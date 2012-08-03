@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		93409D8615CC1E8B00D20824 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93409D7B15CC1E6B00D20824 /* libReactiveCocoa-iOS.a */; };
+		93409D9D15CC200C00D20824 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D8915CC200C00D20824 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409D9E15CC200C00D20824 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D8B15CC200C00D20824 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409D9F15CC200C00D20824 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D8D15CC200C00D20824 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA015CC200C00D20824 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D8F15CC200C00D20824 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA115CC200C00D20824 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9115CC200C00D20824 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA215CC200C00D20824 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9315CC200C00D20824 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA315CC200C00D20824 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9615CC200C00D20824 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA415CC200C00D20824 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9815CC200C00D20824 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA515CC200C00D20824 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9A15CC200C00D20824 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93409DA615CC200C00D20824 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9C15CC200C00D20824 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93BF92DB15CC1A14005ED4E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BF92DA15CC1A14005ED4E6 /* UIKit.framework */; };
 		93BF92DD15CC1A14005ED4E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BF92DC15CC1A14005ED4E6 /* Foundation.framework */; };
 		93BF92DF15CC1A14005ED4E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BF92DE15CC1A14005ED4E6 /* CoreGraphics.framework */; };
@@ -56,6 +66,27 @@
 
 /* Begin PBXFileReference section */
 		93409D6715CC1E6B00D20824 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = ../external/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		93409D8815CC200C00D20824 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		93409D8915CC200C00D20824 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		93409D8A15CC200C00D20824 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		93409D8B15CC200C00D20824 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		93409D8C15CC200C00D20824 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		93409D8D15CC200C00D20824 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		93409D8E15CC200C00D20824 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		93409D8F15CC200C00D20824 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		93409D9015CC200C00D20824 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		93409D9115CC200C00D20824 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		93409D9215CC200C00D20824 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		93409D9315CC200C00D20824 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		93409D9415CC200C00D20824 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		93409D9515CC200C00D20824 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		93409D9615CC200C00D20824 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		93409D9715CC200C00D20824 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		93409D9815CC200C00D20824 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		93409D9915CC200C00D20824 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		93409D9A15CC200C00D20824 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		93409D9B15CC200C00D20824 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		93409D9C15CC200C00D20824 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		93BF92D615CC1A14005ED4E6 /* ReactiveCocoaPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BF92DA15CC1A14005ED4E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93BF92DC15CC1A14005ED4E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +143,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		93409D8715CC200C00D20824 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				93409D8815CC200C00D20824 /* AFHTTPClient.h */,
+				93409D8915CC200C00D20824 /* AFHTTPClient.m */,
+				93409D8A15CC200C00D20824 /* AFHTTPRequestOperation.h */,
+				93409D8B15CC200C00D20824 /* AFHTTPRequestOperation.m */,
+				93409D8C15CC200C00D20824 /* AFImageRequestOperation.h */,
+				93409D8D15CC200C00D20824 /* AFImageRequestOperation.m */,
+				93409D8E15CC200C00D20824 /* AFJSONRequestOperation.h */,
+				93409D8F15CC200C00D20824 /* AFJSONRequestOperation.m */,
+				93409D9015CC200C00D20824 /* AFJSONUtilities.h */,
+				93409D9115CC200C00D20824 /* AFJSONUtilities.m */,
+				93409D9215CC200C00D20824 /* AFNetworkActivityIndicatorManager.h */,
+				93409D9315CC200C00D20824 /* AFNetworkActivityIndicatorManager.m */,
+				93409D9415CC200C00D20824 /* AFNetworking.h */,
+				93409D9515CC200C00D20824 /* AFPropertyListRequestOperation.h */,
+				93409D9615CC200C00D20824 /* AFPropertyListRequestOperation.m */,
+				93409D9715CC200C00D20824 /* AFURLConnectionOperation.h */,
+				93409D9815CC200C00D20824 /* AFURLConnectionOperation.m */,
+				93409D9915CC200C00D20824 /* AFXMLRequestOperation.h */,
+				93409D9A15CC200C00D20824 /* AFXMLRequestOperation.m */,
+				93409D9B15CC200C00D20824 /* UIImageView+AFNetworking.h */,
+				93409D9C15CC200C00D20824 /* UIImageView+AFNetworking.m */,
+			);
+			name = AFNetworking;
+			path = ../external/AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
 		93BF92CB15CC1A14005ED4E6 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +194,7 @@
 		93BF92D915CC1A14005ED4E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93409D8715CC200C00D20824 /* AFNetworking */,
 				93409D6715CC1E6B00D20824 /* ReactiveCocoa.xcodeproj */,
 				93BF92DA15CC1A14005ED4E6 /* UIKit.framework */,
 				93BF92DC15CC1A14005ED4E6 /* Foundation.framework */,
@@ -326,6 +387,16 @@
 				93BF92E715CC1A14005ED4E6 /* main.m in Sources */,
 				93BF92EB15CC1A14005ED4E6 /* AppDelegate.m in Sources */,
 				93BF92F115CC1A14005ED4E6 /* ViewController.m in Sources */,
+				93409D9D15CC200C00D20824 /* AFHTTPClient.m in Sources */,
+				93409D9E15CC200C00D20824 /* AFHTTPRequestOperation.m in Sources */,
+				93409D9F15CC200C00D20824 /* AFImageRequestOperation.m in Sources */,
+				93409DA015CC200C00D20824 /* AFJSONRequestOperation.m in Sources */,
+				93409DA115CC200C00D20824 /* AFJSONUtilities.m in Sources */,
+				93409DA215CC200C00D20824 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				93409DA315CC200C00D20824 /* AFPropertyListRequestOperation.m in Sources */,
+				93409DA415CC200C00D20824 /* AFURLConnectionOperation.m in Sources */,
+				93409DA515CC200C00D20824 /* AFXMLRequestOperation.m in Sources */,
+				93409DA615CC200C00D20824 /* UIImageView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +498,16 @@
 		93BF930A15CC1A14005ED4E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"",
+					"\"$(PROJECT_DIR)/../external/AFNetworking\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveCocoaPlayground/ReactiveCocoaPlayground-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"",
+					"\"$(PROJECT_DIR)/../external/AFNetworking\"",
+				);
 				INFOPLIST_FILE = "ReactiveCocoaPlayground/ReactiveCocoaPlayground-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -444,10 +521,16 @@
 		93BF930B15CC1A14005ED4E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"",
+					"\"$(PROJECT_DIR)/../external/AFNetworking\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveCocoaPlayground/ReactiveCocoaPlayground-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(PROJECT_DIR)/../external/ReactiveCocoa/ReactiveCocoaFramework\"",
+					"\"$(PROJECT_DIR)/../external/AFNetworking\"",
+				);
 				INFOPLIST_FILE = "ReactiveCocoaPlayground/ReactiveCocoaPlayground-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
