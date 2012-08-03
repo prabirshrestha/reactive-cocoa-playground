@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jC-yl-rmc">
-                                <rect key="frame" x="40" y="22" width="247" height="44"/>
+                                <rect key="frame" x="12" y="43" width="300" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Push Me (1)">
@@ -90,19 +90,39 @@
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Output" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nBp-lS-3wq">
-                                <rect key="frame" x="14" y="364" width="287" height="46"/>
+                                <rect key="frame" x="19" y="140" width="287" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y17-QP-E7D">
+                                <rect key="frame" x="12" y="93" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Push Me (2)">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rzH-4Q-WlN">
+                                <rect key="frame" x="11" y="5" width="300" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="4vn-Kt-Zik"/>
                     <connections>
                         <outlet property="outputLabel" destination="nBp-lS-3wq" id="lXu-6c-gCH"/>
-                        <outlet property="pushMeButton1" destination="8jC-yl-rmc" id="WZ5-hX-d6L"/>
+                        <outlet property="pushMeButton1" destination="8jC-yl-rmc" id="MO3-3R-1fO"/>
+                        <outlet property="pushMeButton2" destination="y17-QP-E7D" id="9mE-wy-qhE"/>
+                        <outlet property="textField1" destination="rzH-4Q-WlN" id="qw1-3X-a4I"/>
                     </connections>
                 </viewController>
             </objects>
@@ -235,6 +255,17 @@
             <point key="canvasLocation" x="-25" y="29"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EventsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="outputLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pushMeButton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pushMeButton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textField1" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

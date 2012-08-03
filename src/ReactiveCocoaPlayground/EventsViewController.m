@@ -8,6 +8,9 @@
 
 #import "EventsViewController.h"
 #include <ReactiveCocoa/ReactiveCocoa.h>
+#include <ReactiveCocoa/RACEventTrampoline.h>
+#include <ReactiveCocoa/RACDelegateProxy.h>
+#include <ReactiveCocoa/UITextView+RACSubscribableSupport.h>
 
 @interface EventsViewController ()
 
@@ -16,7 +19,9 @@
 @implementation EventsViewController
 
 @synthesize pushMeButton1 = _pushMeButton1;
+@synthesize pushMeButton2 = _pushMeButton2;
 @synthesize outputLabel = _outputLabel;
+@synthesize textField1 = _textField1;
 
 @synthesize output = _output;
 
@@ -33,25 +38,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
+    self.textField1.delegate = self;
     
     [[self.pushMeButton1
      rac_subscribableForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
-         self.outputLabel.text = @"Push me button 1";
+         self.outputLabel.text = @"Push Me (1)";
          NSLog(@"%@", self.outputLabel.text);
      }];
     
-     
+    [[[self.pushMeButton2
+     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     select:^id(UIButton *x) {
+         return x.titleLabel.text;
+     }]
+     subscribeNext:^(NSString *x) {
+         self.outputLabel.text = x;
+         NSLog(@"%@", x);
+     }];
+    
+    [[[self.textField1
+     rac_subscribableForControlEvents:UIControlEventEditingChanged]
+     select:^id(UITextField *x) {
+         return x.text;
+     }]
+     subscribeNext:^(NSString *x) {
+         self.outputLabel.text = x;
+         NSLog(@"%@", x);
+     }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)viewDidUnload
 {
-    [self setOutputLabel:nil];
+    [self setPushMeButton2:nil];
     [self setPushMeButton1:nil];
+    [self setOutputLabel:nil];
+    [self setTextField1:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
