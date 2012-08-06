@@ -18,8 +18,8 @@
 		93409DA415CC200C00D20824 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9815CC200C00D20824 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93409DA515CC200C00D20824 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9A15CC200C00D20824 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93409DA615CC200C00D20824 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 93409D9C15CC200C00D20824 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		93772CE215CC2CD500265471 /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93772CE115CC2CD500265471 /* BackgroundSchedulerViewController.m */; };
 		93772CE915CC306800265471 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93772CE815CC306800265471 /* EventsViewController.m */; };
+		93772D5515CC7E2A00265471 /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93772D5415CC7E2A00265471 /* BackgroundSchedulerViewController.m */; };
 		93BF92DB15CC1A14005ED4E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BF92DA15CC1A14005ED4E6 /* UIKit.framework */; };
 		93BF92DD15CC1A14005ED4E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BF92DC15CC1A14005ED4E6 /* Foundation.framework */; };
 		93BF92DF15CC1A14005ED4E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93BF92DE15CC1A14005ED4E6 /* CoreGraphics.framework */; };
@@ -89,10 +89,10 @@
 		93409D9A15CC200C00D20824 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		93409D9B15CC200C00D20824 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		93409D9C15CC200C00D20824 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		93772CE015CC2CD500265471 /* BackgroundSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundSchedulerViewController.h; sourceTree = "<group>"; };
-		93772CE115CC2CD500265471 /* BackgroundSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSchedulerViewController.m; sourceTree = "<group>"; };
 		93772CE715CC306800265471 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		93772CE815CC306800265471 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		93772D5315CC7E2A00265471 /* BackgroundSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundSchedulerViewController.h; sourceTree = "<group>"; };
+		93772D5415CC7E2A00265471 /* BackgroundSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSchedulerViewController.m; sourceTree = "<group>"; };
 		93BF92D615CC1A14005ED4E6 /* ReactiveCocoaPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BF92DA15CC1A14005ED4E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93BF92DC15CC1A14005ED4E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -192,8 +192,8 @@
 		93772CDE15CC2CB700265471 /* Schedulers */ = {
 			isa = PBXGroup;
 			children = (
-				93772CE015CC2CD500265471 /* BackgroundSchedulerViewController.h */,
-				93772CE115CC2CD500265471 /* BackgroundSchedulerViewController.m */,
+				93772D5315CC7E2A00265471 /* BackgroundSchedulerViewController.h */,
+				93772D5415CC7E2A00265471 /* BackgroundSchedulerViewController.m */,
 			);
 			name = Schedulers;
 			sourceTree = "<group>";
@@ -431,8 +431,8 @@
 				93409DA415CC200C00D20824 /* AFURLConnectionOperation.m in Sources */,
 				93409DA515CC200C00D20824 /* AFXMLRequestOperation.m in Sources */,
 				93409DA615CC200C00D20824 /* UIImageView+AFNetworking.m in Sources */,
-				93772CE215CC2CD500265471 /* BackgroundSchedulerViewController.m in Sources */,
 				93772CE915CC306800265471 /* EventsViewController.m in Sources */,
+				93772D5515CC7E2A00265471 /* BackgroundSchedulerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

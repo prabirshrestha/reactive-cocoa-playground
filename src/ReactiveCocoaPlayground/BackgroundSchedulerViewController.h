@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BackgroundSchedulerViewController : UIViewController
+@interface BackgroundSchedulerViewController : UITableViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *backgroundButton;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end

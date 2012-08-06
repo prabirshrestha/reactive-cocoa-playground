@@ -1,27 +1,25 @@
 //
-//  BackgroundSchedulerViewController.m
+//  SchedulerBackgroundViewController.m
 //  ReactiveCocoaPlayground
 //
 //  Created by Prabir Shrestha on 8/3/12.
 //  Copyright (c) 2012 Prabir Shrestha. All rights reserved.
 //
 
-#import "BackgroundSchedulerViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "SchedulerBackgroundViewController.h"
 
-@interface BackgroundSchedulerViewController ()
+@interface SchedulerBackgroundViewController ()
 
 @end
 
-@implementation BackgroundSchedulerViewController
-@synthesize backgroundButton;
-@synthesize textView;
+@implementation SchedulerBackgroundViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if(self == nil) return nil;
-    
+    if (self) {
+        // Custom initialization
+    }
     return self;
 }
 
@@ -29,17 +27,15 @@
 {
     [super viewDidLoad];
 
-    [[self.backgroundButton
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
-     subscribeNext:^(id x) {
-         [self backgroundButtonClicked];
-     }];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
-    [self setBackgroundButton:nil];
-    [self setTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -52,29 +48,29 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    // Configure the cell...
+    
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -128,32 +124,4 @@
      */
 }
 
-# pragma mark -
-
-- (void)backgroundButtonClicked {
-    self.textView.text = @"";
-    
-    self.textView.text = @"button clicked (scheduling)";
-    
-    [[RACScheduler
-     backgroundScheduler]
-     schedule:^{
-         
-         [[RACScheduler
-           mainQueueScheduler]
-           schedule:^{
-               self.textView.text = @"entering schedule";
-           }];
-         
-         [NSThread sleepForTimeInterval:5];
-         
-         [[RACScheduler
-           mainQueueScheduler]
-          schedule:^{
-              self.textView.text = @"leaving schedule";
-          }];
-     }];
-    
-    self.textView.text = [self.textView.text stringByAppendingString:@"\r\nScheduled"];
-}
 @end
