@@ -58,11 +58,16 @@
          NSLog(@"%@", x);
      }];
     
-    [[[self.textField1
+    [[[[[[self.textField1
      rac_subscribableForControlEvents:UIControlEventEditingChanged]
      select:^id(UITextField *x) {
          return x.text;
      }]
+     where:^BOOL(NSString *x) {
+         return [x stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 2;
+     }]
+     distinctUntilChanged]
+     throttle:.5]
      subscribeNext:^(NSString *x) {
          self.outputLabel.text = x;
          NSLog(@"%@", x);
