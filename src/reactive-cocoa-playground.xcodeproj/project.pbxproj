@@ -23,6 +23,7 @@
 		0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF57160BF3DC0083A979 /* EventsViewController.m */; };
 		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
 		0F0DEF62160BF3FD0083A979 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF61160BF3FD0083A979 /* ViewController.m */; };
+		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
 		0F0DEF60160BF3FD0083A979 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0F0DEF61160BF3FD0083A979 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingViewController.h; sourceTree = "<group>"; };
+		0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingViewController.m; sourceTree = "<group>"; };
 		5B5B2EDB5A1943AF8E57D041 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,6 +178,8 @@
 				0F0DEF57160BF3DC0083A979 /* EventsViewController.m */,
 				0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */,
 				0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */,
+				0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */,
+				0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */,
 				0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */,
 				0F0DEF62160BF3FD0083A979 /* ViewController.m in Sources */,
+				0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
