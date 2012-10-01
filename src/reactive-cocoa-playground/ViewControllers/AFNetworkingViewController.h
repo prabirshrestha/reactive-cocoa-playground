@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AFNetworkingViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end
