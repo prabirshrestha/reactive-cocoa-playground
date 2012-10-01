@@ -34,6 +34,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.textView.text = nil;
     
     [[self
      requestWithMethod:@"GET"
@@ -74,7 +75,7 @@
     
     [operation start];
     
-	return subject;
+    return subject;
 }
 
 - (void)viewDidUnload {
