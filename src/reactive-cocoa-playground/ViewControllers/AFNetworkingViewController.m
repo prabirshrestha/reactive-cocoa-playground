@@ -8,14 +8,14 @@
 
 #import "AFNetworkingViewController.h"
 #include <ReactiveCocoa.h>
-#include <AFNetworking.h>
+#include "../Classes/Api.h"
 
 @interface AFNetworkingViewController ()
 
 @end
 
 @implementation AFNetworkingViewController {
-    AFHTTPClient *client;
+    Api *api;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,53 +29,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    client = [[AFHTTPClient alloc]init];
+    api = [[Api alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.textView.text = nil;
     
-    [[self
+    [[api
      requestWithMethod:@"GET"
      path:@"https://graph.facebook.com/4"
      parameters:nil]
-     subscribeNext:^(NSString *x) {
+     subscribeNext:^(id x) {
          self.textView.text = x;
-     } error:^(NSError *error) {
+     }
+     error:^(NSError *error) {
          self.textView.text = error.description;
-     } completed:^{
-         NSLog(@"completd");
+     }
+     completed:^{
+         NSLog(@"completed");
      }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-# pragma mark - AFNetworking RAC helper
-
-- (RACSubscribable*)requestWithMethod:(NSString*)method
-                                 path:(NSString*)path
-                           parameters:(NSDictionary *)parameters {
-    
-    RACAsyncSubject *subject = [RACAsyncSubject subject];
-	NSURLRequest *request = [client requestWithMethod:method path:path parameters:parameters];
-	AFHTTPRequestOperation *operation =
-    [client
-     HTTPRequestOperationWithRequest:request
-     success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		[subject sendNext:operation.responseString];
-		[subject sendCompleted];
-     }
-     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		[subject sendError:error];
-     }];
-    
-    [operation start];
-    
-    return subject;
 }
 
 - (void)viewDidUnload {
