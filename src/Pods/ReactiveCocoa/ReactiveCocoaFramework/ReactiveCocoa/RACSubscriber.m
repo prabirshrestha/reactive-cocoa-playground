@@ -49,7 +49,9 @@
 }
 
 - (void)didSubscribeWithDisposable:(RACDisposable *)d {
-	self.disposable = d;
+	@synchronized(self) {
+		self.disposable = d;
+	}
 }
 
 
@@ -60,7 +62,7 @@
 @synthesize completed;
 @synthesize disposable;
 
-+ (id)subscriberWithNext:(void (^)(id x))next error:(void (^)(NSError *error))error completed:(void (^)(void))completed {
++ (instancetype)subscriberWithNext:(void (^)(id x))next error:(void (^)(NSError *error))error completed:(void (^)(void))completed {
 	RACSubscriber *subscriber = [[self alloc] init];
 	subscriber.next = next;
 	subscriber.error = error;
@@ -69,9 +71,10 @@
 }
 
 - (void)stopSubscription {
-	RACDisposable *d = self.disposable;
-	self.disposable = nil;
-	[d dispose];
+	@synchronized(self) {
+		[self.disposable dispose];
+		self.disposable = nil;
+	}
 }
 
 @end

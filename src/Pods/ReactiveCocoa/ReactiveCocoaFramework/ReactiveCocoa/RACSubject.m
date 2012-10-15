@@ -43,7 +43,9 @@
 }
 
 - (void)didSubscribeWithDisposable:(RACDisposable *)d {
-	self.disposable = d;
+	@synchronized(self) {
+		self.disposable = d;
+	}
 }
 
 
@@ -51,13 +53,15 @@
 
 @synthesize disposable;
 
-+ (id)subject {
++ (instancetype)subject {
 	return [[self alloc] init];
 }
 
 - (void)stopSubscription {
-	[self.disposable dispose];
-	self.disposable = nil;
+	@synchronized(self) {
+		[self.disposable dispose];
+		self.disposable = nil;
+	}
 }
 
 @end

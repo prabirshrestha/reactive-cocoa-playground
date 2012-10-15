@@ -14,52 +14,36 @@
 #import "RACSwizzling.h"
 #import "RACSubscribable+Private.h"
 
-static NSMutableDictionary *swizzledClasses = nil;
+static const void *RACObjectDisposables = &RACObjectDisposables;
 
-static const void *RACPropertySubscribingDisposables = &RACPropertySubscribingDisposables;
-
+static NSMutableDictionary *swizzledClasses() {
+	static dispatch_once_t onceToken;
+	static NSMutableDictionary *swizzledClasses = nil;
+	dispatch_once(&onceToken, ^{
+		swizzledClasses = [[NSMutableDictionary alloc] init];
+	});
+	
+	return swizzledClasses;
+}
 
 @implementation NSObject (RACPropertySubscribing)
 
-+ (void)load {
-	swizzledClasses = [[NSMutableDictionary alloc] init];
-}
-
-- (void)rac_propertySubscribingDealloc {
-	NSMutableSet *disposables = objc_getAssociatedObject(self, RACPropertySubscribingDisposables);
-	for(RACDisposable *disposable in [disposables copy]) {
+- (void)rac_disposablesDealloc {
+	NSSet *disposables = objc_getAssociatedObject(self, RACObjectDisposables);
+	for (RACDisposable *disposable in disposables) {
 		[disposable dispose];
 	}
-	
-	objc_setAssociatedObject(self, RACPropertySubscribingDisposables, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-	
-	[self rac_propertySubscribingDealloc];
+
+	objc_setAssociatedObject(self, RACObjectDisposables, nil, OBJC_ASSOCIATION_RETAIN);
+
+	[self rac_disposablesDealloc];
 }
 
 + (RACSubscribable *)rac_subscribableFor:(NSObject *)object keyPath:(NSString *)keyPath onObject:(NSObject *)onObject {
 	RACReplaySubject *subject = [RACReplaySubject replaySubjectWithCapacity:1];
-	
-	@synchronized(swizzledClasses) {
-		Class class = [onObject class];
-		NSString *keyName = NSStringFromClass(class);
-		if([swizzledClasses objectForKey:keyName] == nil) {
-			RACSwizzle(class, NSSelectorFromString(@"dealloc"), @selector(rac_propertySubscribingDealloc));
-			[swizzledClasses setObject:[NSNull null] forKey:keyName];
-		}
-	}
-	
-	@synchronized(self) {
-		NSMutableSet *disposables = objc_getAssociatedObject(onObject, RACPropertySubscribingDisposables);
-		if(disposables == nil) {
-			disposables = [NSMutableSet set];
-			objc_setAssociatedObject(onObject, RACPropertySubscribingDisposables, disposables, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-		}
-		
-		[disposables addObject:[RACDisposable disposableWithBlock:^{
-			// tear down the subscribable without sending notifications to the subscribers, since they could have already been dealloc'd by this point
-			[subject tearDown];
-		}]];
-	}
+	[onObject rac_addDeallocDisposable:[RACDisposable disposableWithBlock:^{
+		[subject sendCompleted];
+	}]];
 	
 	__block __unsafe_unretained NSObject *weakObject = object;
 	[object rac_addObserver:onObject forKeyPath:keyPath options:0 queue:[NSOperationQueue mainQueue] block:^(id target, NSDictionary *change) {
@@ -72,6 +56,27 @@ static const void *RACPropertySubscribingDisposables = &RACPropertySubscribingDi
 
 - (RACSubscribable *)rac_subscribableForKeyPath:(NSString *)keyPath onObject:(NSObject *)object {
 	return [[self class] rac_subscribableFor:self keyPath:keyPath onObject:object];
+}
+
+- (RACDisposable *)rac_deriveProperty:(NSString *)keyPath from:(RACSubscribable *)subscribable {
+	return [subscribable toProperty:keyPath onObject:self];
+}
+
+- (void)rac_addDeallocDisposable:(RACDisposable *)disposable {
+	@synchronized(swizzledClasses()) {
+		Class class = self.class;
+		NSString *keyName = NSStringFromClass(class);
+		if (swizzledClasses()[keyName] == nil) {
+			RACSwizzle(class, NSSelectorFromString(@"dealloc"), @selector(rac_disposablesDealloc));
+			swizzledClasses()[keyName] = NSNull.null;
+		}
+	}
+
+	@synchronized(self) {
+		NSSet *disposables = objc_getAssociatedObject(self, RACObjectDisposables) ?: [NSSet set];
+		disposables = [disposables setByAddingObject:disposable];
+		objc_setAssociatedObject(self, RACObjectDisposables, disposables, OBJC_ASSOCIATION_RETAIN);
+	}
 }
 
 @end

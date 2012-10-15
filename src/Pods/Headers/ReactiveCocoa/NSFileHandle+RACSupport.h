@@ -1,1 +1,1 @@
-../../ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSFileHandle+RACSupport.h
+../../ReactiveCocoa/RACExtensions/NSFileHandle+RACSupport.h

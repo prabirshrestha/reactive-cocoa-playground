@@ -9,7 +9,6 @@
 #import "RACCollection.h"
 #import "RACSubject.h"
 #import "RACSubscribable.h"
-#import "RACSubscribable+Operations.h"
 #import "RACUnit.h"
 #import "NSObject+RACPropertySubscribing.h"
 
@@ -27,7 +26,7 @@
 
 @implementation RACCollection
 
-- (id)init {
+- (instancetype)init {
 	self = [super init];
 	if(self == nil) return nil;
 	
@@ -71,7 +70,7 @@
 @synthesize suppressChangeNotificationsCount;
 @synthesize changeNotificationsEnabled;
 
-+ (RACCollection *)collectionWithObjectsInArray:(NSArray *)array {
++ (instancetype)collectionWithObjectsInArray:(NSArray *)array {
 	RACCollection *collection = [[self alloc] init];
 	for(id object in array) {
 		[collection addObject:object];
@@ -79,7 +78,7 @@
 	return collection;
 }
 
-+ (RACCollection *)collectionWithObjects:(id)object, ... {
++ (instancetype)collectionWithObjects:(id)object, ... {
 	RACCollection *collection = [[self alloc] init];
 	
 	va_list args;

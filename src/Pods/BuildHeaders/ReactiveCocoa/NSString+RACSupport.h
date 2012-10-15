@@ -1,1 +1,1 @@
-../../ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSString+RACSupport.h
+../../ReactiveCocoa/RACExtensions/NSString+RACSupport.h

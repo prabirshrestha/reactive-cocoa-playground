@@ -22,7 +22,7 @@ const NSUInteger RACReplaySubjectUnlimitedCapacity = 0;
 
 @implementation RACReplaySubject
 
-- (id)init {
+- (instancetype)init {
 	self = [super init];
 	if(self == nil) return nil;
 	
@@ -35,7 +35,7 @@ const NSUInteger RACReplaySubjectUnlimitedCapacity = 0;
 #pragma mark RACSubscribable
 
 - (RACDisposable *)subscribe:(id<RACSubscriber>)subscriber {
-	RACDisposable * disposable = [super subscribe:subscriber];
+	RACDisposable *disposable = [super subscribe:subscriber];
 	NSArray *valuesCopy = nil;
 	@synchronized(self.valuesReceived) {
 		valuesCopy = [self.valuesReceived copy];
@@ -91,7 +91,7 @@ const NSUInteger RACReplaySubjectUnlimitedCapacity = 0;
 @synthesize hasCompletedAlready;
 @synthesize error;
 
-+ (id)replaySubjectWithCapacity:(NSUInteger)capacity {
++ (instancetype)replaySubjectWithCapacity:(NSUInteger)capacity {
 	RACReplaySubject *subject = [self subject];
 	subject.capacity = capacity;
 	return subject;
