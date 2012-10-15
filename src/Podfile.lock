@@ -1,17 +1,17 @@
 
-SPEC CHECKSUMS: 
-  ReactiveCocoa: 172671064cb38a27d5f7a7cd8d3c3e24025480c6
-  AFNetworking: 11ddec0dca78dc178cece46ef48ee0b65e47b293
-  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
+COCOAPODS: 0.15.0
 
 DEPENDENCIES: 
 - AFNetworking (= 1.0)
 - ReactiveCocoa (= 0.6.0)
-
-COCOAPODS: 0.14.0
 
 PODS: 
 - AFNetworking (1.0)
 - JRSwizzle (1.0)
 - ReactiveCocoa (0.6.0): 
   - JRSwizzle (~> 1.0)
+
+SPEC CHECKSUMS: 
+  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
+  ReactiveCocoa: 172671064cb38a27d5f7a7cd8d3c3e24025480c6
+  AFNetworking: 8ebc0d45f8753337f280a427c6b9b707e2eecc94
