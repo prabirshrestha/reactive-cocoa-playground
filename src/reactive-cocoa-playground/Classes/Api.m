@@ -30,14 +30,18 @@
     
     NSURLRequest *request = [client requestWithMethod:method path:path parameters:parameters];
     
+    // note: add in app delegate [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [[AFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
     AFHTTPRequestOperation *operation =
         [client
          HTTPRequestOperationWithRequest:request
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
              [subject sendNext:operation.responseString];
              [subject sendCompleted];
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
              [subject sendError:error];
          }];
     
