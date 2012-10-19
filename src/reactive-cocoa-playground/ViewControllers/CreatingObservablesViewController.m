@@ -49,9 +49,12 @@
     [[self.observableWithReturn rac_subscribableForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          
-         [[RACSubscribable return:[NSNumber numberWithInt:42]]
+        [[RACSubscribable return:[NSNumber numberWithInt:42]]
          subscribeNext:^(id x) {
              NSLog(@"%@", x);
+         }
+         completed:^{
+             NSLog(@"completed");
          }];
          
      }];
