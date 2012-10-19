@@ -29,6 +29,7 @@
     
     [self setupObservableWithReturn];
     [self setupObservableFromEmpty];
+    [self setupObservableFromArray];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +41,7 @@
 - (void)viewDidUnload {
     [self setObservableWithReturn:nil];
     [self setObservableFromEmpty:nil];
+    [self setObservableFromArray:nil];
     [super viewDidUnload];
 }
 
@@ -73,6 +75,26 @@
         }];
         
     }];
+}
+
+- (void) setupObservableFromArray {
+    [[self.observableFromArray
+     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         
+         NSArray *array = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], nil];
+         
+         [[array
+          rac_toSubscribable]
+          subscribeNext:^(id x) {
+              NSLog(@"%@", x);
+          }
+          completed:^{
+              NSLog(@"completed");
+          }];
+         
+     }];
+    
 }
 
 @end
