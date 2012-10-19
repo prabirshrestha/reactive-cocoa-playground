@@ -101,11 +101,11 @@
 
 - (void) setupObservableFromEvent {
     
-    [[self.observableFromEvent
-      rac_subscribableForControlEvents:UIControlEventTouchUpInside]
-     subscribeNext:^(id x) {
-         NSLog(@"touch up inside");
-     }];
+//    [[self.observableFromEvent
+//      rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+//     subscribeNext:^(id x) {
+//         NSLog(@"touch up inside");
+//     }];
     
 }
 
