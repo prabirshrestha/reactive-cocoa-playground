@@ -11,5 +11,6 @@
 @interface CreatingObservablesViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *observableWithReturn;
+@property (weak, nonatomic) IBOutlet UIButton *observableFromEmpty;
 
 @end
