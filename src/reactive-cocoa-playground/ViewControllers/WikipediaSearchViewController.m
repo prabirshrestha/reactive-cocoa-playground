@@ -46,7 +46,7 @@
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     RACSubscribable *keys =
-    [[[[self.searchTextField
+    [[[[[self.searchTextField
      rac_subscribableForControlEvents:UIControlEventEditingChanged]
      throttle:0.5] // seconds
      select:^id(UITextField *x) {
@@ -54,7 +54,8 @@
      }]
      where:^BOOL(NSString *x) {
          return x.length > 0;
-     }];
+     }]
+     distinctUntilChanged];
     
     [[keys
       deliverOn:[RACScheduler mainQueueScheduler]]
