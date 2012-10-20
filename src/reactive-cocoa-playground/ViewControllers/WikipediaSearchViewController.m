@@ -29,8 +29,11 @@
     [super viewDidLoad];
     
     self.webView.delegate = self;
-    
     self.activityIndicator.hidden = YES;
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     RACSubscribable *keys =
     [[[self.searchTextField
@@ -58,6 +61,10 @@
      subscribeNext:^(NSString *x) {
          NSLog(@"%@", x);
      }];
+}
+
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning
