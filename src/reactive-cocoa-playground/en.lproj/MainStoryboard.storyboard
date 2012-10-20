@@ -170,11 +170,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="ezm-MG-o4u">
+                                <rect key="frame" x="280" y="8" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="observable from event" id="hqF-N5-0Yf"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ezm-MG-o4u" id="YPB-Ge-4Pa"/>
                         <outlet property="searchTextField" destination="9zp-kt-kOQ" id="DQT-ud-3WW"/>
                         <outlet property="searchingForLabel" destination="jhX-cb-d5q" id="y2n-bu-JOd"/>
                         <outlet property="webView" destination="NjZ-9g-Ou4" id="Erf-3c-NFM"/>
@@ -507,6 +512,7 @@
         <class className="WikipediaSearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikipediaSearchViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="searchTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="searchingForLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>

@@ -10,6 +10,7 @@
 
 @interface WikipediaSearchViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UITextField *searchTextField;
 @property (strong, nonatomic) IBOutlet UILabel *searchingForLabel;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;

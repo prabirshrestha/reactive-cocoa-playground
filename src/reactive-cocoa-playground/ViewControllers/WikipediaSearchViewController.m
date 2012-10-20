@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     
+    self.activityIndicator.hidden = YES;
+    
     RACSubscribable *keys =
     [[[self.searchTextField
      rac_subscribableForControlEvents:UIControlEventEditingChanged]
@@ -59,6 +61,7 @@
     [self setSearchTextField:nil];
     [self setSearchingForLabel:nil];
     [self setWebView:nil];
+    [self setActivityIndicator:nil];
     [super viewDidUnload];
 }
 @end
