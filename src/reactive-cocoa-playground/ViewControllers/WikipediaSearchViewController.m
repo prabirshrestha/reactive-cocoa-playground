@@ -41,6 +41,8 @@
     [[keys
       deliverOn:[RACScheduler mainQueueScheduler]]
       subscribeNext:^(NSString *x) {
+          self.activityIndicator.hidden = NO;
+          [self.activityIndicator startAnimating];
           self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", x];
       }];
     
