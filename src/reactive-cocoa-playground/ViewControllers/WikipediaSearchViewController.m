@@ -34,22 +34,26 @@
     RACSubject *webViewLoadSubject = [RACSubject subject];
     self.webView.didFinishLoadBlock = ^( UIWebView *webView){
         [webViewLoadSubject sendNext:webView];
-        [webViewLoadSubject sendCompleted];
     };
     self.webView.didFinishWithErrorBlock  = ^(UIWebView *webView, NSError *error) {
         [webViewLoadSubject sendError:error];
     };
     
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    UITapGestureRecognizer *tapGestureRecognizer = [UITapGestureRecognizer recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        [self.view endEditing:YES];
+    }];
     tapGestureRecognizer.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     RACSubscribable *keys =
-    [[[self.searchTextField
+    [[[[self.searchTextField
      rac_subscribableForControlEvents:UIControlEventEditingChanged]
      throttle:0.5] // seconds
      select:^id(UITextField *x) {
          return x.text;
+     }]
+     where:^BOOL(NSString *x) {
+         return x.length > 0;
      }];
     
     [[keys
@@ -84,10 +88,6 @@
      error:^(NSError *error) {
          disableWebLoadAnimation();
      }];    
-}
-
-- (void)dismissKeyboard {
-    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning
