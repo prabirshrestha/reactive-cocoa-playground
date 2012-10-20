@@ -1,14 +1,10 @@
 
-SPEC CHECKSUMS: 
-  libextobjc/EXTConcreteProtocol: e20b251b73436754b490b3bea51aac9a8e9fff1f
-  ReactiveCocoa/Core: a61925d3e42ffce76a70b22a289e203912608788
-  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
-  AFNetworking: 8ebc0d45f8753337f280a427c6b9b707e2eecc94
-  ReactiveCocoa/RACExtensions: a61925d3e42ffce76a70b22a289e203912608788
-  ReactiveCocoa: a61925d3e42ffce76a70b22a289e203912608788
-
 PODS: 
+- A2DynamicDelegate (2.0.2): 
+  - libffi
 - AFNetworking (1.0)
+- BlocksKit (1.5.2): 
+  - A2DynamicDelegate
 - JRSwizzle (1.0)
 - ReactiveCocoa (0.8.0): 
   - ReactiveCocoa/Core (= 0.8.0)
@@ -19,9 +15,22 @@ PODS:
 - ReactiveCocoa/RACExtensions (0.8.0): 
   - ReactiveCocoa/Core
 - libextobjc/EXTConcreteProtocol (0.1.0)
+- libffi (3.0.11)
+
+SPEC CHECKSUMS: 
+  AFNetworking: 758a1cb1ab5a0d22795ba1c44abb9cad395bc126
+  ReactiveCocoa: a61925d3e42ffce76a70b22a289e203912608788
+  A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
+  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
+  ReactiveCocoa/Core: a61925d3e42ffce76a70b22a289e203912608788
+  libextobjc/EXTConcreteProtocol: e20b251b73436754b490b3bea51aac9a8e9fff1f
+  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
+  ReactiveCocoa/RACExtensions: a61925d3e42ffce76a70b22a289e203912608788
+  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
+
+COCOAPODS: 0.15.1
 
 DEPENDENCIES: 
 - AFNetworking (= 1.0)
+- BlocksKit (= 1.5.2)
 - ReactiveCocoa (= 0.8.0)
-
-COCOAPODS: 0.15.0
