@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     
+    self.webView.delegate = self;
+    
     self.activityIndicator.hidden = YES;
     
     RACSubscribable *keys =
@@ -71,4 +73,20 @@
     [self setActivityIndicator:nil];
     [super viewDidUnload];
 }
+
+# pragma mark - UIWebViewDelegate 
+
+- (void)stopAnimation {
+    self.activityIndicator.hidden = YES;
+    [self.activityIndicator stopAnimating];
+}
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView {
+    [self stopAnimation];
+}
+
+- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    [self stopAnimation];
+}
+
 @end
