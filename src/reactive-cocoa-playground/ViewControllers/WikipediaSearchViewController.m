@@ -7,6 +7,7 @@
 //
 
 #import "WikipediaSearchViewController.h"
+#import <ReactiveCocoa.h>
 
 @interface WikipediaSearchViewController ()
 
@@ -26,7 +27,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    RACSubscribable *keys =
+    [[[self.searchTextField
+     rac_subscribableForControlEvents:UIControlEventEditingChanged]
+     throttle:0.5] // seconds
+     select:^id(UITextField *x) {
+         return x.text;
+     }];
+    
+    [[keys
+      deliverOn:[RACScheduler mainQueueScheduler]]
+      subscribeNext:^(NSString *x) {
+          self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", x];
+      }];
+    
+    [[keys
+     deliverOn:[RACScheduler mainQueueScheduler]]
+     subscribeNext:^(NSString *x) {
+         NSLog(@"%@", x);
+     }];
 }
 
 - (void)didReceiveMemoryWarning
