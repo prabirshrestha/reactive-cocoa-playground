@@ -13,7 +13,9 @@
 
 @end
 
-@implementation WikipediaSearchViewController
+@implementation WikipediaSearchViewController {
+    RACSubject *webViewLoadSubject;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,8 @@
     
     self.webView.delegate = self;
     self.activityIndicator.hidden = YES;
+    
+    webViewLoadSubject = [RACSubject subject];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     tapGestureRecognizer.cancelsTouchesInView = NO;
@@ -57,10 +61,21 @@
       }];
     
     [[keys
-     deliverOn:[RACScheduler mainQueueScheduler]]
-     subscribeNext:^(NSString *x) {
+      deliverOn:[RACScheduler mainQueueScheduler]]
+      subscribeNext:^(NSString *x) {
          NSLog(@"%@", x);
      }];
+    
+    [webViewLoadSubject
+     subscribeError:^(NSError *error) {
+         self.activityIndicator.hidden = YES;
+         [self.activityIndicator stopAnimating];
+     }
+     completed:^{
+         self.activityIndicator.hidden = YES;
+         [self.activityIndicator stopAnimating];
+     }];   
+    
 }
 
 - (void)dismissKeyboard {
@@ -83,17 +98,13 @@
 
 # pragma mark - UIWebViewDelegate 
 
-- (void)stopAnimation {
-    self.activityIndicator.hidden = YES;
-    [self.activityIndicator stopAnimating];
-}
-
 - (void) webViewDidFinishLoad:(UIWebView *)webView {
-    [self stopAnimation];
+    [webViewLoadSubject sendNext:webView];
+    [webViewLoadSubject sendCompleted];
 }
 
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [self stopAnimation];
+    [webViewLoadSubject sendError:error];
 }
 
 @end
