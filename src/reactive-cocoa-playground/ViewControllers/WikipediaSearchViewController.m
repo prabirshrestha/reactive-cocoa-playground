@@ -40,10 +40,15 @@
     
     [[keys
       deliverOn:[RACScheduler mainQueueScheduler]]
-      subscribeNext:^(NSString *x) {
+      subscribeNext:^(NSString *searchText) {
           self.activityIndicator.hidden = NO;
           [self.activityIndicator startAnimating];
-          self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", x];
+          self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", searchText];
+          
+          NSURLRequest *request = [NSURLRequest
+                                   requestWithURL:[NSURL URLWithString:
+                                                   [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@", searchText]]];
+          [self.webView loadRequest:request];
       }];
     
     [[keys
