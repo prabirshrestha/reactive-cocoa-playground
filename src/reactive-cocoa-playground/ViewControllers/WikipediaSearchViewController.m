@@ -8,14 +8,13 @@
 
 #import "WikipediaSearchViewController.h"
 #import <ReactiveCocoa.h>
+#import <BlocksKit.h>
 
 @interface WikipediaSearchViewController ()
 
 @end
 
-@implementation WikipediaSearchViewController {
-    RACSubject *webViewLoadSubject;
-}
+@implementation WikipediaSearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,10 +29,16 @@
 {
     [super viewDidLoad];
     
-    self.webView.delegate = self;
     self.activityIndicator.hidden = YES;
     
-    webViewLoadSubject = [RACSubject subject];
+    RACSubject *webViewLoadSubject = [RACSubject subject];
+    self.webView.didFinishLoadBlock = ^( UIWebView *webView){
+        [webViewLoadSubject sendNext:webView];
+        [webViewLoadSubject sendCompleted];
+    };
+    self.webView.didFinishWithErrorBlock  = ^(UIWebView *webView, NSError *error) {
+        [webViewLoadSubject sendError:error];
+    };
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     tapGestureRecognizer.cancelsTouchesInView = NO;
@@ -66,16 +71,19 @@
          NSLog(@"%@", x);
      }];
     
-    [webViewLoadSubject
-     subscribeError:^(NSError *error) {
-         self.activityIndicator.hidden = YES;
-         [self.activityIndicator stopAnimating];
-     }
-     completed:^{
-         self.activityIndicator.hidden = YES;
-         [self.activityIndicator stopAnimating];
-     }];   
     
+    void (^disableWebLoadAnimation)() = ^() {
+        self.activityIndicator.hidden = YES;
+        [self.activityIndicator stopAnimating];
+    };
+    
+    [webViewLoadSubject
+     subscribeNext:^(id x) {
+         disableWebLoadAnimation();
+     }
+     error:^(NSError *error) {
+         disableWebLoadAnimation();
+     }];    
 }
 
 - (void)dismissKeyboard {
@@ -94,17 +102,6 @@
     [self setWebView:nil];
     [self setActivityIndicator:nil];
     [super viewDidUnload];
-}
-
-# pragma mark - UIWebViewDelegate 
-
-- (void) webViewDidFinishLoad:(UIWebView *)webView {
-    [webViewLoadSubject sendNext:webView];
-    [webViewLoadSubject sendCompleted];
-}
-
-- (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [webViewLoadSubject sendError:error];
 }
 
 @end

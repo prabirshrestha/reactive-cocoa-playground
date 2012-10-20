@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WikipediaSearchViewController : UIViewController <UIWebViewDelegate>
+@interface WikipediaSearchViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UITextField *searchTextField;
