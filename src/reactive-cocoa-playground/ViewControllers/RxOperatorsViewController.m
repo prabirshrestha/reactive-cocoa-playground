@@ -48,27 +48,23 @@
     [[self.takeButton
      rac_subscribableForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
-        
-         NSArray *array = @[ @1, @2, @3, @4, @5, @4, @3, @2, @1];
          
-         RACSubscribable *subscribable =
-             [[[array
-              rac_toSubscribable]
-              take:5]
-              select:^id(id x) {
-                  NSNumber *result = [NSNumber numberWithInt:[x intValue] * 10];
-                  NSLog(@"%@", result);
-                  return result;
-              }];
+         RACSubscribable *input = [@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_toSubscribable];
          
-         [subscribable
+         RACSubscribable *output =
+            [[input
+             take:5]
+             select:^id(id x) {
+                 return [NSNumber numberWithInt:[x intValue] * 10];
+             }];
+         
+         [output
           subscribeNext:^(id x) {
               NSLog(@"%@", x);
+          }
+          completed:^{
+              NSLog(@"completed");
           }];
-         
-         [subscribable subscribeCompleted:^{
-             NSLog(@"completed");
-         }];
          
      }];
 }
