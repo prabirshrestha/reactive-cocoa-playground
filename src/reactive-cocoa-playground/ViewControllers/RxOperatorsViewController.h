@@ -10,4 +10,6 @@
 
 @interface RxOperatorsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *takeButton;
+
 @end
