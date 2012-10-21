@@ -30,6 +30,7 @@
     
     [self setupTake];
     [self setupSkip];
+    [self setupDistinct];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +42,7 @@
 - (void)viewDidUnload {
     [self setTakeButton:nil];
     [self setSkipButton:nil];
+    [self setDistinctButton:nil];
     [super viewDidUnload];
 }
 
@@ -88,6 +90,23 @@
               NSLog(@"%@", x);
           }];
          
+         
+     }];
+}
+
+- (void) setupDistinct {
+    [[self.distinctButton
+     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         
+         [[[UIAlertView
+          alloc]
+          initWithTitle:@"Not Available"
+          message:@"ReactiveCocoa does not support distinct"
+          delegate:nil
+          cancelButtonTitle:@"OK"
+          otherButtonTitles:nil, nil]
+          show];
          
      }];
 }

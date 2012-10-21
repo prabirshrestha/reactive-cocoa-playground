@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *takeButton;
 @property (strong, nonatomic) IBOutlet UIButton *skipButton;
+@property (strong, nonatomic) IBOutlet UIButton *distinctButton;
 
 @end
