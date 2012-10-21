@@ -37,8 +37,29 @@
                                             <segue destination="9VG-IQ-J8s" kind="push" id="msj-tz-uBA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2Ne-Yg-2uR" style="IBUITableViewCellStyleDefault" id="gGw-BU-Otd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="3hd-dx-nn3" style="IBUITableViewCellStyleDefault" id="IVs-sT-aNs">
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Rx Operators" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3hd-dx-nn3">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="RGQ-mi-zL3" kind="push" id="UeR-Vr-2Z8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="2Ne-Yg-2uR" style="IBUITableViewCellStyleDefault" id="gGw-BU-Otd">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -59,7 +80,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Pfz-4U-rQr" style="IBUITableViewCellStyleDefault" id="zEl-kH-HTI">
-                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -80,7 +101,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="p6r-i8-TAd" style="IBUITableViewCellStyleDefault" id="TYJ-lL-y6G">
-                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -187,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v83-er-bow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440" y="-1134"/>
+            <point key="canvasLocation" x="1440" y="-1256"/>
         </scene>
         <!--Creating Observables View Controller-->
         <scene sceneID="EqO-4M-R6S">
@@ -261,7 +282,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bim-tt-ObR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="-1134"/>
+            <point key="canvasLocation" x="977" y="-1268"/>
+        </scene>
+        <!--Rx Operators View Controller - RX Operators-->
+        <scene sceneID="kh0-G3-D80">
+            <objects>
+                <viewController id="RGQ-mi-zL3" customClass="RxOperatorsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="52c-Se-fPy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="RX Operators" id="a0F-fs-P3Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ouy-Oo-60a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="-691"/>
         </scene>
         <!--Events View Controller - Events-->
         <scene sceneID="5F9-Uv-Wpd">
@@ -508,6 +544,9 @@
                 <relationship kind="outlet" name="pushMeButton2" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="textField1" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="RxOperatorsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RxOperatorsViewController.h"/>
         </class>
         <class className="WikipediaSearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WikipediaSearchViewController.h"/>

@@ -22,6 +22,7 @@
 		0F0DEF5C160BF3DC0083A979 /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */; };
 		0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF57160BF3DC0083A979 /* EventsViewController.m */; };
 		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
+		0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */; };
 		0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */; };
 		0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D248416322040006A2224 /* WikipediaSearchViewController.m */; };
 		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
@@ -64,6 +65,8 @@
 		0F0DEF57160BF3DC0083A979 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerBackgroundViewController.h; sourceTree = "<group>"; };
 		0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
+		0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxOperatorsViewController.h; sourceTree = "<group>"; };
+		0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxOperatorsViewController.m; sourceTree = "<group>"; };
 		0F6D24711632166D006A2224 /* CreatingObservablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatingObservablesViewController.h; sourceTree = "<group>"; };
 		0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatingObservablesViewController.m; sourceTree = "<group>"; };
 		0F6D248316322040006A2224 /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaSearchViewController.h; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */,
 				0F6D248316322040006A2224 /* WikipediaSearchViewController.h */,
 				0F6D248416322040006A2224 /* WikipediaSearchViewController.m */,
+				0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */,
+				0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				0FDD334B161A30580025F437 /* Api.m in Sources */,
 				0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */,
 				0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */,
+				0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
