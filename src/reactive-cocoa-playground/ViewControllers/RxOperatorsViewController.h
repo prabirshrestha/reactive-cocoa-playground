@@ -11,5 +11,6 @@
 @interface RxOperatorsViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *takeButton;
+@property (strong, nonatomic) IBOutlet UIButton *skipButton;
 
 @end

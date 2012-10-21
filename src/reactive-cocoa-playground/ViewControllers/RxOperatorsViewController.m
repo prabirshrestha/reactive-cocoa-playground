@@ -29,6 +29,7 @@
     [super viewDidLoad];
     
     [self setupTake];
+    [self setupSkip];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,6 +40,7 @@
 
 - (void)viewDidUnload {
     [self setTakeButton:nil];
+    [self setSkipButton:nil];
     [super viewDidUnload];
 }
 
@@ -67,6 +69,29 @@
          [subscribable subscribeCompleted:^{
              NSLog(@"completed");
          }];
+         
+     }];
+}
+
+- (void) setupSkip {
+    [[self.skipButton
+     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         
+         RACSubscribable *input = [@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_toSubscribable];
+         
+         RACSubscribable *output =
+            [[input
+             skip:6]
+             select:^id(id x) {
+                 return [NSNumber numberWithInt:[x intValue] * 10];
+             }];
+         
+         [output
+          subscribeNext:^(id x) {
+              NSLog(@"%@", x);
+          }];
+         
          
      }];
 }
