@@ -9,6 +9,7 @@
 #import "AFNetworkingViewController.h"
 #include <ReactiveCocoa.h>
 #include "../Classes/Api.h"
+#import <WBErrorNoticeView.h>
 
 @interface AFNetworkingViewController ()
 
@@ -44,7 +45,12 @@
          self.textView.text = x;
      }
      error:^(NSError *error) {
-         self.textView.text = error.description;
+         WBErrorNoticeView *notice = [WBErrorNoticeView
+                                      errorNoticeInView:self.view
+                                      title:@"Network Error"
+                                      message:@"Check your network connection."];
+         notice.sticky = YES;
+         [notice show];
      }
      completed:^{
          NSLog(@"completed");
