@@ -11,6 +11,8 @@
 #import "Api.h"
 #import <ReactiveCocoa.h>
 #import <SVPullToRefresh.h>
+#import <WBNoticeView.h>
+#import <WBErrorNoticeView.h>
 
 @interface TwitterSearchViewController ()
 
@@ -18,6 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *datasource;
 
 @property (strong, nonatomic) Api *api;
+@property (strong, nonatomic) WBNoticeView *currentNoticeView;
 
 @end
 
@@ -46,6 +49,11 @@
         
         [request
          subscribeNext:^(id JSON) {
+             if(self.currentNoticeView) {
+                 [self.currentNoticeView dismissNotice];
+             }
+//             [self.datasource removeAllObjects];
+//             [self.tableView reloadData];
              for (id result in [JSON objectForKey:@"results"]) {
                  NSString *text = [result objectForKey:@"text"];
                  [self.tableView beginUpdates];
@@ -55,6 +63,19 @@
              }
          }
          error:^(NSError *error) {
+             if(self.currentNoticeView) {
+                 [self.currentNoticeView dismissNotice];
+             }
+             
+             WBNoticeView *noticeView =
+                [WBErrorNoticeView
+                 errorNoticeInView:self.view
+                 title:@"Network Error"
+                 message:@"Check your network connection"];
+             noticeView.sticky = YES;
+             [noticeView show];
+             
+             self.currentNoticeView = noticeView;
              [self.tableView.pullToRefreshView stopAnimating];
          }
          completed:^{
