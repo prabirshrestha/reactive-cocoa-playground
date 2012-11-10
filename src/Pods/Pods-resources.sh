@@ -17,3 +17,4 @@ install_resource()
       ;;
   esac
 }
+install_resource 'NoticeView/NoticeView/WBNoticeView/NoticeView.bundle'
