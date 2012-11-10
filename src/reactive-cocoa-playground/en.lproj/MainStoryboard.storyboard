@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6q-Ro-1kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="1668"/>
+            <point key="canvasLocation" x="1013" y="1666"/>
         </scene>
         <!--Networking View Controller - AFNetworking-->
         <scene sceneID="iVn-BR-TS8">
