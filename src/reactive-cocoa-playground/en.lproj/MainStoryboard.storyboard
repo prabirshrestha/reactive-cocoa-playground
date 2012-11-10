@@ -186,7 +186,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="78" id="qMx-Hb-OfK" customClass="TwitterSearchTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TwitterSearchCellIdentifier" rowHeight="78" id="qMx-Hb-OfK" customClass="TwitterSearchTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -210,7 +210,6 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="5N7-lz-JlD" id="xKu-aa-cFf"/>
-                                    <outlet property="delegate" destination="5N7-lz-JlD" id="NXd-Hp-uWa"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -716,6 +715,79 @@
             <point key="canvasLocation" x="-25" y="29"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AFNetworkingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AFNetworkingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BackgroundSchedulerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundSchedulerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backgroundButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="CreatingObservablesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreatingObservablesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="observableFromArray" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="observableFromEmpty" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="observableFromEvent" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="observableWithReturn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EventsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="outputLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pushMeButton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pushMeButton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textField1" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LoginSampleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginSampleViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="RxOperatorsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RxOperatorsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distinctButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="skipButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="takeButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="TPKeyboardAvoidingScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPKeyboardAvoidingScrollView.h"/>
+        </class>
+        <class className="TwitterSearchTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterSearchTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tweetTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TwitterSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterSearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WikipediaSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikipediaSearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="searchTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="searchingForLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

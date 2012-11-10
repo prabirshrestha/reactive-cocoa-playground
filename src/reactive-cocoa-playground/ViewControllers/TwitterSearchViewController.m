@@ -7,6 +7,7 @@
 //
 
 #import "TwitterSearchViewController.h"
+#import "TwitterSearchTableViewCell.h"
 #import "Api.h"
 #import <ReactiveCocoa.h>
 #import <SVPullToRefresh.h>
@@ -15,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *datasource;
+
 @property (strong, nonatomic) Api *api;
 
 @end
@@ -41,10 +43,14 @@
                                     requestJSONWithMethod:@"GET"
                                     path:@"http://search.twitter.com/search.json"
                                     parameters:@{ @"q": @"#twitterapi"}];
+        
         [request
          subscribeNext:^(id JSON) {
              for (id result in [JSON objectForKey:@"results"]) {
-                 NSLog(@"%@", result);
+                 [self.tableView beginUpdates];
+                 [self.datasource insertObject:result atIndex:0];
+                 [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+                 [self.tableView endUpdates];
              }
          }
          error:^(NSError *error) {
@@ -54,6 +60,8 @@
              [self.tableView.pullToRefreshView stopAnimating];
          }];
     }];
+    
+    [self.tableView.pullToRefreshView triggerRefresh];
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,10 +76,26 @@
 
 # pragma mark - table view datasource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.datasource.count;
 }
 
-# pragma mark - table view delegate
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"TwitterSearchCellIdentifier";
+    
+    TwitterSearchTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+        cell = [[TwitterSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    
+    cell.tweet = [self.datasource objectAtIndex:indexPath.row];
+    
+    return cell;
+    
+}
 
 @end
