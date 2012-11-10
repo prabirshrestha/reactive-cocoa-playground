@@ -47,8 +47,9 @@
         [request
          subscribeNext:^(id JSON) {
              for (id result in [JSON objectForKey:@"results"]) {
+                 NSString *text = [result objectForKey:@"text"];
                  [self.tableView beginUpdates];
-                 [self.datasource insertObject:result atIndex:0];
+                 [self.datasource insertObject:text atIndex:0];
                  [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
                  [self.tableView endUpdates];
              }
@@ -59,6 +60,7 @@
          completed:^{
              [self.tableView.pullToRefreshView stopAnimating];
          }];
+        
     }];
     
     [self.tableView.pullToRefreshView triggerRefresh];
@@ -92,6 +94,7 @@
     if (cell == nil)
         cell = [[TwitterSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
+    [cell listenForChanges];
     cell.tweet = [self.datasource objectAtIndex:indexPath.row];
     
     return cell;

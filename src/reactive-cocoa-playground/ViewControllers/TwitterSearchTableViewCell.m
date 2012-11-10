@@ -7,10 +7,12 @@
 //
 
 #import "TwitterSearchTableViewCell.h"
+#import <ReactiveCocoa.h>
 
 @interface TwitterSearchTableViewCell()
 
 @property (weak, nonatomic) IBOutlet UITextView *tweetTextView;
+@property (assign, nonatomic) BOOL listening;
 
 @end
 
@@ -26,8 +28,17 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)listenForChanges {
+    if(self.listening) return;
+    self.listening = YES;
+    
+    RACSubscribable *tweet = RACAble(self.tweet);
+    [tweet
+     subscribeNext:^(NSString *tweet) {
+         self.tweetTextView.text = tweet;
+     }];
 }
 
 @end

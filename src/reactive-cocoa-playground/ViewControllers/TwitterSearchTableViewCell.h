@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSString *tweet;
 
+- (void)listenForChanges;
+
 @end
