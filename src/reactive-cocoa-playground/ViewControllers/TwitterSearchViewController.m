@@ -7,10 +7,15 @@
 //
 
 #import "TwitterSearchViewController.h"
+#import "Api.h"
+#import <ReactiveCocoa.h>
+#import <SVPullToRefresh.h>
 
 @interface TwitterSearchViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *datasource;
+@property (strong, nonatomic) Api *api;
 
 @end
 
@@ -26,6 +31,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.api = [[Api alloc] init];
+    
+    self.datasource = [NSMutableArray array];
+    
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        
+        RACSubscribable *request = [self.api
+                                    requestJSONWithMethod:@"GET"
+                                    path:@"http://search.twitter.com/search.json"
+                                    parameters:@{ @"q": @"#twitterapi"}];
+        [request
+         subscribeNext:^(id JSON) {
+             for (id result in [JSON objectForKey:@"results"]) {
+                 NSLog(@"%@", result);
+             }
+         }
+         error:^(NSError *error) {
+             [self.tableView.pullToRefreshView stopAnimating];
+         }
+         completed:^{
+             [self.tableView.pullToRefreshView stopAnimating];
+         }];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,4 +65,13 @@
     [self setTableView:nil];
     [super viewDidUnload];
 }
+
+# pragma mark - table view datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.datasource.count;
+}
+
+# pragma mark - table view delegate
+
 @end

@@ -15,4 +15,8 @@
                                   path:(NSString*)path
                             parameters:(NSDictionary*) parameters;
 
+- (RACSubscribable*) requestJSONWithMethod:(NSString *)method
+                                      path:(NSString *)path
+                                parameters:(NSDictionary *)parameters;
+
 @end

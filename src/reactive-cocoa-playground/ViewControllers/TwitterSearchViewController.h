@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwitterSearchViewController : UIViewController
+@interface TwitterSearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

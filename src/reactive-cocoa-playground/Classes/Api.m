@@ -50,4 +50,36 @@
     return subject;
 }
 
+- (RACSubscribable *)requestJSONWithMethod:(NSString *)method
+                                      path:(NSString *)path
+                                parameters:(NSDictionary *)parameters {
+    RACAsyncSubject *subject = [RACAsyncSubject subject];
+    
+    [[self
+     requestWithMethod:method
+     path:path
+     parameters:parameters]
+     subscribeNext:^(NSString *JSONString) {
+         NSData *data = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+         
+         NSError *error = nil;
+         id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+         if(error) {
+             [subject sendError:error];
+         } else {
+             [subject sendNext:JSON];
+             [subject sendCompleted];
+         }
+     }
+     error:^(NSError *error) {
+         [subject sendError:error];
+     }
+     completed:^{
+         // completed controlled by subscribeNext
+//         [subject sendCompleted];
+     }];
+    
+    return subject;
+}
+
 @end
