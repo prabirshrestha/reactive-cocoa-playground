@@ -10,6 +10,8 @@
 
 @interface TwitterSearchViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation TwitterSearchViewController
@@ -31,4 +33,8 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidUnload {
+    [self setTableView:nil];
+    [super viewDidUnload];
+}
 @end
