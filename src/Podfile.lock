@@ -1,13 +1,21 @@
 
-COCOAPODS: 0.15.1
+DEPENDENCIES: 
+- AFNetworking (= 1.0)
+- BlocksKit (= 1.5.2)
+- NoticeView (= 2.4)
+- SVPullToRefresh (= 0.3)
+- TPKeyboardAvoiding (= 0.0.1)
 
 SPEC CHECKSUMS: 
   TPKeyboardAvoiding: 129e3c55ac9165d0692e66f02fd1f611d917ec1a
+  AFNetworking: 758a1cb1ab5a0d22795ba1c44abb9cad395bc126
+  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
   A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
   NoticeView: af1d5f1913808731bf4fe9e4e8533a2635e8a627
-  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
+  SVPullToRefresh: f6047698fc0530e9ab42266fce4dc1882e718d0e
   libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
-  AFNetworking: 758a1cb1ab5a0d22795ba1c44abb9cad395bc126
+
+COCOAPODS: 0.15.1
 
 PODS: 
 - A2DynamicDelegate (2.0.2): 
@@ -16,11 +24,6 @@ PODS:
 - BlocksKit (1.5.2): 
   - A2DynamicDelegate
 - NoticeView (2.4)
+- SVPullToRefresh (0.3)
 - TPKeyboardAvoiding (0.0.1)
 - libffi (3.0.11)
-
-DEPENDENCIES: 
-- AFNetworking (= 1.0)
-- BlocksKit (= 1.5.2)
-- NoticeView (= 2.4)
-- TPKeyboardAvoiding (= 0.0.1)
