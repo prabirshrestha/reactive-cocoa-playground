@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+@property (nonatomic, assign) BOOL logingIn;
+
 @end
 
 @implementation LoginSampleViewController
@@ -29,6 +31,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // are all entries valid?
+    RACSubscribable *formValid =
+    [RACSubscribable
+     combineLatest:@[self.usernameField.rac_textSubscribable, self.passwordField.rac_textSubscribable]
+     reduce:^(NSString *username, NSString *password) {
+         return @(username.length > 0 && password.length > 0);
+     }];
+    
+    // are we loging in?
+    RACSubscribable *logingIn = RACAble(self.logingIn);
+    
+    // enable/disable button based on form valid
+    RACSubscribable *buttonEnabled =
+    [RACSubscribable
+     combineLatest:@[formValid, logingIn]
+     reduce:^(id formValid, id logingIn){
+         return @([formValid boolValue] && ![logingIn boolValue]);
+     }];
+    
+    RAC(self.loginButton.enabled) = buttonEnabled;
+    
+    self.logingIn = NO;
 }
 
 - (void)didReceiveMemoryWarning
