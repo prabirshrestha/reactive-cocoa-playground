@@ -53,6 +53,16 @@
     
     RAC(self.loginButton.enabled) = buttonEnabled;
     
+    // button color based on enabledness
+    UIColor *defaultButtonTitleColor = self.loginButton.titleLabel.textColor;
+    RACSubscribable *loginButtonTitileColor = [buttonEnabled select:^id(id x) {
+        return [x boolValue] ? defaultButtonTitleColor : [UIColor lightGrayColor];
+    }];
+    
+    [loginButtonTitileColor subscribeNext:^(UIColor *color) {
+        [self.loginButton setTitleColor:color forState:UIControlStateNormal];
+    }];
+    
     self.logingIn = NO;
 }
 
