@@ -521,6 +521,7 @@
 					"\"$(PROJECT_DIR)/External/ReactiveCocoa/ReactiveCocoaFramework\"/**",
 				);
 				INFOPLIST_FILE = "reactive-cocoa-playground/reactive-cocoa-playground-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-Wl,-no_compact_unwind",
@@ -549,6 +550,7 @@
 					"\"$(PROJECT_DIR)/External/ReactiveCocoa/ReactiveCocoaFramework\"/**",
 				);
 				INFOPLIST_FILE = "reactive-cocoa-playground/reactive-cocoa-playground-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-Wl,-no_compact_unwind",
