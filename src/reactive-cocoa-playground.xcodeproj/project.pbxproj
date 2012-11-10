@@ -23,6 +23,7 @@
 		0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF57160BF3DC0083A979 /* EventsViewController.m */; };
 		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
 		0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */; };
+		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
 		0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */; };
 		0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D248416322040006A2224 /* WikipediaSearchViewController.m */; };
 		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
@@ -67,6 +68,8 @@
 		0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
 		0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxOperatorsViewController.h; sourceTree = "<group>"; };
 		0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxOperatorsViewController.m; sourceTree = "<group>"; };
+		0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSampleViewController.h; sourceTree = "<group>"; };
+		0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSampleViewController.m; sourceTree = "<group>"; };
 		0F6D24711632166D006A2224 /* CreatingObservablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatingObservablesViewController.h; sourceTree = "<group>"; };
 		0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatingObservablesViewController.m; sourceTree = "<group>"; };
 		0F6D248316322040006A2224 /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaSearchViewController.h; sourceTree = "<group>"; };
@@ -138,9 +141,9 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
+				0F0DEF15160BF29E0083A979 /* MainStoryboard.storyboard */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
-				0F0DEF15160BF29E0083A979 /* MainStoryboard.storyboard */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
 			);
 			path = "reactive-cocoa-playground";
@@ -193,6 +196,8 @@
 				0F6D248416322040006A2224 /* WikipediaSearchViewController.m */,
 				0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */,
 				0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */,
+				0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */,
+				0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */,
 				0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */,
 				0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */,
+				0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

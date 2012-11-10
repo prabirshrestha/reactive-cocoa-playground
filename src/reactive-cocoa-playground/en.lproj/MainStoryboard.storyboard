@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Maa-A1-7rf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Maa-A1-7rf">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Table View Controller - Reactive Cocoa-->
@@ -121,6 +121,27 @@
                                             <segue destination="pg4-AF-sjG" kind="push" id="PuK-df-1z3"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Bf2-pV-nBF" style="IBUITableViewCellStyleDefault" id="7qT-ES-HS1">
+                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Login Sample" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bf2-pV-nBF">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="8Qo-uA-He2" kind="push" id="fyP-16-Nss"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -130,6 +151,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXl-zc-h2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="363" y="31"/>
+        </scene>
+        <!--Login Sample View Controller - Login Sample-->
+        <scene sceneID="qge-pC-E2D">
+            <objects>
+                <viewController id="8Qo-uA-He2" customClass="LoginSampleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h25-Tm-rcy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login Sample" id="E2n-F9-711"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6q-Ro-1kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="1668"/>
         </scene>
         <!--Networking View Controller - AFNetworking-->
         <scene sceneID="iVn-BR-TS8">
@@ -556,6 +592,59 @@
             <point key="canvasLocation" x="-25" y="29"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AFNetworkingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AFNetworkingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="BackgroundSchedulerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BackgroundSchedulerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="backgroundButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="CreatingObservablesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreatingObservablesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="observableFromArray" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="observableFromEmpty" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="observableFromEvent" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="observableWithReturn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="EventsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="outputLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pushMeButton1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pushMeButton2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textField1" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="LoginSampleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginSampleViewController.h"/>
+        </class>
+        <class className="RxOperatorsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RxOperatorsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="distinctButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="skipButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="takeButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="WikipediaSearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikipediaSearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="searchTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="searchingForLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
