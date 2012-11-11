@@ -125,7 +125,7 @@
     
     NSData *cachedData = [[EGOCache currentCache] dataForKey:CACHEKEY_TWITTER];
     if(cachedData == nil) {
-        [self.tableView pullToRefreshView];
+        [self.tableView.pullToRefreshView triggerRefresh];
     } else {
         NSError *error = nil;
         id JSON = [NSJSONSerialization JSONObjectWithData:cachedData options:kNilOptions error:&error];
@@ -133,8 +133,6 @@
             [receivedNewTweets sendNext:JSON]; // send notification that we have received tweets
         }
     }
-    
-    return;
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,6 +143,9 @@
 - (void)viewDidUnload {
     [self setTableView:nil];
     [super viewDidUnload];
+    self.datasource = nil;
+    self.api = nil;
+    self.currentNoticeView = nil;
 }
 
 # pragma mark - table view datasource
