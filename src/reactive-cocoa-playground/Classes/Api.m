@@ -67,7 +67,7 @@
          if(error) {
              [subject sendError:error];
          } else {
-             [subject sendNext:JSON];
+             [subject sendNext:[RACTuple tupleWithObjects:JSON, data, nil]];
              [subject sendCompleted];
          }
      }

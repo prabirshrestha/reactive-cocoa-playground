@@ -22,6 +22,8 @@
 @property (strong, nonatomic) Api *api;
 @property (strong, nonatomic) WBNoticeView *currentNoticeView;
 
+@property (assign, nonatomic) BOOL searching;
+
 @end
 
 @implementation TwitterSearchViewController
@@ -40,51 +42,77 @@
     
     self.datasource = [NSMutableArray array];
     
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        
-        RACSubscribable *request = [self.api
-                                    requestJSONWithMethod:@"GET"
-                                    path:@"http://search.twitter.com/search.json"
-                                    parameters:@{ @"q": @"#twitterapi"}];
-        
-        [request
-         subscribeNext:^(id JSON) {
-             if(self.currentNoticeView) {
-                 [self.currentNoticeView dismissNotice];
-             }
-//             [self.datasource removeAllObjects];
-//             [self.tableView reloadData];
-             for (id result in [JSON objectForKey:@"results"]) {
-                 NSString *text = [result objectForKey:@"text"];
-                 [self.tableView beginUpdates];
-                 [self.datasource insertObject:text atIndex:0];
-                 [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-                 [self.tableView endUpdates];
-             }
-         }
-         error:^(NSError *error) {
-             if(self.currentNoticeView) {
-                 [self.currentNoticeView dismissNotice];
-             }
-             
-             WBNoticeView *noticeView =
-                [WBErrorNoticeView
-                 errorNoticeInView:self.view
-                 title:@"Network Error"
-                 message:@"Check your network connection"];
-             noticeView.sticky = YES;
-             [noticeView show];
-             
-             self.currentNoticeView = noticeView;
-             [self.tableView.pullToRefreshView stopAnimating];
-         }
-         completed:^{
-             [self.tableView.pullToRefreshView stopAnimating];
-         }];
-        
+    RACSubscribable *searching = RACAble(self.searching);
+    RACSubscribable *notSearching = [searching select:^id(id x) {
+        return @(![x boolValue]);
     }];
     
-    [self.tableView.pullToRefreshView triggerRefresh];
+    // command for searching tweets online
+    RACAsyncCommand *searchTweetsOnline =
+        [RACAsyncCommand commandWithCanExecuteSubscribable:notSearching block:nil];
+    
+    // update ui when new tweets arrive
+    RACSubject *receivedNewTweets = [RACSubject subject];
+    [receivedNewTweets
+     subscribeNext:^(id xs) {
+         [self.datasource removeAllObjects];
+         [self.tableView reloadData];
+         id JSON = xs[0];
+         for (id result in [JSON objectForKey:@"results"]) {
+             NSString *text = [result objectForKey:@"text"];
+             [self.tableView beginUpdates];
+             [self.datasource insertObject:text atIndex:0];
+             [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+             [self.tableView endUpdates];
+         }
+     }];
+    
+    [searchTweetsOnline
+     subscribeNext:^(id x) {
+         
+         RACSubscribable *request = [self.api
+                                     requestJSONWithMethod:@"GET"
+                                     path:@"http://search.twitter.com/search.json"
+                                     parameters:@{ @"q": @"#twitterapi"}];
+         
+         [request
+          subscribeNext:^(id xs) {
+              if(self.currentNoticeView) {
+                  [self.currentNoticeView dismissNotice];
+              }              
+              [receivedNewTweets sendNext:xs];
+          }
+          error:^(NSError *error) {
+              if(self.currentNoticeView) {
+                  [self.currentNoticeView dismissNotice];
+              }
+              
+              WBNoticeView *noticeView =
+              [WBErrorNoticeView
+               errorNoticeInView:self.view
+               title:@"Network Error"
+               message:@"Check your network connection"];
+              noticeView.sticky = YES;
+              [noticeView show];
+              
+              self.currentNoticeView = noticeView;
+              [self.tableView.pullToRefreshView stopAnimating];
+              self.searching = NO;
+          }
+          completed:^{
+              self.searching = NO;
+              [self.tableView.pullToRefreshView stopAnimating];
+          }];
+     }];
+    
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [searchTweetsOnline sendNext:nil];
+    }];
+    
+    self.searching = NO;
+    
+    return;
+    
 }
 
 - (void)didReceiveMemoryWarning
