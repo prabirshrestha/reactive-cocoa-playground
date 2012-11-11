@@ -13,6 +13,9 @@
 #import <SVPullToRefresh.h>
 #import <WBNoticeView.h>
 #import <WBErrorNoticeView.h>
+#import <EGOCache.h>
+
+#define CACHEKEY_TWITTER @"twitter"
 
 @interface TwitterSearchViewController ()
 
@@ -48,16 +51,17 @@
     }];
     
     // command for searching tweets online
+    // search tweet is enabled only when we are not already searching
     RACAsyncCommand *searchTweetsOnline =
         [RACAsyncCommand commandWithCanExecuteSubscribable:notSearching block:nil];
     
     // update ui when new tweets arrive
     RACSubject *receivedNewTweets = [RACSubject subject];
-    [receivedNewTweets
-     subscribeNext:^(id xs) {
+    [[receivedNewTweets
+     deliverOn:[RACScheduler mainQueueScheduler]]
+     subscribeNext:^(id JSON) {
          [self.datasource removeAllObjects];
          [self.tableView reloadData];
-         id JSON = xs[0];
          for (id result in [JSON objectForKey:@"results"]) {
              NSString *text = [result objectForKey:@"text"];
              [self.tableView beginUpdates];
@@ -67,20 +71,28 @@
          }
      }];
     
+    // update cache
+    RACAsyncCommand *saveToCache = [RACAsyncCommand commandWithBlock:nil];
+    [saveToCache
+     subscribeNext:^(NSData *x) {
+         [[EGOCache currentCache] setData:x forKey:CACHEKEY_TWITTER withTimeoutInterval:30]; // 30 seconds
+     }];
+    
     [searchTweetsOnline
      subscribeNext:^(id x) {
-         
-         RACSubscribable *request = [self.api
-                                     requestJSONWithMethod:@"GET"
-                                     path:@"http://search.twitter.com/search.json"
-                                     parameters:@{ @"q": @"#twitterapi"}];
-         
+         RACSubscribable *request =
+            [self.api
+             requestJSONWithMethod:@"GET"
+             path:@"http://search.twitter.com/search.json"
+             parameters:@{ @"q": @"#twitterapi"}];
+
          [request
           subscribeNext:^(id xs) {
               if(self.currentNoticeView) {
                   [self.currentNoticeView dismissNotice];
               }              
-              [receivedNewTweets sendNext:xs];
+              [receivedNewTweets sendNext:xs[0]]; // send notification that new tweets have been received
+              [saveToCache sendNext:xs[1]]; // notify we need to update the cache with new tweets
           }
           error:^(NSError *error) {
               if(self.currentNoticeView) {
@@ -111,8 +123,18 @@
     
     self.searching = NO;
     
-    return;
+    NSData *cachedData = [[EGOCache currentCache] dataForKey:CACHEKEY_TWITTER];
+    if(cachedData == nil) {
+        [self.tableView pullToRefreshView];
+    } else {
+        NSError *error = nil;
+        id JSON = [NSJSONSerialization JSONObjectWithData:cachedData options:kNilOptions error:&error];
+        if(!error) {
+            [receivedNewTweets sendNext:JSON]; // send notification that we have received tweets
+        }
+    }
     
+    return;
 }
 
 - (void)didReceiveMemoryWarning
