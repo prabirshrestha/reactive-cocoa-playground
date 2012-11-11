@@ -61,14 +61,15 @@
      deliverOn:[RACScheduler mainQueueScheduler]]
      subscribeNext:^(id JSON) {
          [self.datasource removeAllObjects];
-         [self.tableView reloadData];
+         
          for (id result in [JSON objectForKey:@"results"]) {
              NSString *text = [result objectForKey:@"text"];
-             [self.tableView beginUpdates];
+//             [self.tableView beginUpdates];
              [self.datasource insertObject:text atIndex:0];
-             [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-             [self.tableView endUpdates];
+//             [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//             [self.tableView endUpdates];
          }
+         [self.tableView reloadData];
      }];
     
     // update cache
