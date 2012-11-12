@@ -31,6 +31,8 @@
 		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
 		0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */; };
 		0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98441650A219005CEADF /* LocationManagerViewController.m */; };
+		0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98891650A68D005CEADF /* RCLocationManager.m */; };
+		0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E988B1650A6C0005CEADF /* CoreLocation.framework */; };
 		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
 		0FDD334B161A30580025F437 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD334A161A30580025F437 /* Api.m */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
@@ -108,6 +110,9 @@
 		0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchTableViewCell.m; sourceTree = "<group>"; };
 		0F6E98431650A219005CEADF /* LocationManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerViewController.h; sourceTree = "<group>"; };
 		0F6E98441650A219005CEADF /* LocationManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerViewController.m; sourceTree = "<group>"; };
+		0F6E98881650A68D005CEADF /* RCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationManager.h; sourceTree = "<group>"; };
+		0F6E98891650A68D005CEADF /* RCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLocationManager.m; sourceTree = "<group>"; };
+		0F6E988B1650A6C0005CEADF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingViewController.h; sourceTree = "<group>"; };
 		0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingViewController.m; sourceTree = "<group>"; };
 		0FDD3349161A30580025F437 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */,
 				0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */,
 				0F6E959F164ED4F8005CEADF /* libReactiveCocoa-iOS.a in Frameworks */,
 				0F0DEF04160BF29D0083A979 /* UIKit.framework in Frameworks */,
@@ -165,6 +171,7 @@
 		0F0DEF02160BF29D0083A979 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F6E988B1650A6C0005CEADF /* CoreLocation.framework */,
 				0F6E9603164EF14C005CEADF /* QuartzCore.framework */,
 				0F0DEF03160BF29D0083A979 /* UIKit.framework */,
 				0F0DEF05160BF29D0083A979 /* Foundation.framework */,
@@ -172,6 +179,7 @@
 				0F0DEF21160BF29E0083A979 /* SenTestingKit.framework */,
 				5B5B2EDB5A1943AF8E57D041 /* libPods.a */,
 				0F6E9581164ED4E3005CEADF /* ReactiveCocoa.xcodeproj */,
+				0F6E98871650A68D005CEADF /* RCLocationManager */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,6 +289,16 @@
 				0F6E98441650A219005CEADF /* LocationManagerViewController.m */,
 			);
 			name = LocationManager;
+			sourceTree = "<group>";
+		};
+		0F6E98871650A68D005CEADF /* RCLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F6E98881650A68D005CEADF /* RCLocationManager.h */,
+				0F6E98891650A68D005CEADF /* RCLocationManager.m */,
+			);
+			name = RCLocationManager;
+			path = External/RCLocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,6 +467,7 @@
 				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
 				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
 				0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */,
+				0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

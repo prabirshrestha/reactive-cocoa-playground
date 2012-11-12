@@ -7,8 +7,12 @@
 //
 
 #import "LocationManagerViewController.h"
+#import "RCLocationManager.h"
+#import <ReactiveCocoa.h>
 
 @interface LocationManagerViewController ()
+
+@property (strong, nonatomic) RACDisposable *cancelLocationUpdate;
 
 @end
 
@@ -26,13 +30,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.cancelLocationUpdate =
+        [[self setupLocationUpdateNotifications]
+         subscribeNext:^(id x) {
+             CLLocationManager *locationManager = x[0];
+             CLLocation *newLocation = x[1];
+             CLLocation *oldLocation = x[2];
+             NSLog(@"%@, %@, %@", locationManager, newLocation, oldLocation);
+         }
+         error:^(NSError *error) {
+             NSLog(@"%@", error);
+         }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.cancelLocationUpdate dispose];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (RACSubscribable*) setupLocationUpdateNotifications
+{
+    return [RACSubscribable createSubscribable:^RACDisposable *(id<RACSubscriber> subscriber) {
+        __block RCLocationManager *locationManager = [RCLocationManager sharedManager];
+        [locationManager setPurpose:@"App requires location permission"];
+        
+        [locationManager
+         startUpdatingLocationWithBlock:^(CLLocationManager *manager, CLLocation *newLocation, CLLocation *oldLocation) {
+             [subscriber sendNext:[RACTuple tupleWithObjects:manager, newLocation, oldLocation, nil]];
+         }
+         errorBlock:^(CLLocationManager *manager, NSError *error) {
+             [subscriber sendError:error];
+         }];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [locationManager stopUpdatingLocation];
+        }];
+        
+    }];
 }
 
 @end
