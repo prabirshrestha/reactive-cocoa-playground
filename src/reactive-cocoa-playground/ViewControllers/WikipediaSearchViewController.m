@@ -39,11 +39,9 @@
         [webViewLoadSubject sendError:error];
     };
     
-    UITapGestureRecognizer *tapGestureRecognizer = [UITapGestureRecognizer recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+    [self.view whenTapped:^{
         [self.view endEditing:YES];
     }];
-    tapGestureRecognizer.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:tapGestureRecognizer];
     
     RACSubscribable *keys =
     [[[[[self.searchTextField
