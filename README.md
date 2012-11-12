@@ -1,5 +1,5 @@
 # My ReactiveCocoa Playground
-This is my playground for Reactive Cocoa stufs.
+This is my playground for Reactive Cocoa stuffs.
 
 ## Getting Started
 
