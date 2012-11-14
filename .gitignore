@@ -16,3 +16,6 @@ build/*
 *.perspectivev3
 *.pbxuser
 xcuserdata
+
+# AppCode
+.idea/
