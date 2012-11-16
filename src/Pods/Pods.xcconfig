@@ -1,7 +1,7 @@
-PODS_ROOT = ${SRCROOT}/Pods
-HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
-PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/A2DynamicDelegate" "${PODS_ROOT}/BuildHeaders/AFNetworking" "${PODS_ROOT}/BuildHeaders/BlocksKit" "${PODS_ROOT}/BuildHeaders/EGOCache" "${PODS_ROOT}/BuildHeaders/NoticeView" "${PODS_ROOT}/BuildHeaders/SVPullToRefresh" "${PODS_ROOT}/BuildHeaders/TPKeyboardAvoiding" "${PODS_ROOT}/BuildHeaders/libffi"
+PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
 PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/A2DynamicDelegate" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/BlocksKit" "${PODS_ROOT}/Headers/EGOCache" "${PODS_ROOT}/Headers/NoticeView" "${PODS_ROOT}/Headers/SVPullToRefresh" "${PODS_ROOT}/Headers/TPKeyboardAvoiding" "${PODS_ROOT}/Headers/libffi"
 OTHER_LDFLAGS = -ObjC -Wl,-no_compact_unwind -framework CoreGraphics -framework Foundation -framework MessageUI -framework MobileCoreServices -framework QuartzCore -framework SystemConfiguration -framework UIKit
 ALWAYS_SEARCH_USER_PATHS = YES
-PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
+HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/A2DynamicDelegate" "${PODS_ROOT}/BuildHeaders/AFNetworking" "${PODS_ROOT}/BuildHeaders/BlocksKit" "${PODS_ROOT}/BuildHeaders/EGOCache" "${PODS_ROOT}/BuildHeaders/NoticeView" "${PODS_ROOT}/BuildHeaders/SVPullToRefresh" "${PODS_ROOT}/BuildHeaders/TPKeyboardAvoiding" "${PODS_ROOT}/BuildHeaders/libffi"
+PODS_ROOT = ${SRCROOT}/Pods
