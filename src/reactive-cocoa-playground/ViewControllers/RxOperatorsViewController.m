@@ -48,9 +48,9 @@
 
 - (void) setupTake {
     [[self.takeButton
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
-         
+         /*
          RACSubscribable *input = [@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_toSubscribable];
          
          RACSubscribable *output =
@@ -67,15 +67,15 @@
           completed:^{
               NSLog(@"completed");
           }];
-         
+         */
      }];
 }
 
 - (void) setupSkip {
     [[self.skipButton
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
-         
+         /*
          RACSubscribable *input = [@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_toSubscribable];
          
          RACSubscribable *output =
@@ -89,14 +89,14 @@
           subscribeNext:^(id x) {
               NSLog(@"%@", x);
           }];
-         
+         */
          
      }];
 }
 
 - (void) setupDistinct {
     [[self.distinctButton
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          
          [[[UIAlertView

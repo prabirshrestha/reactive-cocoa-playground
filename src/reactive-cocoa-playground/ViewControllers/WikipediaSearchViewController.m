@@ -42,37 +42,37 @@
     [self.view whenTapped:^{
         [self.view endEditing:YES];
     }];
-    
-    RACSubscribable *keys =
-    [[[[[self.searchTextField
-     rac_subscribableForControlEvents:UIControlEventEditingChanged]
-     throttle:0.5] // seconds
-     select:^id(UITextField *x) {
-         return x.text;
-     }]
-     where:^BOOL(NSString *x) {
-         return x.length > 0;
-     }]
-     distinctUntilChanged];
-    
-    [[keys
-      deliverOn:[RACScheduler mainQueueScheduler]]
-      subscribeNext:^(NSString *searchText) {
-          self.activityIndicator.hidden = NO;
-          [self.activityIndicator startAnimating];
-          self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", searchText];
-          
-          NSURLRequest *request = [NSURLRequest
-                                   requestWithURL:[NSURL URLWithString:
-                                                   [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@", searchText]]];
-          [self.webView loadRequest:request];
-      }];
-    
-    [[keys
-      deliverOn:[RACScheduler mainQueueScheduler]]
-      subscribeNext:^(NSString *x) {
-         NSLog(@"%@", x);
-     }];
+//    
+//    RACSignal *keys =
+//    [[[[[self.searchTextField
+//     rac_signalForControlEvents:UIControlEventEditingChanged]
+//     throttle:0.5] // seconds
+//     select:^id(UITextField *x) {
+//         return x.text;
+//     }]
+//     where:^BOOL(NSString *x) {
+//         return x.length > 0;
+//     }]
+//     distinctUntilChanged];
+//    
+//    [[keys
+//      deliverOn:[RACScheduler mainQueueScheduler]]
+//      subscribeNext:^(NSString *searchText) {
+//          self.activityIndicator.hidden = NO;
+//          [self.activityIndicator startAnimating];
+//          self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", searchText];
+//          
+//          NSURLRequest *request = [NSURLRequest
+//                                   requestWithURL:[NSURL URLWithString:
+//                                                   [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@", searchText]]];
+//          [self.webView loadRequest:request];
+//      }];
+//    
+//    [[keys
+//      deliverOn:[RACScheduler mainQueueScheduler]]
+//      subscribeNext:^(NSString *x) {
+//         NSLog(@"%@", x);
+//     }];
     
     
     void (^disableWebLoadAnimation)() = ^() {

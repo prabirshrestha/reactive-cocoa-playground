@@ -30,7 +30,7 @@
     [super viewDidLoad];
 
     [[self.backgroundButton
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          [self backgroundButtonClicked];
      }];
@@ -134,7 +134,7 @@
     self.textView.text = @"";
     
     self.textView.text = @"button clicked (scheduling)";
-    
+    /*
     [[RACScheduler
      backgroundScheduler]
      schedule:^{
@@ -153,6 +153,7 @@
               self.textView.text = @"leaving schedule";
           }];
      }];
+     */
     
     self.textView.text = [self.textView.text stringByAppendingString:@"\r\nScheduled"];
 }

@@ -10,7 +10,6 @@
 #include <ReactiveCocoa/ReactiveCocoa.h>
 #include <ReactiveCocoa/RACEventTrampoline.h>
 #include <ReactiveCocoa/RACDelegateProxy.h>
-#include <ReactiveCocoa/UITextView+RACSubscribableSupport.h>
 
 @interface EventsViewController ()
 
@@ -42,36 +41,36 @@
     self.textField1.delegate = self;
     
     [[self.pushMeButton1
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          self.outputLabel.text = @"Push Me (1)";
          NSLog(@"%@", self.outputLabel.text);
      }];
     
-    [[[self.pushMeButton2
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
-     select:^id(UIButton *x) {
-         return x.titleLabel.text;
-     }]
-     subscribeNext:^(NSString *x) {
-         self.outputLabel.text = x;
-         NSLog(@"%@", x);
-     }];
+//    [[[self.pushMeButton2
+//     rac_signalForControlEvents:UIControlEventTouchUpInside]
+//     select:^id(UIButton *x) {
+//         return x.titleLabel.text;
+//     }]
+//     subscribeNext:^(NSString *x) {
+//         self.outputLabel.text = x;
+//         NSLog(@"%@", x);
+//     }];
     
-    [[[[[[self.textField1
-     rac_subscribableForControlEvents:UIControlEventEditingChanged]
-     select:^id(UITextField *x) {
-         return x.text;
-     }]
-     where:^BOOL(NSString *x) {
-         return [x stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 2;
-     }]
-     distinctUntilChanged]
-     throttle:.5]
-     subscribeNext:^(NSString *x) {
-         self.outputLabel.text = x;
-         NSLog(@"%@", x);
-     }];
+//    [[[[[[self.textField1
+//     rac_signalForControlEvents:UIControlEventEditingChanged]
+//     select:^id(UITextField *x) {
+//         return x.text;
+//     }]
+//     where:^BOOL(NSString *x) {
+//         return [x stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 2;
+//     }]
+//     distinctUntilChanged]
+//     throttle:.5]
+//     subscribeNext:^(NSString *x) {
+//         self.outputLabel.text = x;
+//         NSLog(@"%@", x);
+//     }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

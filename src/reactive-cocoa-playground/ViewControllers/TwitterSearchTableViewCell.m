@@ -34,11 +34,11 @@
     if(self.listening) return;
     self.listening = YES;
     
-    RACSubscribable *tweet = RACAble(self.tweet);
-    [tweet
-     subscribeNext:^(NSString *tweet) {
-         self.tweetTextView.text = tweet;
-     }];
+//    RACSubscribable *tweet = RACAble(self.tweet);
+//    [tweet
+//     subscribeNext:^(NSString *tweet) {
+//         self.tweetTextView.text = tweet;
+//     }];
 }
 
 @end

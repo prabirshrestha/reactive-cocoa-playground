@@ -26,7 +26,6 @@
 		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
 		0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */; };
 		0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D248416322040006A2224 /* WikipediaSearchViewController.m */; };
-		0F6E959F164ED4F8005CEADF /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9595164ED4E3005CEADF /* libReactiveCocoa-iOS.a */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
 		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
 		0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */; };
@@ -127,7 +126,6 @@
 			files = (
 				0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */,
 				0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */,
-				0F6E959F164ED4F8005CEADF /* libReactiveCocoa-iOS.a in Frameworks */,
 				0F0DEF04160BF29D0083A979 /* UIKit.framework in Frameworks */,
 				0F0DEF06160BF29D0083A979 /* Foundation.framework in Frameworks */,
 				0F0DEF08160BF29D0083A979 /* CoreGraphics.framework in Frameworks */,

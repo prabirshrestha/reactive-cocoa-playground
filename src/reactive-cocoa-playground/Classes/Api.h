@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-@class RACSubscribable;
+#import <ReactiveCocoa.h>
 
 @interface Api : NSObject
 
-- (RACSubscribable*) requestWithMethod:(NSString*)method
+- (RACSignal*) requestWithMethod:(NSString*)method
                                   path:(NSString*)path
                             parameters:(NSDictionary*) parameters;
 
-- (RACSubscribable*) requestJSONWithMethod:(NSString *)method
+- (RACSignal*) requestJSONWithMethod:(NSString *)method
                                       path:(NSString *)path
                                 parameters:(NSDictionary *)parameters;
 

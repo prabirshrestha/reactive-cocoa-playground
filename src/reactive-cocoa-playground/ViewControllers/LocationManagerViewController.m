@@ -54,8 +54,10 @@
     [super didReceiveMemoryWarning];
 }
 
-- (RACSubscribable*) setupLocationUpdateNotifications
+- (RACSignal*) setupLocationUpdateNotifications
 {
+    return nil;
+    /*
     return [RACSubscribable createSubscribable:^RACDisposable *(id<RACSubscriber> subscriber) {
         __block RCLocationManager *locationManager = [RCLocationManager sharedManager];
         [locationManager setPurpose:@"App requires location permission"];
@@ -73,6 +75,7 @@
         }];
         
     }];
+     */
 }
 
 @end

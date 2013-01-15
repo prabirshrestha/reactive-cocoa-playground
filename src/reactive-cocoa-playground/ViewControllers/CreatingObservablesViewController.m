@@ -50,10 +50,10 @@
 # pragma mark - 
 
 - (void) setupObservableWithReturn {
-    [[self.observableWithReturn rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+    [[self.observableWithReturn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          
-        [[RACSubscribable return:[NSNumber numberWithInt:42]]
+        [[RACSignal return:[NSNumber numberWithInt:42]]
          subscribeNext:^(id x) {
              NSLog(@"%@", x);
          }
@@ -65,10 +65,10 @@
 }
 
 - (void) setupObservableFromEmpty {
-    [[self.observableFromEmpty rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+    [[self.observableFromEmpty rac_signalForControlEvents:UIControlEventTouchUpInside]
     subscribeNext:^(id x) {
         
-        [[RACSubscribable empty]
+        [[RACSignal empty]
         subscribeNext:^(id x) {
             NSLog(@"%@", x);
         }
@@ -81,11 +81,11 @@
 
 - (void) setupObservableFromArray {
     [[self.observableFromArray
-     rac_subscribableForControlEvents:UIControlEventTouchUpInside]
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
          
          NSArray *array = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], nil];
-         
+         /*
          [[array
           rac_toSubscribable]
           subscribeNext:^(id x) {
@@ -94,7 +94,7 @@
           completed:^{
               NSLog(@"completed");
           }];
-         
+         */
      }];
     
 }

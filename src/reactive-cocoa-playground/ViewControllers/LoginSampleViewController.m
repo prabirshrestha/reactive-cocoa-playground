@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
     
+    /*
     // are all entries valid?
     RACSubscribable *formValid =
     [RACSubscribable
@@ -62,7 +63,7 @@
     [loginButtonTitileColor subscribeNext:^(UIColor *color) {
         [self.loginButton setTitleColor:color forState:UIControlStateNormal];
     }];
-    
+    */
     self.logingIn = NO;
 }
 

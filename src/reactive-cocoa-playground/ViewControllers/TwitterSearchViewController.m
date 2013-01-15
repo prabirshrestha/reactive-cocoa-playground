@@ -45,6 +45,7 @@
     
     self.datasource = [NSMutableArray array];
     
+    /*
     RACSubscribable *searching = RACAble(self.searching);
     RACSubscribable *notSearching = [searching select:^id(id x) {
         return @(![x boolValue]);
@@ -134,6 +135,7 @@
             [receivedNewTweets sendNext:JSON]; // send notification that we have received tweets
         }
     }
+     */
 }
 
 - (void)didReceiveMemoryWarning
