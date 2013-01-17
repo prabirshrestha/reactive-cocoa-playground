@@ -47,30 +47,30 @@
          NSLog(@"%@", self.outputLabel.text);
      }];
     
-//    [[[self.pushMeButton2
-//     rac_signalForControlEvents:UIControlEventTouchUpInside]
-//     select:^id(UIButton *x) {
-//         return x.titleLabel.text;
-//     }]
-//     subscribeNext:^(NSString *x) {
-//         self.outputLabel.text = x;
-//         NSLog(@"%@", x);
-//     }];
+    [[[self.pushMeButton2
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
+     map:^id(UIButton *x) {
+         return x.titleLabel.text;
+     }]
+     subscribeNext:^(NSString *x) {
+         self.outputLabel.text = x;
+         NSLog(@"%@", x);
+     }];
     
-//    [[[[[[self.textField1
-//     rac_signalForControlEvents:UIControlEventEditingChanged]
-//     select:^id(UITextField *x) {
-//         return x.text;
-//     }]
-//     where:^BOOL(NSString *x) {
-//         return [x stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 2;
-//     }]
-//     distinctUntilChanged]
-//     throttle:.5]
-//     subscribeNext:^(NSString *x) {
-//         self.outputLabel.text = x;
-//         NSLog(@"%@", x);
-//     }];
+    [[[[[[self.textField1
+     rac_signalForControlEvents:UIControlEventEditingChanged]
+     map:^id(UITextField *x) {
+         return x.text;
+     }]
+     filter:^BOOL(NSString *x) {
+         return [x stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 2;
+     }]
+     distinctUntilChanged]
+     throttle:.5]
+     subscribeNext:^(NSString *x) {
+         self.outputLabel.text = x;
+         NSLog(@"%@", x);
+     }];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

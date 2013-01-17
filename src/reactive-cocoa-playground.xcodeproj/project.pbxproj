@@ -20,7 +20,6 @@
 		0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF4E160BF3550083A979 /* AppDelegate.m */; };
 		0F0DEF53160BF36F0083A979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF52160BF36F0083A979 /* main.m */; };
 		0F0DEF5C160BF3DC0083A979 /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */; };
-		0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF57160BF3DC0083A979 /* EventsViewController.m */; };
 		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
 		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
@@ -38,6 +37,8 @@
 		9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */; };
 		9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */; };
 		9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5116A796890088238D /* RxOperatorsViewController.m */; };
+		9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE5416A797EB0088238D /* EventsStoryboard.storyboard */; };
+		9339CE5816A798000088238D /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5716A798000088238D /* EventsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +93,6 @@
 		0F0DEF52160BF36F0083A979 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F0DEF54160BF3DC0083A979 /* BackgroundSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundSchedulerViewController.h; sourceTree = "<group>"; };
 		0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSchedulerViewController.m; sourceTree = "<group>"; };
-		0F0DEF56160BF3DC0083A979 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		0F0DEF57160BF3DC0083A979 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerBackgroundViewController.h; sourceTree = "<group>"; };
 		0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
 		0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSampleViewController.h; sourceTree = "<group>"; };
@@ -124,6 +123,9 @@
 		9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RxOperatorsStoryboard.storyboard; path = "reactive-cocoa-playground/RxOperators/RxOperatorsStoryboard.storyboard"; sourceTree = "<group>"; };
 		9339CE5016A796890088238D /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RxOperatorsViewController.h; path = "reactive-cocoa-playground/RxOperators/RxOperatorsViewController.h"; sourceTree = "<group>"; };
 		9339CE5116A796890088238D /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RxOperatorsViewController.m; path = "reactive-cocoa-playground/RxOperators/RxOperatorsViewController.m"; sourceTree = "<group>"; };
+		9339CE5416A797EB0088238D /* EventsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventsStoryboard.storyboard; path = Events/EventsStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE5616A798000088238D /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = Events/EventsViewController.h; sourceTree = "<group>"; };
+		9339CE5716A798000088238D /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = Events/EventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				932D98FD16A7881800A7FBFC /* Main */,
 				9339CE4116A78B3F0088238D /* CreatingObservables */,
 				9339CE4D16A796160088238D /* RxOperators */,
+				9339CE5316A797D00088238D /* Events */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -239,8 +242,6 @@
 				0F6E9645164EF97B005CEADF /* TwitterSearch */,
 				0F0DEF54160BF3DC0083A979 /* BackgroundSchedulerViewController.h */,
 				0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */,
-				0F0DEF56160BF3DC0083A979 /* EventsViewController.h */,
-				0F0DEF57160BF3DC0083A979 /* EventsViewController.m */,
 				0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */,
 				0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */,
 				0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */,
@@ -333,6 +334,16 @@
 			);
 			name = RxOperators;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		9339CE5316A797D00088238D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE5416A797EB0088238D /* EventsStoryboard.storyboard */,
+				9339CE5616A798000088238D /* EventsViewController.h */,
+				9339CE5716A798000088238D /* EventsViewController.m */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +452,7 @@
 				0F0DEF17160BF29E0083A979 /* MainStoryboard.storyboard in Resources */,
 				9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */,
 				9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */,
+				9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +504,6 @@
 				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
 				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
 				0F0DEF5C160BF3DC0083A979 /* BackgroundSchedulerViewController.m in Sources */,
-				0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */,
 				0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */,
 				0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */,
 				0FDD334B161A30580025F437 /* Api.m in Sources */,
@@ -505,6 +516,7 @@
 				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
 				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
 				9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */,
+				9339CE5816A798000088238D /* EventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
