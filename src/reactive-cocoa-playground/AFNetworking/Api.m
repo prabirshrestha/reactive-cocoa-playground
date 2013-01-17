@@ -26,9 +26,7 @@
 }
 
 - (RACSignal *)requestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters {
-    return nil;
-  /*
-    RACAsyncSubject* subject = [RACAsyncSubject subject];
+    RACReplaySubject* subject = [RACReplaySubject subject];
     
     NSURLRequest *request = [client requestWithMethod:method path:path parameters:parameters];
     
@@ -50,15 +48,12 @@
     [operation start];
     
     return subject;
-   */
 }
 
 - (RACSignal *)requestJSONWithMethod:(NSString *)method
                                       path:(NSString *)path
                                 parameters:(NSDictionary *)parameters {
-    return nil;
-    /*
-    RACAsyncSubject *subject = [RACAsyncSubject subject];
+    RACReplaySubject *subject = [RACReplaySubject subject];
     
     [[self
      requestWithMethod:method
@@ -85,7 +80,6 @@
      }];
     
     return subject;
-     */
 }
 
 @end

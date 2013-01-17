@@ -8,7 +8,7 @@
 
 #import "AFNetworkingViewController.h"
 #include <ReactiveCocoa.h>
-#include "../Classes/Api.h"
+#include "Api.h"
 #import <WBErrorNoticeView.h>
 
 @interface AFNetworkingViewController ()

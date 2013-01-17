@@ -26,8 +26,6 @@
 		0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98441650A219005CEADF /* LocationManagerViewController.m */; };
 		0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98891650A68D005CEADF /* RCLocationManager.m */; };
 		0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E988B1650A6C0005CEADF /* CoreLocation.framework */; };
-		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
-		0FDD334B161A30580025F437 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD334A161A30580025F437 /* Api.m */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
 		9339CE3F16A788DB0088238D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE3E16A788DB0088238D /* MainViewController.m */; };
 		9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */; };
@@ -40,6 +38,9 @@
 		9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE5A16A798F60088238D /* SchedulersStoryboard.storyboard */; };
 		9339CE6016A7995B0088238D /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5D16A7995B0088238D /* BackgroundSchedulerViewController.m */; };
 		9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */; };
+		9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */; };
+		9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */; };
+		9339CE6A16A79ACF0088238D /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6816A79ACF0088238D /* Api.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,10 +106,6 @@
 		0F6E98881650A68D005CEADF /* RCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationManager.h; sourceTree = "<group>"; };
 		0F6E98891650A68D005CEADF /* RCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLocationManager.m; sourceTree = "<group>"; };
 		0F6E988B1650A6C0005CEADF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingViewController.h; sourceTree = "<group>"; };
-		0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingViewController.m; sourceTree = "<group>"; };
-		0FDD3349161A30580025F437 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
-		0FDD334A161A30580025F437 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		5B5B2EDB5A1943AF8E57D041 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9339CE3D16A788DB0088238D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
 		9339CE3E16A788DB0088238D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
@@ -128,6 +125,11 @@
 		9339CE5D16A7995B0088238D /* BackgroundSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundSchedulerViewController.m; path = Schedulers/BackgroundSchedulerViewController.m; sourceTree = "<group>"; };
 		9339CE5E16A7995B0088238D /* SchedulerBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SchedulerBackgroundViewController.h; path = Schedulers/SchedulerBackgroundViewController.h; sourceTree = "<group>"; };
 		9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SchedulerBackgroundViewController.m; path = Schedulers/SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
+		9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AFNetworkingStoryboard.storyboard; path = AFNetworking/AFNetworkingStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE6516A79ACF0088238D /* AFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkingViewController.h; path = AFNetworking/AFNetworkingViewController.h; sourceTree = "<group>"; };
+		9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkingViewController.m; path = AFNetworking/AFNetworkingViewController.m; sourceTree = "<group>"; };
+		9339CE6716A79ACF0088238D /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Api.h; path = AFNetworking/Api.h; sourceTree = "<group>"; };
+		9339CE6816A79ACF0088238D /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Api.m; path = AFNetworking/Api.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				9339CE4D16A796160088238D /* RxOperators */,
 				9339CE5316A797D00088238D /* Events */,
 				9339CE5916A798DA0088238D /* Schedulers */,
+				9339CE6216A79A250088238D /* AFNetworking */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -243,8 +246,6 @@
 			children = (
 				0F6E98421650A158005CEADF /* LocationManager */,
 				0F6E9645164EF97B005CEADF /* TwitterSearch */,
-				0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */,
-				0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */,
 				0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */,
 				0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */,
 			);
@@ -256,8 +257,6 @@
 			children = (
 				0F0DEF4D160BF3550083A979 /* AppDelegate.h */,
 				0F0DEF4E160BF3550083A979 /* AppDelegate.m */,
-				0FDD3349161A30580025F437 /* Api.h */,
-				0FDD334A161A30580025F437 /* Api.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -355,6 +354,18 @@
 				9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */,
 			);
 			name = Schedulers;
+			sourceTree = "<group>";
+		};
+		9339CE6216A79A250088238D /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */,
+				9339CE6516A79ACF0088238D /* AFNetworkingViewController.h */,
+				9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */,
+				9339CE6716A79ACF0088238D /* Api.h */,
+				9339CE6816A79ACF0088238D /* Api.m */,
+			);
+			name = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +476,7 @@
 				9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */,
 				9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */,
 				9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */,
+				9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +527,6 @@
 			files = (
 				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
 				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
-				0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */,
-				0FDD334B161A30580025F437 /* Api.m in Sources */,
 				0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */,
 				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
 				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
@@ -529,6 +539,8 @@
 				9339CE5816A798000088238D /* EventsViewController.m in Sources */,
 				9339CE6016A7995B0088238D /* BackgroundSchedulerViewController.m in Sources */,
 				9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */,
+				9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */,
+				9339CE6A16A79ACF0088238D /* Api.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
