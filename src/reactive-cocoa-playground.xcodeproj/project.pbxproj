@@ -22,7 +22,6 @@
 		0F0DEF5C160BF3DC0083A979 /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */; };
 		0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF57160BF3DC0083A979 /* EventsViewController.m */; };
 		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
-		0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */; };
 		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
 		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
@@ -37,6 +36,8 @@
 		9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */; };
 		9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4816A78C390088238D /* CreatingObservablesViewController.m */; };
 		9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */; };
+		9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */; };
+		9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5116A796890088238D /* RxOperatorsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +96,6 @@
 		0F0DEF57160BF3DC0083A979 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerBackgroundViewController.h; sourceTree = "<group>"; };
 		0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
-		0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxOperatorsViewController.h; sourceTree = "<group>"; };
-		0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxOperatorsViewController.m; sourceTree = "<group>"; };
 		0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSampleViewController.h; sourceTree = "<group>"; };
 		0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSampleViewController.m; sourceTree = "<group>"; };
 		0F6E9581164ED4E3005CEADF /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
@@ -122,6 +121,9 @@
 		9339CE4816A78C390088238D /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatingObservablesViewController.m; path = CreatingObservables/CreatingObservablesViewController.m; sourceTree = "<group>"; };
 		9339CE4A16A78DD90088238D /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WikipediaSearchViewController.h; path = CreatingObservables/WikipediaSearchViewController.h; sourceTree = "<group>"; };
 		9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WikipediaSearchViewController.m; path = CreatingObservables/WikipediaSearchViewController.m; sourceTree = "<group>"; };
+		9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RxOperatorsStoryboard.storyboard; path = "reactive-cocoa-playground/RxOperators/RxOperatorsStoryboard.storyboard"; sourceTree = "<group>"; };
+		9339CE5016A796890088238D /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RxOperatorsViewController.h; path = "reactive-cocoa-playground/RxOperators/RxOperatorsViewController.h"; sourceTree = "<group>"; };
+		9339CE5116A796890088238D /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RxOperatorsViewController.m; path = "reactive-cocoa-playground/RxOperators/RxOperatorsViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +192,9 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
-				9339CE4116A78B3F0088238D /* CreatingObservables */,
 				932D98FD16A7881800A7FBFC /* Main */,
+				9339CE4116A78B3F0088238D /* CreatingObservables */,
+				9339CE4D16A796160088238D /* RxOperators */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -242,8 +245,6 @@
 				0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */,
 				0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */,
 				0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */,
-				0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */,
-				0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */,
 				0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */,
 				0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */,
 			);
@@ -321,6 +322,17 @@
 				9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */,
 			);
 			name = CreatingObservables;
+			sourceTree = "<group>";
+		};
+		9339CE4D16A796160088238D /* RxOperators */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */,
+				9339CE5016A796890088238D /* RxOperatorsViewController.h */,
+				9339CE5116A796890088238D /* RxOperatorsViewController.m */,
+			);
+			name = RxOperators;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +440,7 @@
 				0F0DEF0E160BF29D0083A979 /* InfoPlist.strings in Resources */,
 				0F0DEF17160BF29E0083A979 /* MainStoryboard.storyboard in Resources */,
 				9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */,
+				9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +496,6 @@
 				0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */,
 				0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */,
 				0FDD334B161A30580025F437 /* Api.m in Sources */,
-				0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */,
 				0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */,
 				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
 				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
@@ -492,6 +504,7 @@
 				9339CE3F16A788DB0088238D /* MainViewController.m in Sources */,
 				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
 				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
+				9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,13 +50,12 @@
     [[self.takeButton
      rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
-         /*
-         RACSubscribable *input = [@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_toSubscribable];
+         RACSignal *input = [[@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_sequence] signal];
          
-         RACSubscribable *output =
+         RACSignal *output =
             [[input
              take:5]
-             select:^id(id x) {
+             map:^id(id x) {
                  return [NSNumber numberWithInt:[x intValue] * 10];
              }];
          
@@ -67,7 +66,6 @@
           completed:^{
               NSLog(@"completed");
           }];
-         */
      }];
 }
 
@@ -75,13 +73,12 @@
     [[self.skipButton
      rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(id x) {
-         /*
-         RACSubscribable *input = [@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_toSubscribable];
+         RACSignal *input = [[@[ @1, @2, @3, @4, @5, @4, @3, @2, @1] rac_sequence] signal];
          
-         RACSubscribable *output =
+         RACSignal *output =
             [[input
              skip:6]
-             select:^id(id x) {
+             map:^id(id x) {
                  return [NSNumber numberWithInt:[x intValue] * 10];
              }];
          
@@ -89,8 +86,6 @@
           subscribeNext:^(id x) {
               NSLog(@"%@", x);
           }];
-         */
-         
      }];
 }
 
