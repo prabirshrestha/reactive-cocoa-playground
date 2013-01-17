@@ -24,8 +24,6 @@
 		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
 		0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */; };
 		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
-		0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */; };
-		0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D248416322040006A2224 /* WikipediaSearchViewController.m */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
 		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
 		0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */; };
@@ -35,6 +33,10 @@
 		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
 		0FDD334B161A30580025F437 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD334A161A30580025F437 /* Api.m */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
+		9339CE3F16A788DB0088238D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE3E16A788DB0088238D /* MainViewController.m */; };
+		9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */; };
+		9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4816A78C390088238D /* CreatingObservablesViewController.m */; };
+		9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,10 +99,6 @@
 		0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxOperatorsViewController.m; sourceTree = "<group>"; };
 		0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSampleViewController.h; sourceTree = "<group>"; };
 		0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSampleViewController.m; sourceTree = "<group>"; };
-		0F6D24711632166D006A2224 /* CreatingObservablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatingObservablesViewController.h; sourceTree = "<group>"; };
-		0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatingObservablesViewController.m; sourceTree = "<group>"; };
-		0F6D248316322040006A2224 /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaSearchViewController.h; sourceTree = "<group>"; };
-		0F6D248416322040006A2224 /* WikipediaSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaSearchViewController.m; sourceTree = "<group>"; };
 		0F6E9581164ED4E3005CEADF /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		0F6E9603164EF14C005CEADF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0F6E9642164EF88A005CEADF /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
@@ -117,6 +115,13 @@
 		0FDD3349161A30580025F437 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
 		0FDD334A161A30580025F437 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		5B5B2EDB5A1943AF8E57D041 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9339CE3D16A788DB0088238D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
+		9339CE3E16A788DB0088238D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
+		9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreatingObservablesStoryboard.storyboard; path = CreatingObservables/CreatingObservablesStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE4716A78C390088238D /* CreatingObservablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatingObservablesViewController.h; path = CreatingObservables/CreatingObservablesViewController.h; sourceTree = "<group>"; };
+		9339CE4816A78C390088238D /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatingObservablesViewController.m; path = CreatingObservables/CreatingObservablesViewController.m; sourceTree = "<group>"; };
+		9339CE4A16A78DD90088238D /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WikipediaSearchViewController.h; path = CreatingObservables/WikipediaSearchViewController.h; sourceTree = "<group>"; };
+		9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WikipediaSearchViewController.m; path = CreatingObservables/WikipediaSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +190,8 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
-				0F0DEF15160BF29E0083A979 /* MainStoryboard.storyboard */,
+				9339CE4116A78B3F0088238D /* CreatingObservables */,
+				932D98FD16A7881800A7FBFC /* Main */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -236,10 +242,6 @@
 				0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */,
 				0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */,
 				0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */,
-				0F6D24711632166D006A2224 /* CreatingObservablesViewController.h */,
-				0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */,
-				0F6D248316322040006A2224 /* WikipediaSearchViewController.h */,
-				0F6D248416322040006A2224 /* WikipediaSearchViewController.m */,
 				0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */,
 				0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */,
 				0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */,
@@ -297,6 +299,28 @@
 			);
 			name = RCLocationManager;
 			path = External/RCLocationManager;
+			sourceTree = "<group>";
+		};
+		932D98FD16A7881800A7FBFC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0F0DEF15160BF29E0083A979 /* MainStoryboard.storyboard */,
+				9339CE3D16A788DB0088238D /* MainViewController.h */,
+				9339CE3E16A788DB0088238D /* MainViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		9339CE4116A78B3F0088238D /* CreatingObservables */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */,
+				9339CE4716A78C390088238D /* CreatingObservablesViewController.h */,
+				9339CE4816A78C390088238D /* CreatingObservablesViewController.m */,
+				9339CE4A16A78DD90088238D /* WikipediaSearchViewController.h */,
+				9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */,
+			);
+			name = CreatingObservables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +427,7 @@
 			files = (
 				0F0DEF0E160BF29D0083A979 /* InfoPlist.strings in Resources */,
 				0F0DEF17160BF29E0083A979 /* MainStoryboard.storyboard in Resources */,
+				9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,14 +483,15 @@
 				0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */,
 				0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */,
 				0FDD334B161A30580025F437 /* Api.m in Sources */,
-				0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */,
-				0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */,
 				0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */,
 				0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */,
 				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
 				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
 				0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */,
 				0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */,
+				9339CE3F16A788DB0088238D /* MainViewController.m in Sources */,
+				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
+				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

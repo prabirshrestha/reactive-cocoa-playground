@@ -8,6 +8,7 @@
 
 #import "CreatingObservablesViewController.h"
 #import <ReactiveCocoa.h>
+
 @interface CreatingObservablesViewController ()
 
 @end
@@ -85,28 +86,26 @@
      subscribeNext:^(id x) {
          
          NSArray *array = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], nil];
-         /*
-         [[array
-          rac_toSubscribable]
+         
+         [[[array
+          rac_sequence]
+          signal]
           subscribeNext:^(id x) {
               NSLog(@"%@", x);
           }
           completed:^{
               NSLog(@"completed");
           }];
-         */
      }];
     
 }
 
 - (void) setupObservableFromEvent {
-    
-//    [[self.observableFromEvent
-//      rac_subscribableForControlEvents:UIControlEventTouchUpInside]
-//     subscribeNext:^(id x) {
-//         NSLog(@"touch up inside");
-//     }];
-    
+    [[self.observableFromEvent
+     rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         NSLog(@"touch up inside");
+     }];
 }
 
 @end

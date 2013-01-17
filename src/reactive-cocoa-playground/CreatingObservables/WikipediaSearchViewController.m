@@ -42,38 +42,32 @@
     [self.view whenTapped:^{
         [self.view endEditing:YES];
     }];
-//    
-//    RACSignal *keys =
-//    [[[[[self.searchTextField
-//     rac_signalForControlEvents:UIControlEventEditingChanged]
-//     throttle:0.5] // seconds
-//     select:^id(UITextField *x) {
-//         return x.text;
-//     }]
-//     where:^BOOL(NSString *x) {
-//         return x.length > 0;
-//     }]
-//     distinctUntilChanged];
-//    
-//    [[keys
-//      deliverOn:[RACScheduler mainQueueScheduler]]
-//      subscribeNext:^(NSString *searchText) {
-//          self.activityIndicator.hidden = NO;
-//          [self.activityIndicator startAnimating];
-//          self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", searchText];
-//          
-//          NSURLRequest *request = [NSURLRequest
-//                                   requestWithURL:[NSURL URLWithString:
-//                                                   [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@", searchText]]];
-//          [self.webView loadRequest:request];
-//      }];
-//    
-//    [[keys
-//      deliverOn:[RACScheduler mainQueueScheduler]]
-//      subscribeNext:^(NSString *x) {
-//         NSLog(@"%@", x);
-//     }];
     
+    RACSignal *keys = [[[[[self.searchTextField
+                       rac_signalForControlEvents:UIControlEventEditingChanged]
+                       throttle:0.5]
+                       map:^NSString*(UITextField *value) {
+                           return value.text;
+                       }]
+                       filter:^BOOL(NSString *value) {
+                           return value.length > 0;
+                       }]
+                       distinctUntilChanged];
+    
+    [[keys
+     deliverOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(NSString *searchText) {
+         self.activityIndicator.hidden = NO;
+         [self.activityIndicator startAnimating];
+         self.searchingForLabel.text = [NSString stringWithFormat:@"Searching for ... %@", searchText];
+         NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:
+                                               [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@", searchText]]];
+         [self.webView loadRequest:request];
+     }];
+    
+    [keys subscribeNext:^(NSString *searchText) {
+        NSLog(@"%@", searchText);
+    }];
     
     void (^disableWebLoadAnimation)() = ^() {
         self.activityIndicator.hidden = YES;
@@ -92,7 +86,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidUnload {
