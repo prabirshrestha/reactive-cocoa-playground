@@ -134,13 +134,12 @@
     self.textView.text = @"";
     
     self.textView.text = @"button clicked (scheduling)";
-    /*
     [[RACScheduler
-     backgroundScheduler]
+     scheduler]
      schedule:^{
          
          [[RACScheduler
-           mainQueueScheduler]
+           mainThreadScheduler]
            schedule:^{
                self.textView.text = @"entering schedule";
            }];
@@ -148,12 +147,11 @@
          [NSThread sleepForTimeInterval:5];
          
          [[RACScheduler
-           mainQueueScheduler]
-          schedule:^{
+           mainThreadScheduler]
+           schedule:^{
               self.textView.text = @"leaving schedule";
           }];
      }];
-     */
     
     self.textView.text = [self.textView.text stringByAppendingString:@"\r\nScheduled"];
 }
