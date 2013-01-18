@@ -44,6 +44,9 @@
 		93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */; };
 		93F4D31A16A8CA730006A507 /* LocationManagerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */; };
 		93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */; };
+		93F4D34916A912020006A507 /* TwitterInstantSearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D34816A912020006A507 /* TwitterInstantSearchStoryboard.storyboard */; };
+		93F4D34C16A912280006A507 /* TwitterInstantSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D34B16A912280006A507 /* TwitterInstantSearchViewController.m */; };
+		93F4D35016A918970006A507 /* TwitterInstantSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D34F16A918970006A507 /* TwitterInstantSearchModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,11 @@
 		93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LocationManagerStoryboard.storyboard; path = LocationManager/LocationManagerStoryboard.storyboard; sourceTree = "<group>"; };
 		93F4D31B16A8CAD00006A507 /* LocationManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManagerViewController.h; path = LocationManager/LocationManagerViewController.h; sourceTree = "<group>"; };
 		93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManagerViewController.m; path = LocationManager/LocationManagerViewController.m; sourceTree = "<group>"; };
+		93F4D34816A912020006A507 /* TwitterInstantSearchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TwitterInstantSearchStoryboard.storyboard; path = TwitterInstantSearch/TwitterInstantSearchStoryboard.storyboard; sourceTree = "<group>"; };
+		93F4D34A16A912280006A507 /* TwitterInstantSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterInstantSearchViewController.h; path = TwitterInstantSearch/TwitterInstantSearchViewController.h; sourceTree = "<group>"; };
+		93F4D34B16A912280006A507 /* TwitterInstantSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterInstantSearchViewController.m; path = TwitterInstantSearch/TwitterInstantSearchViewController.m; sourceTree = "<group>"; };
+		93F4D34E16A918970006A507 /* TwitterInstantSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterInstantSearchModel.h; path = TwitterInstantSearch/Models/TwitterInstantSearchModel.h; sourceTree = "<group>"; };
+		93F4D34F16A918970006A507 /* TwitterInstantSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterInstantSearchModel.m; path = TwitterInstantSearch/Models/TwitterInstantSearchModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +220,7 @@
 				9339CE6216A79A250088238D /* AFNetworking */,
 				93F4D30116A8C6D60006A507 /* LoginSample */,
 				93F4D30F16A8C84B0006A507 /* TwitterSearch */,
+				93F4D34616A911E10006A507 /* TwitterInstantSearch */,
 				93F4D31816A8CA560006A507 /* LocationManager */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -377,6 +386,26 @@
 			name = LocationManager;
 			sourceTree = "<group>";
 		};
+		93F4D34616A911E10006A507 /* TwitterInstantSearch */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D34816A912020006A507 /* TwitterInstantSearchStoryboard.storyboard */,
+				93F4D34D16A9187C0006A507 /* Models */,
+				93F4D34A16A912280006A507 /* TwitterInstantSearchViewController.h */,
+				93F4D34B16A912280006A507 /* TwitterInstantSearchViewController.m */,
+			);
+			name = TwitterInstantSearch;
+			sourceTree = "<group>";
+		};
+		93F4D34D16A9187C0006A507 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D34E16A918970006A507 /* TwitterInstantSearchModel.h */,
+				93F4D34F16A918970006A507 /* TwitterInstantSearchModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,6 +518,7 @@
 				93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */,
 				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
 				93F4D31A16A8CA730006A507 /* LocationManagerStoryboard.storyboard in Resources */,
+				93F4D34916A912020006A507 /* TwitterInstantSearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +583,8 @@
 				93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */,
 				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
 				93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */,
+				93F4D34C16A912280006A507 /* TwitterInstantSearchViewController.m in Sources */,
+				93F4D35016A918970006A507 /* TwitterInstantSearchModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
