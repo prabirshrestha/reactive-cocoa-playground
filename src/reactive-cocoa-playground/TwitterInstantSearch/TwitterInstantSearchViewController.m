@@ -54,7 +54,7 @@
      doNext:^(id x) {
          NSLog(@"[%@] Throttle Changed: %@", [NSThread currentThread], x);
      }]
-     subscribeOn:[RACScheduler mainThreadScheduler]]
+     deliverOn:[RACScheduler mainThreadScheduler]]
      doNext:^(NSString *x) {
          self.recentList.text = [NSString stringWithFormat:@"%@ \n%@", self.recentList.text, x];
      }]
@@ -64,10 +64,9 @@
      flattenMap:^RACStream *(id value) {
          return [[value rac_sequence] signal];
      }]
-     subscribeOn:[RACScheduler mainThreadScheduler]]
+     deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(TwitterInstantSearchModel *x) {
-         // oid _WebThreadLockFromAnyThread(bool), 0xfa3d600: Obtaining the web lock from a thread other than the main thread or the web thread. UIKit should not be called from a secondary thread.
-         // self.searchResults.text = [NSString stringWithFormat:@"%@ %@", self.searchResults.text, x.text];
+         self.searchResults.text = [NSString stringWithFormat:@"%@ %@\n\n", self.searchResults.text, x.text];
          NSLog(@"%@", x.text);
      }];
 }
