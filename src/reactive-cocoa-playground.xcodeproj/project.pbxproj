@@ -19,23 +19,31 @@
 		0F0DEF2F160BF29E0083A979 /* reactive_cocoa_playgroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF2E160BF29E0083A979 /* reactive_cocoa_playgroundTests.m */; };
 		0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF4E160BF3550083A979 /* AppDelegate.m */; };
 		0F0DEF53160BF36F0083A979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF52160BF36F0083A979 /* main.m */; };
-		0F0DEF5C160BF3DC0083A979 /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */; };
-		0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF57160BF3DC0083A979 /* EventsViewController.m */; };
-		0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */; };
-		0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */; };
-		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
-		0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */; };
-		0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6D248416322040006A2224 /* WikipediaSearchViewController.m */; };
-		0F6E959F164ED4F8005CEADF /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9595164ED4E3005CEADF /* libReactiveCocoa-iOS.a */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
-		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
-		0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */; };
-		0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98441650A219005CEADF /* LocationManagerViewController.m */; };
 		0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98891650A68D005CEADF /* RCLocationManager.m */; };
 		0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E988B1650A6C0005CEADF /* CoreLocation.framework */; };
-		0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */; };
-		0FDD334B161A30580025F437 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD334A161A30580025F437 /* Api.m */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
+		9339CE3F16A788DB0088238D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE3E16A788DB0088238D /* MainViewController.m */; };
+		9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */; };
+		9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4816A78C390088238D /* CreatingObservablesViewController.m */; };
+		9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */; };
+		9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */; };
+		9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5116A796890088238D /* RxOperatorsViewController.m */; };
+		9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE5416A797EB0088238D /* EventsStoryboard.storyboard */; };
+		9339CE5816A798000088238D /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5716A798000088238D /* EventsViewController.m */; };
+		9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE5A16A798F60088238D /* SchedulersStoryboard.storyboard */; };
+		9339CE6016A7995B0088238D /* BackgroundSchedulerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5D16A7995B0088238D /* BackgroundSchedulerViewController.m */; };
+		9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */; };
+		9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */; };
+		9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */; };
+		9339CE6A16A79ACF0088238D /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6816A79ACF0088238D /* Api.m */; };
+		93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */; };
+		93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */; };
+		93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D31116A8C84B0006A507 /* TwitterSearchTableViewCell.m */; };
+		93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D31316A8C84B0006A507 /* TwitterSearchViewController.m */; };
+		93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */; };
+		93F4D31A16A8CA730006A507 /* LocationManagerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */; };
+		93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,36 +96,46 @@
 		0F0DEF4D160BF3550083A979 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F0DEF4E160BF3550083A979 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0F0DEF52160BF36F0083A979 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0F0DEF54160BF3DC0083A979 /* BackgroundSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundSchedulerViewController.h; sourceTree = "<group>"; };
-		0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundSchedulerViewController.m; sourceTree = "<group>"; };
-		0F0DEF56160BF3DC0083A979 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		0F0DEF57160BF3DC0083A979 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
-		0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulerBackgroundViewController.h; sourceTree = "<group>"; };
-		0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
-		0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxOperatorsViewController.h; sourceTree = "<group>"; };
-		0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxOperatorsViewController.m; sourceTree = "<group>"; };
-		0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSampleViewController.h; sourceTree = "<group>"; };
-		0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSampleViewController.m; sourceTree = "<group>"; };
-		0F6D24711632166D006A2224 /* CreatingObservablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatingObservablesViewController.h; sourceTree = "<group>"; };
-		0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatingObservablesViewController.m; sourceTree = "<group>"; };
-		0F6D248316322040006A2224 /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaSearchViewController.h; sourceTree = "<group>"; };
-		0F6D248416322040006A2224 /* WikipediaSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaSearchViewController.m; sourceTree = "<group>"; };
 		0F6E9581164ED4E3005CEADF /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		0F6E9603164EF14C005CEADF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0F6E9642164EF88A005CEADF /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
-		0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchViewController.m; sourceTree = "<group>"; };
-		0F6E9646164EF9AD005CEADF /* TwitterSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchTableViewCell.h; sourceTree = "<group>"; };
-		0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchTableViewCell.m; sourceTree = "<group>"; };
-		0F6E98431650A219005CEADF /* LocationManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerViewController.h; sourceTree = "<group>"; };
-		0F6E98441650A219005CEADF /* LocationManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerViewController.m; sourceTree = "<group>"; };
 		0F6E98881650A68D005CEADF /* RCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationManager.h; sourceTree = "<group>"; };
 		0F6E98891650A68D005CEADF /* RCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLocationManager.m; sourceTree = "<group>"; };
 		0F6E988B1650A6C0005CEADF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingViewController.h; sourceTree = "<group>"; };
-		0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingViewController.m; sourceTree = "<group>"; };
-		0FDD3349161A30580025F437 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
-		0FDD334A161A30580025F437 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		5B5B2EDB5A1943AF8E57D041 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9339CE3D16A788DB0088238D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
+		9339CE3E16A788DB0088238D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
+		9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreatingObservablesStoryboard.storyboard; path = CreatingObservables/CreatingObservablesStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE4716A78C390088238D /* CreatingObservablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatingObservablesViewController.h; path = CreatingObservables/CreatingObservablesViewController.h; sourceTree = "<group>"; };
+		9339CE4816A78C390088238D /* CreatingObservablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatingObservablesViewController.m; path = CreatingObservables/CreatingObservablesViewController.m; sourceTree = "<group>"; };
+		9339CE4A16A78DD90088238D /* WikipediaSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WikipediaSearchViewController.h; path = CreatingObservables/WikipediaSearchViewController.h; sourceTree = "<group>"; };
+		9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WikipediaSearchViewController.m; path = CreatingObservables/WikipediaSearchViewController.m; sourceTree = "<group>"; };
+		9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RxOperatorsStoryboard.storyboard; path = "reactive-cocoa-playground/RxOperators/RxOperatorsStoryboard.storyboard"; sourceTree = "<group>"; };
+		9339CE5016A796890088238D /* RxOperatorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RxOperatorsViewController.h; path = "reactive-cocoa-playground/RxOperators/RxOperatorsViewController.h"; sourceTree = "<group>"; };
+		9339CE5116A796890088238D /* RxOperatorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RxOperatorsViewController.m; path = "reactive-cocoa-playground/RxOperators/RxOperatorsViewController.m"; sourceTree = "<group>"; };
+		9339CE5416A797EB0088238D /* EventsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventsStoryboard.storyboard; path = Events/EventsStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE5616A798000088238D /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = Events/EventsViewController.h; sourceTree = "<group>"; };
+		9339CE5716A798000088238D /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = Events/EventsViewController.m; sourceTree = "<group>"; };
+		9339CE5A16A798F60088238D /* SchedulersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SchedulersStoryboard.storyboard; path = Schedulers/SchedulersStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE5C16A7995B0088238D /* BackgroundSchedulerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundSchedulerViewController.h; path = Schedulers/BackgroundSchedulerViewController.h; sourceTree = "<group>"; };
+		9339CE5D16A7995B0088238D /* BackgroundSchedulerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundSchedulerViewController.m; path = Schedulers/BackgroundSchedulerViewController.m; sourceTree = "<group>"; };
+		9339CE5E16A7995B0088238D /* SchedulerBackgroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SchedulerBackgroundViewController.h; path = Schedulers/SchedulerBackgroundViewController.h; sourceTree = "<group>"; };
+		9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SchedulerBackgroundViewController.m; path = Schedulers/SchedulerBackgroundViewController.m; sourceTree = "<group>"; };
+		9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AFNetworkingStoryboard.storyboard; path = AFNetworking/AFNetworkingStoryboard.storyboard; sourceTree = "<group>"; };
+		9339CE6516A79ACF0088238D /* AFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkingViewController.h; path = AFNetworking/AFNetworkingViewController.h; sourceTree = "<group>"; };
+		9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkingViewController.m; path = AFNetworking/AFNetworkingViewController.m; sourceTree = "<group>"; };
+		9339CE6716A79ACF0088238D /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Api.h; path = AFNetworking/Api.h; sourceTree = "<group>"; };
+		9339CE6816A79ACF0088238D /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Api.m; path = AFNetworking/Api.m; sourceTree = "<group>"; };
+		93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginSampleStoryboard.storyboard; path = LoginSample/LoginSampleStoryboard.storyboard; sourceTree = "<group>"; };
+		93F4D30516A8C75A0006A507 /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginSampleViewController.h; path = LoginSample/LoginSampleViewController.h; sourceTree = "<group>"; };
+		93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginSampleViewController.m; path = LoginSample/LoginSampleViewController.m; sourceTree = "<group>"; };
+		93F4D31016A8C84B0006A507 /* TwitterSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchTableViewCell.h; sourceTree = "<group>"; };
+		93F4D31116A8C84B0006A507 /* TwitterSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchTableViewCell.m; sourceTree = "<group>"; };
+		93F4D31216A8C84B0006A507 /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
+		93F4D31316A8C84B0006A507 /* TwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchViewController.m; sourceTree = "<group>"; };
+		93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TwitterSearchStoryboard.storyboard; sourceTree = "<group>"; };
+		93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LocationManagerStoryboard.storyboard; path = LocationManager/LocationManagerStoryboard.storyboard; sourceTree = "<group>"; };
+		93F4D31B16A8CAD00006A507 /* LocationManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManagerViewController.h; path = LocationManager/LocationManagerViewController.h; sourceTree = "<group>"; };
+		93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManagerViewController.m; path = LocationManager/LocationManagerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +145,6 @@
 			files = (
 				0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */,
 				0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */,
-				0F6E959F164ED4F8005CEADF /* libReactiveCocoa-iOS.a in Frameworks */,
 				0F0DEF04160BF29D0083A979 /* UIKit.framework in Frameworks */,
 				0F0DEF06160BF29D0083A979 /* Foundation.framework in Frameworks */,
 				0F0DEF08160BF29D0083A979 /* CoreGraphics.framework in Frameworks */,
@@ -187,9 +204,16 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
-				0F0DEF15160BF29E0083A979 /* MainStoryboard.storyboard */,
+				932D98FD16A7881800A7FBFC /* Main */,
+				9339CE4116A78B3F0088238D /* CreatingObservables */,
+				9339CE4D16A796160088238D /* RxOperators */,
+				9339CE5316A797D00088238D /* Events */,
+				9339CE5916A798DA0088238D /* Schedulers */,
+				9339CE6216A79A250088238D /* AFNetworking */,
+				93F4D30116A8C6D60006A507 /* LoginSample */,
+				93F4D30F16A8C84B0006A507 /* TwitterSearch */,
+				93F4D31816A8CA560006A507 /* LocationManager */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
-				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
 			);
 			path = "reactive-cocoa-playground";
@@ -225,38 +249,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0F0DEF48160BF32D0083A979 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				0F6E98421650A158005CEADF /* LocationManager */,
-				0F6E9645164EF97B005CEADF /* TwitterSearch */,
-				0F0DEF54160BF3DC0083A979 /* BackgroundSchedulerViewController.h */,
-				0F0DEF55160BF3DC0083A979 /* BackgroundSchedulerViewController.m */,
-				0F0DEF56160BF3DC0083A979 /* EventsViewController.h */,
-				0F0DEF57160BF3DC0083A979 /* EventsViewController.m */,
-				0F0DEF58160BF3DC0083A979 /* SchedulerBackgroundViewController.h */,
-				0F0DEF59160BF3DC0083A979 /* SchedulerBackgroundViewController.m */,
-				0F8FFD651619463D001625E6 /* AFNetworkingViewController.h */,
-				0F8FFD661619463D001625E6 /* AFNetworkingViewController.m */,
-				0F6D24711632166D006A2224 /* CreatingObservablesViewController.h */,
-				0F6D24721632166D006A2224 /* CreatingObservablesViewController.m */,
-				0F6D248316322040006A2224 /* WikipediaSearchViewController.h */,
-				0F6D248416322040006A2224 /* WikipediaSearchViewController.m */,
-				0F5778AC1634642400CA4F16 /* RxOperatorsViewController.h */,
-				0F5778AD1634642400CA4F16 /* RxOperatorsViewController.m */,
-				0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */,
-				0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		0F0DEF4C160BF3550083A979 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				0F0DEF4D160BF3550083A979 /* AppDelegate.h */,
 				0F0DEF4E160BF3550083A979 /* AppDelegate.m */,
-				0FDD3349161A30580025F437 /* Api.h */,
-				0FDD334A161A30580025F437 /* Api.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -271,26 +268,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F6E9645164EF97B005CEADF /* TwitterSearch */ = {
-			isa = PBXGroup;
-			children = (
-				0F6E9642164EF88A005CEADF /* TwitterSearchViewController.h */,
-				0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */,
-				0F6E9646164EF9AD005CEADF /* TwitterSearchTableViewCell.h */,
-				0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */,
-			);
-			name = TwitterSearch;
-			sourceTree = "<group>";
-		};
-		0F6E98421650A158005CEADF /* LocationManager */ = {
-			isa = PBXGroup;
-			children = (
-				0F6E98431650A219005CEADF /* LocationManagerViewController.h */,
-				0F6E98441650A219005CEADF /* LocationManagerViewController.m */,
-			);
-			name = LocationManager;
-			sourceTree = "<group>";
-		};
 		0F6E98871650A68D005CEADF /* RCLocationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +276,105 @@
 			);
 			name = RCLocationManager;
 			path = External/RCLocationManager;
+			sourceTree = "<group>";
+		};
+		932D98FD16A7881800A7FBFC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0F0DEF15160BF29E0083A979 /* MainStoryboard.storyboard */,
+				9339CE3D16A788DB0088238D /* MainViewController.h */,
+				9339CE3E16A788DB0088238D /* MainViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		9339CE4116A78B3F0088238D /* CreatingObservables */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */,
+				9339CE4716A78C390088238D /* CreatingObservablesViewController.h */,
+				9339CE4816A78C390088238D /* CreatingObservablesViewController.m */,
+				9339CE4A16A78DD90088238D /* WikipediaSearchViewController.h */,
+				9339CE4B16A78DD90088238D /* WikipediaSearchViewController.m */,
+			);
+			name = CreatingObservables;
+			sourceTree = "<group>";
+		};
+		9339CE4D16A796160088238D /* RxOperators */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE4E16A796480088238D /* RxOperatorsStoryboard.storyboard */,
+				9339CE5016A796890088238D /* RxOperatorsViewController.h */,
+				9339CE5116A796890088238D /* RxOperatorsViewController.m */,
+			);
+			name = RxOperators;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9339CE5316A797D00088238D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE5416A797EB0088238D /* EventsStoryboard.storyboard */,
+				9339CE5616A798000088238D /* EventsViewController.h */,
+				9339CE5716A798000088238D /* EventsViewController.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		9339CE5916A798DA0088238D /* Schedulers */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE5A16A798F60088238D /* SchedulersStoryboard.storyboard */,
+				9339CE5C16A7995B0088238D /* BackgroundSchedulerViewController.h */,
+				9339CE5D16A7995B0088238D /* BackgroundSchedulerViewController.m */,
+				9339CE5E16A7995B0088238D /* SchedulerBackgroundViewController.h */,
+				9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */,
+			);
+			name = Schedulers;
+			sourceTree = "<group>";
+		};
+		9339CE6216A79A250088238D /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */,
+				9339CE6516A79ACF0088238D /* AFNetworkingViewController.h */,
+				9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */,
+				9339CE6716A79ACF0088238D /* Api.h */,
+				9339CE6816A79ACF0088238D /* Api.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		93F4D30116A8C6D60006A507 /* LoginSample */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */,
+				93F4D30516A8C75A0006A507 /* LoginSampleViewController.h */,
+				93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */,
+			);
+			name = LoginSample;
+			sourceTree = "<group>";
+		};
+		93F4D30F16A8C84B0006A507 /* TwitterSearch */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */,
+				93F4D31016A8C84B0006A507 /* TwitterSearchTableViewCell.h */,
+				93F4D31116A8C84B0006A507 /* TwitterSearchTableViewCell.m */,
+				93F4D31216A8C84B0006A507 /* TwitterSearchViewController.h */,
+				93F4D31316A8C84B0006A507 /* TwitterSearchViewController.m */,
+			);
+			path = TwitterSearch;
+			sourceTree = "<group>";
+		};
+		93F4D31816A8CA560006A507 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */,
+				93F4D31B16A8CAD00006A507 /* LocationManagerViewController.h */,
+				93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */,
+			);
+			name = LocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +481,14 @@
 			files = (
 				0F0DEF0E160BF29D0083A979 /* InfoPlist.strings in Resources */,
 				0F0DEF17160BF29E0083A979 /* MainStoryboard.storyboard in Resources */,
+				9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */,
+				9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */,
+				9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */,
+				9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */,
+				9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */,
+				93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */,
+				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
+				93F4D31A16A8CA730006A507 /* LocationManagerStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,19 +539,20 @@
 			files = (
 				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
 				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
-				0F0DEF5C160BF3DC0083A979 /* BackgroundSchedulerViewController.m in Sources */,
-				0F0DEF5D160BF3DC0083A979 /* EventsViewController.m in Sources */,
-				0F0DEF5E160BF3DC0083A979 /* SchedulerBackgroundViewController.m in Sources */,
-				0F8FFD671619463D001625E6 /* AFNetworkingViewController.m in Sources */,
-				0FDD334B161A30580025F437 /* Api.m in Sources */,
-				0F6D24731632166D006A2224 /* CreatingObservablesViewController.m in Sources */,
-				0F6D248516322040006A2224 /* WikipediaSearchViewController.m in Sources */,
-				0F5778AE1634642400CA4F16 /* RxOperatorsViewController.m in Sources */,
-				0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */,
-				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
-				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
-				0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */,
 				0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */,
+				9339CE3F16A788DB0088238D /* MainViewController.m in Sources */,
+				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
+				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
+				9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */,
+				9339CE5816A798000088238D /* EventsViewController.m in Sources */,
+				9339CE6016A7995B0088238D /* BackgroundSchedulerViewController.m in Sources */,
+				9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */,
+				9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */,
+				9339CE6A16A79ACF0088238D /* Api.m in Sources */,
+				93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */,
+				93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */,
+				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
+				93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
