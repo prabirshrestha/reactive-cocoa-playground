@@ -20,8 +20,6 @@
 		0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF4E160BF3550083A979 /* AppDelegate.m */; };
 		0F0DEF53160BF36F0083A979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF52160BF36F0083A979 /* main.m */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
-		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
-		0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */; };
 		0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98441650A219005CEADF /* LocationManagerViewController.m */; };
 		0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E98891650A68D005CEADF /* RCLocationManager.m */; };
 		0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E988B1650A6C0005CEADF /* CoreLocation.framework */; };
@@ -42,6 +40,9 @@
 		9339CE6A16A79ACF0088238D /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6816A79ACF0088238D /* Api.m */; };
 		93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */; };
 		93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */; };
+		93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D31116A8C84B0006A507 /* TwitterSearchTableViewCell.m */; };
+		93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D31316A8C84B0006A507 /* TwitterSearchViewController.m */; };
+		93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,10 +97,6 @@
 		0F0DEF52160BF36F0083A979 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F6E9581164ED4E3005CEADF /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		0F6E9603164EF14C005CEADF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		0F6E9642164EF88A005CEADF /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
-		0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchViewController.m; sourceTree = "<group>"; };
-		0F6E9646164EF9AD005CEADF /* TwitterSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchTableViewCell.h; sourceTree = "<group>"; };
-		0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchTableViewCell.m; sourceTree = "<group>"; };
 		0F6E98431650A219005CEADF /* LocationManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerViewController.h; sourceTree = "<group>"; };
 		0F6E98441650A219005CEADF /* LocationManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerViewController.m; sourceTree = "<group>"; };
 		0F6E98881650A68D005CEADF /* RCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationManager.h; sourceTree = "<group>"; };
@@ -132,6 +129,11 @@
 		93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginSampleStoryboard.storyboard; path = LoginSample/LoginSampleStoryboard.storyboard; sourceTree = "<group>"; };
 		93F4D30516A8C75A0006A507 /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginSampleViewController.h; path = LoginSample/LoginSampleViewController.h; sourceTree = "<group>"; };
 		93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginSampleViewController.m; path = LoginSample/LoginSampleViewController.m; sourceTree = "<group>"; };
+		93F4D31016A8C84B0006A507 /* TwitterSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchTableViewCell.h; sourceTree = "<group>"; };
+		93F4D31116A8C84B0006A507 /* TwitterSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchTableViewCell.m; sourceTree = "<group>"; };
+		93F4D31216A8C84B0006A507 /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
+		93F4D31316A8C84B0006A507 /* TwitterSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSearchViewController.m; sourceTree = "<group>"; };
+		93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TwitterSearchStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				9339CE5916A798DA0088238D /* Schedulers */,
 				9339CE6216A79A250088238D /* AFNetworking */,
 				93F4D30116A8C6D60006A507 /* LoginSample */,
+				93F4D30F16A8C84B0006A507 /* TwitterSearch */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -248,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				0F6E98421650A158005CEADF /* LocationManager */,
-				0F6E9645164EF97B005CEADF /* TwitterSearch */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -270,17 +272,6 @@
 				0F6E9597164ED4E3005CEADF /* ReactiveCocoaTests.octest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0F6E9645164EF97B005CEADF /* TwitterSearch */ = {
-			isa = PBXGroup;
-			children = (
-				0F6E9642164EF88A005CEADF /* TwitterSearchViewController.h */,
-				0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */,
-				0F6E9646164EF9AD005CEADF /* TwitterSearchTableViewCell.h */,
-				0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */,
-			);
-			name = TwitterSearch;
 			sourceTree = "<group>";
 		};
 		0F6E98421650A158005CEADF /* LocationManager */ = {
@@ -377,6 +368,18 @@
 				93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */,
 			);
 			name = LoginSample;
+			sourceTree = "<group>";
+		};
+		93F4D30F16A8C84B0006A507 /* TwitterSearch */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D31616A8C8610006A507 /* TwitterSearchStoryboard.storyboard */,
+				93F4D31016A8C84B0006A507 /* TwitterSearchTableViewCell.h */,
+				93F4D31116A8C84B0006A507 /* TwitterSearchTableViewCell.m */,
+				93F4D31216A8C84B0006A507 /* TwitterSearchViewController.h */,
+				93F4D31316A8C84B0006A507 /* TwitterSearchViewController.m */,
+			);
+			path = TwitterSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +492,7 @@
 				9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */,
 				9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */,
 				93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */,
+				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,8 +543,6 @@
 			files = (
 				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
 				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
-				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
-				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
 				0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */,
 				0F6E988A1650A68D005CEADF /* RCLocationManager.m in Sources */,
 				9339CE3F16A788DB0088238D /* MainViewController.m in Sources */,
@@ -553,6 +555,8 @@
 				9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */,
 				9339CE6A16A79ACF0088238D /* Api.m in Sources */,
 				93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */,
+				93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */,
+				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

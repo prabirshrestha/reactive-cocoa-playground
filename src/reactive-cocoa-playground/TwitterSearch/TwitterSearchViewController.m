@@ -14,6 +14,7 @@
 #import <WBNoticeView.h>
 #import <WBErrorNoticeView.h>
 #import <EGOCache.h>
+#import "EXTScope.h"
 
 #define CACHEKEY_TWITTER @"twitter"
 
@@ -45,12 +46,12 @@
     
     self.datasource = [NSMutableArray array];
     
-    /*
-    RACSubscribable *searching = RACAble(self.searching);
-    RACSubscribable *notSearching = [searching select:^id(id x) {
+    RACSignal *searching = RACAble(self.searching);
+    RACSignal *notSearching = [searching map:^id(id x) {
         return @(![x boolValue]);
     }];
     
+    /*
     // command for searching tweets online
     // search tweet is enabled only when we are not already searching
     RACAsyncCommand *searchTweetsOnline =
