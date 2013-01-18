@@ -32,21 +32,20 @@
 {
     [super viewDidLoad];
     
-    /*
     // are all entries valid?
-    RACSubscribable *formValid =
-    [RACSubscribable
-     combineLatest:@[self.usernameField.rac_textSubscribable, self.passwordField.rac_textSubscribable]
+    RACSignal *formValid =
+    [RACSignal
+     combineLatest:@[self.usernameField.rac_textSignal, self.passwordField.rac_textSignal]
      reduce:^(NSString *username, NSString *password) {
          return @(username.length > 0 && password.length > 0);
      }];
     
     // are we loging in?
-    RACSubscribable *logingIn = RACAble(self.logingIn);
+    RACSignal *logingIn = RACAble(self.logingIn);
     
     // enable/disable button based on form valid
-    RACSubscribable *buttonEnabled =
-    [RACSubscribable
+    RACSignal *buttonEnabled =
+    [RACSignal
      combineLatest:@[formValid, logingIn]
      reduce:^(id formValid, id logingIn){
          return @([formValid boolValue] && ![logingIn boolValue]);
@@ -56,14 +55,14 @@
     
     // button color based on enabledness
     UIColor *defaultButtonTitleColor = self.loginButton.titleLabel.textColor;
-    RACSubscribable *loginButtonTitileColor = [buttonEnabled select:^id(id x) {
+    RACSignal *loginButtonTitileColor = [buttonEnabled map:^id(id x) {
         return [x boolValue] ? defaultButtonTitleColor : [UIColor lightGrayColor];
     }];
     
     [loginButtonTitileColor subscribeNext:^(UIColor *color) {
         [self.loginButton setTitleColor:color forState:UIControlStateNormal];
     }];
-    */
+    
     self.logingIn = NO;
 }
 

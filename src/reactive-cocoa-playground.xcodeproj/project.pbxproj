@@ -19,7 +19,6 @@
 		0F0DEF2F160BF29E0083A979 /* reactive_cocoa_playgroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF2E160BF29E0083A979 /* reactive_cocoa_playgroundTests.m */; };
 		0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF4E160BF3550083A979 /* AppDelegate.m */; };
 		0F0DEF53160BF36F0083A979 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0DEF52160BF36F0083A979 /* main.m */; };
-		0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */; };
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
 		0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9643164EF88A005CEADF /* TwitterSearchViewController.m */; };
 		0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6E9647164EF9AD005CEADF /* TwitterSearchTableViewCell.m */; };
@@ -41,6 +40,8 @@
 		9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */; };
 		9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */; };
 		9339CE6A16A79ACF0088238D /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6816A79ACF0088238D /* Api.m */; };
+		93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */; };
+		93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +94,6 @@
 		0F0DEF4D160BF3550083A979 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F0DEF4E160BF3550083A979 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0F0DEF52160BF36F0083A979 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSampleViewController.h; sourceTree = "<group>"; };
-		0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSampleViewController.m; sourceTree = "<group>"; };
 		0F6E9581164ED4E3005CEADF /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		0F6E9603164EF14C005CEADF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0F6E9642164EF88A005CEADF /* TwitterSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSearchViewController.h; sourceTree = "<group>"; };
@@ -130,6 +129,9 @@
 		9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkingViewController.m; path = AFNetworking/AFNetworkingViewController.m; sourceTree = "<group>"; };
 		9339CE6716A79ACF0088238D /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Api.h; path = AFNetworking/Api.h; sourceTree = "<group>"; };
 		9339CE6816A79ACF0088238D /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Api.m; path = AFNetworking/Api.m; sourceTree = "<group>"; };
+		93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LoginSampleStoryboard.storyboard; path = LoginSample/LoginSampleStoryboard.storyboard; sourceTree = "<group>"; };
+		93F4D30516A8C75A0006A507 /* LoginSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginSampleViewController.h; path = LoginSample/LoginSampleViewController.h; sourceTree = "<group>"; };
+		93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginSampleViewController.m; path = LoginSample/LoginSampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				9339CE5316A797D00088238D /* Events */,
 				9339CE5916A798DA0088238D /* Schedulers */,
 				9339CE6216A79A250088238D /* AFNetworking */,
+				93F4D30116A8C6D60006A507 /* LoginSample */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				0F0DEF48160BF32D0083A979 /* ViewControllers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
@@ -246,8 +249,6 @@
 			children = (
 				0F6E98421650A158005CEADF /* LocationManager */,
 				0F6E9645164EF97B005CEADF /* TwitterSearch */,
-				0F58EF8F164DEDFA00FA90EE /* LoginSampleViewController.h */,
-				0F58EF90164DEDFA00FA90EE /* LoginSampleViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -368,6 +369,16 @@
 			name = AFNetworking;
 			sourceTree = "<group>";
 		};
+		93F4D30116A8C6D60006A507 /* LoginSample */ = {
+			isa = PBXGroup;
+			children = (
+				93F4D30316A8C6FF0006A507 /* LoginSampleStoryboard.storyboard */,
+				93F4D30516A8C75A0006A507 /* LoginSampleViewController.h */,
+				93F4D30616A8C75A0006A507 /* LoginSampleViewController.m */,
+			);
+			name = LoginSample;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -477,6 +488,7 @@
 				9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */,
 				9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */,
 				9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */,
+				93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +539,6 @@
 			files = (
 				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
 				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
-				0F58EF91164DEDFA00FA90EE /* LoginSampleViewController.m in Sources */,
 				0F6E9644164EF88A005CEADF /* TwitterSearchViewController.m in Sources */,
 				0F6E9648164EF9AD005CEADF /* TwitterSearchTableViewCell.m in Sources */,
 				0F6E98451650A219005CEADF /* LocationManagerViewController.m in Sources */,
@@ -541,6 +552,7 @@
 				9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */,
 				9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */,
 				9339CE6A16A79ACF0088238D /* Api.m in Sources */,
+				93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
