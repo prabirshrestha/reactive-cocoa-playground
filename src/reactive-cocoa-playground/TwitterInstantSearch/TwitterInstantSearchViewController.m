@@ -62,6 +62,7 @@
          return [self searchTwitter:value];
      }]
      subscribeNext:^(NSArray *x) {
+         // how do i flatten the array to single items? subscribeNext:^(TwitterInstantSearchModel *x)
          self.searchResults.text = [NSString stringWithFormat:@"%@ \n%@", self.searchResults.text, x];
          NSLog(@"%@", x);
      }];
