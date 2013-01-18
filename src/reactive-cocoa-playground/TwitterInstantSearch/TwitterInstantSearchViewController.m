@@ -42,7 +42,7 @@
         [self.view endEditing:YES];
     }];
     
-    [[[[[[[[[self.searchTextField
+    [[[[[[[[[[[self.searchTextField
      rac_textSignal]
      filter:^BOOL(NSString *value) {
          return value.length > 2;
@@ -54,17 +54,21 @@
      doNext:^(id x) {
          NSLog(@"[%@] Throttle Changed: %@", [NSThread currentThread], x);
      }]
+     subscribeOn:[RACScheduler mainThreadScheduler]]
      doNext:^(NSString *x) {
          self.recentList.text = [NSString stringWithFormat:@"%@ \n%@", self.recentList.text, x];
      }]
-     subscribeOn:[RACScheduler mainThreadScheduler]]
      flattenMap:^RACStream *(id value) {
          return [self searchTwitter:value];
      }]
-     subscribeNext:^(NSArray *x) {
-         // how do i flatten the array to single items? subscribeNext:^(TwitterInstantSearchModel *x)
-         self.searchResults.text = [NSString stringWithFormat:@"%@ \n%@", self.searchResults.text, x];
-         NSLog(@"%@", x);
+     flattenMap:^RACStream *(id value) {
+         return [[value rac_sequence] signal];
+     }]
+     subscribeOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(TwitterInstantSearchModel *x) {
+         // oid _WebThreadLockFromAnyThread(bool), 0xfa3d600: Obtaining the web lock from a thread other than the main thread or the web thread. UIKit should not be called from a secondary thread.
+         // self.searchResults.text = [NSString stringWithFormat:@"%@ %@", self.searchResults.text, x.text];
+         NSLog(@"%@", x.text);
      }];
 }
 
