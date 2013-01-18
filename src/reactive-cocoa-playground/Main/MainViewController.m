@@ -40,6 +40,7 @@
         @"AFNetworking",
         @"LoginSample",
         @"TwitterSearch",
+        @"TwitterInstantSearch",
         @"LocationManager",
     ];
     
