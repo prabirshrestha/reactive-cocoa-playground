@@ -56,9 +56,7 @@
 
 - (RACSignal*) setupLocationUpdateNotifications
 {
-    return nil;
-    /*
-    return [RACSubscribable createSubscribable:^RACDisposable *(id<RACSubscriber> subscriber) {
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         __block RCLocationManager *locationManager = [RCLocationManager sharedManager];
         [locationManager setPurpose:@"App requires location permission"];
         
@@ -75,7 +73,6 @@
         }];
         
     }];
-     */
 }
 
 @end
