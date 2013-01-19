@@ -21,4 +21,5 @@ install_resource()
       ;;
   esac
 }
+install_resource 'Facebook-iOS-SDK/src/FacebookSDKResources.bundle'
 install_resource 'NoticeView/NoticeView/WBNoticeView/NoticeView.bundle'
