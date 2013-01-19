@@ -42,6 +42,7 @@
         @"TwitterSearch",
         @"TwitterInstantSearch",
         @"LocationManager",
+        @"Facebook",
     ];
     
     [self setupTableView];

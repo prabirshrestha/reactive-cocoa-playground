@@ -1,35 +1,20 @@
 
-COCOAPODS: 0.16.0
-
-DEPENDENCIES: 
-- AFNetworking (= 1.0)
-- BlocksKit (= 1.5.2)
-- EGOCache (= 0.1.0)
-- NoticeView (= 2.4)
-- ReactiveCocoa (= 0.16.1)
-- SVPullToRefresh (from `https://github.com/samvermette/SVPullToRefresh.git', commit `f54d4871dbe3f905eab44f7aae7096aa15455aa4')
-- TPKeyboardAvoiding (= 0.0.1)
-
-EXTERNAL SOURCES: 
-  SVPullToRefresh: 
-    :git: https://github.com/samvermette/SVPullToRefresh.git
-    :commit: f54d4871dbe3f905eab44f7aae7096aa15455aa4
-
 SPEC CHECKSUMS: 
-  A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
   libextobjc/EXTScope: a2c1ab844d87408fae8e6b8da84b913b7573b051
-  libextobjc/EXTConcreteProtocol: a2c1ab844d87408fae8e6b8da84b913b7573b051
-  ReactiveCocoa/RACExtensions: e859bf3241d7181191cbcb2397e152d122585589
-  ReactiveCocoa/Core: e859bf3241d7181191cbcb2397e152d122585589
-  ReactiveCocoa: e859bf3241d7181191cbcb2397e152d122585589
   libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
   libextobjc/EXTKeyPathCoding: a2c1ab844d87408fae8e6b8da84b913b7573b051
-  SVPullToRefresh: d95803a9816d3919378ede69342c54927fb953ea
-  AFNetworking: 204f4b3d3a3ea7b38737c3fbf2646ba8c9719eea
-  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
+  libextobjc/EXTConcreteProtocol: a2c1ab844d87408fae8e6b8da84b913b7573b051
   TPKeyboardAvoiding: 7289409b17dc2193a3f324672283c542f17c1bb1
+  ReactiveCocoa/RACExtensions: 0069f25f79986c41fecb0c0c1378eb2952e4304f
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
+  AFNetworking: 204f4b3d3a3ea7b38737c3fbf2646ba8c9719eea
+  ReactiveCocoa/Core: 0069f25f79986c41fecb0c0c1378eb2952e4304f
+  ReactiveCocoa: 0069f25f79986c41fecb0c0c1378eb2952e4304f
+  A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
+  Facebook-iOS-SDK: 5fc068ebfd8c8c9b0fad476bc36dbbf1fffeebc8
   EGOCache: 073460647a96c40ddd93177c3bcf4c1920b385bc
+  SVPullToRefresh: d95803a9816d3919378ede69342c54927fb953ea
+  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
   NoticeView: af1d5f1913808731bf4fe9e4e8533a2635e8a627
 
 PODS: 
@@ -39,6 +24,7 @@ PODS:
 - BlocksKit (1.5.2): 
   - A2DynamicDelegate
 - EGOCache (0.1.0)
+- Facebook-iOS-SDK (3.1.1)
 - JRSwizzle (1.0)
 - NoticeView (2.4)
 - ReactiveCocoa (0.16.1): 
@@ -57,3 +43,20 @@ PODS:
 - libextobjc/EXTKeyPathCoding (0.2.4)
 - libextobjc/EXTScope (0.2.4)
 - libffi (3.0.11)
+
+COCOAPODS: 0.16.1
+
+DEPENDENCIES: 
+- AFNetworking (= 1.0)
+- BlocksKit (= 1.5.2)
+- EGOCache (= 0.1.0)
+- Facebook-iOS-SDK (= 3.1.1)
+- NoticeView (= 2.4)
+- ReactiveCocoa (= 0.16.1)
+- SVPullToRefresh (from `https://github.com/samvermette/SVPullToRefresh.git', commit `f54d4871dbe3f905eab44f7aae7096aa15455aa4')
+- TPKeyboardAvoiding (= 0.0.1)
+
+EXTERNAL SOURCES: 
+  SVPullToRefresh: 
+    :git: https://github.com/samvermette/SVPullToRefresh.git
+    :commit: f54d4871dbe3f905eab44f7aae7096aa15455aa4
