@@ -93,9 +93,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="lV2-tu-aJG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="rvB-R1-R9X">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -110,10 +115,36 @@
                     </view>
                     <navigationItem key="navigationItem" title="Table With Search" id="Iab-E9-nag"/>
                     <connections>
+                        <outlet property="searchBar" destination="lV2-tu-aJG" id="EZq-SW-dhF"/>
+                        <outlet property="searchDisplayController" destination="mZB-Ci-HG3" id="jjV-ym-V0F"/>
                         <outlet property="tableView" destination="ccn-gE-6C4" id="U4S-Nh-yLY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akG-Dp-ssj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="PNI-k6-fQx">
+                    <connections>
+                        <outlet property="delegate" destination="9pO-xl-voQ" id="OjS-M8-UEY"/>
+                        <outlet property="searchContentsController" destination="9pO-xl-voQ" id="cq5-m7-e04"/>
+                        <outlet property="searchResultsDataSource" destination="9pO-xl-voQ" id="Ncl-z5-z0q"/>
+                        <outlet property="searchResultsDelegate" destination="9pO-xl-voQ" id="nGb-Up-KBO"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="rmJ-Sa-ORZ">
+                    <connections>
+                        <outlet property="delegate" destination="9pO-xl-voQ" id="ycb-se-aVe"/>
+                        <outlet property="searchContentsController" destination="9pO-xl-voQ" id="Z3w-gQ-qVM"/>
+                        <outlet property="searchResultsDataSource" destination="9pO-xl-voQ" id="ioQ-Zs-kEv"/>
+                        <outlet property="searchResultsDelegate" destination="9pO-xl-voQ" id="EVc-Dl-tPA"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="mZB-Ci-HG3">
+                    <connections>
+                        <outlet property="delegate" destination="9pO-xl-voQ" id="igy-4O-lSA"/>
+                        <outlet property="searchContentsController" destination="9pO-xl-voQ" id="sDN-eK-b5G"/>
+                        <outlet property="searchResultsDataSource" destination="9pO-xl-voQ" id="5g7-PF-sD1"/>
+                        <outlet property="searchResultsDelegate" destination="9pO-xl-voQ" id="7bC-Ec-jo4"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="656" y="354"/>
         </scene>

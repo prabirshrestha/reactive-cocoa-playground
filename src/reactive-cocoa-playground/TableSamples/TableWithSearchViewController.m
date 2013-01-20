@@ -14,10 +14,13 @@
 @interface TableWithSearchViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) NSArray *dataSource;
 
 @property (nonatomic, assign) BOOL fetching;
 @property (nonatomic, strong) RACCommand *fetchCommand;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic, strong) NSMutableArray *displayDataSource;
 
 @end
 
@@ -37,6 +40,8 @@
     [super viewDidLoad];
     
     self.dataSource = [[NSMutableArray alloc] init];
+    self.displayDataSource = [[NSMutableArray alloc] initWithArray:self.dataSource];
+    
     [self setupTableView];
     
     RACSignal *notFetching = [RACAbleWithStart(self.fetching) map:^id(id value) {
@@ -70,9 +75,10 @@
       doNext:^(id x) {
           NSLog(@"%@", x);
       }]
-     subscribeNext:^(id x) {
-         [self.dataSource removeAllObjects];
-         [self.dataSource addObjectsFromArray:x];
+     subscribeNext:^(NSArray *x) {
+         self.dataSource = x;
+         [self.displayDataSource removeAllObjects];
+         [self.displayDataSource addObjectsFromArray:self.dataSource];
          [self.tableView reloadData];
      }];
     
@@ -87,6 +93,7 @@
 
 - (void)viewDidUnload {
     [self setTableView:nil];
+    [self setSearchBar:nil];
     [super viewDidUnload];
 }
 
@@ -96,18 +103,62 @@
         [self.fetchCommand execute:nil];
     }];
     
+    [self.tableView.dynamicDataSource implementMethod:@selector(numberOfSectionsInTableView:) withBlock:^NSInteger(UITableView *tableView) {
+        return 1;
+    }];
+    
     [self.tableView.dynamicDataSource implementMethod:@selector(tableView:numberOfRowsInSection:) withBlock:^NSInteger(UITableView *tableView, NSInteger section) {
-        return self.dataSource.count;
+        return self.displayDataSource.count;
     }];
     
     [self.tableView.dynamicDataSource implementMethod:@selector(tableView:cellForRowAtIndexPath:) withBlock:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-        id data = [self.dataSource objectAtIndex:indexPath.row];
+        id data = [self.displayDataSource objectAtIndex:indexPath.row];
         cell.textLabel.text = [data objectForKey:@"name"];
         return cell;
     }];
     
     self.tableView.dataSource = self.tableView.dynamicDataSource;
+    
+    // search bar
+    
+    [self.searchBar.dynamicDelegate implementMethod:@selector(searchBarSearchButtonClicked:) withBlock:^void(UISearchBar* searchBar) {
+        [searchBar resignFirstResponder];
+    }];
+    
+    [self.searchBar.dynamicDelegate implementMethod:@selector(searchBarCancelButtonClicked:) withBlock:^void(UISearchBar* searchBar) {
+        [searchBar resignFirstResponder];
+    }];
+    
+    RACReplaySubject *searchTextChanged = [RACReplaySubject subject];
+    
+    [self.searchBar.dynamicDelegate implementMethod:@selector(searchBar:textDidChange:) withBlock: ^void(UISearchBar *searchBar, NSString *searchText) {
+        [searchTextChanged sendNext:searchText];
+    }];
+    self.searchBar.delegate = self.searchBar.dynamicDelegate;
+    
+    [[searchTextChanged filter:^BOOL(NSString *value) {
+        return value.length == 0;
+    }] subscribeNext:^(id x) {
+        [self.displayDataSource removeAllObjects];
+        [self.displayDataSource addObjectsFromArray:self.dataSource];
+        [self.tableView reloadData];
+    }];
+    
+    [[[searchTextChanged filter:^BOOL(NSString *value) {
+        return value.length > 0;
+    }] doNext:^(id x) {
+        NSLog(@"%@", x);
+    }] subscribeNext:^(NSString *x) {
+        [self.displayDataSource removeAllObjects];
+        for (id data in self.dataSource) {
+            NSRange range = [[data objectForKey:@"name"] rangeOfString:x options:NSCaseInsensitiveSearch];
+            if(range.location != NSNotFound) {
+                [self.displayDataSource addObject:data];
+            }
+        }
+        [self.tableView reloadData];
+    }];
 }
 
 - (RACSignal*) fetchData {
