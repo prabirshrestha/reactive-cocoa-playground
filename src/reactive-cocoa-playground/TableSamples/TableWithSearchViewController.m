@@ -112,7 +112,12 @@
     }];
     
     [self.tableView.dynamicDataSource implementMethod:@selector(tableView:cellForRowAtIndexPath:) withBlock:^UITableViewCell *(UITableView *tableView, NSIndexPath *indexPath) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        static NSString *CellIdentifier = @"Cell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if ( cell == nil ) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        
         id data = [self.displayDataSource objectAtIndex:indexPath.row];
         cell.textLabel.text = [data objectForKey:@"name"];
         return cell;
@@ -120,8 +125,9 @@
     
     self.tableView.dataSource = self.tableView.dynamicDataSource;
     
-    // search bar
     
+    // search bar
+    self.searchDisplayController.searchResultsDataSource = self.tableView.dynamicDataSource;
     [self.searchBar.dynamicDelegate implementMethod:@selector(searchBarSearchButtonClicked:) withBlock:^void(UISearchBar* searchBar) {
         [searchBar resignFirstResponder];
     }];
