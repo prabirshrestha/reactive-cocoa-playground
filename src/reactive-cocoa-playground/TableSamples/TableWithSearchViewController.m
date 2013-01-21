@@ -125,7 +125,6 @@
     
     self.tableView.dataSource = self.tableView.dynamicDataSource;
     
-    
     // search bar
     self.searchDisplayController.searchResultsDataSource = self.tableView.dynamicDataSource;
     [self.searchBar.dynamicDelegate implementMethod:@selector(searchBarSearchButtonClicked:) withBlock:^void(UISearchBar* searchBar) {
@@ -133,6 +132,9 @@
     }];
     
     [self.searchBar.dynamicDelegate implementMethod:@selector(searchBarCancelButtonClicked:) withBlock:^void(UISearchBar* searchBar) {
+        [self.displayDataSource removeAllObjects];
+        [self.displayDataSource addObjectsFromArray:self.dataSource];
+        [self.tableView reloadData];
         [searchBar resignFirstResponder];
     }];
     
