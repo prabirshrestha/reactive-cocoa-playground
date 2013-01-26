@@ -395,6 +395,13 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
     [self startUpdatingLocation];
 }
 
+- (void)retriveUserLocationWithBlock:(RCLocationManagerLocationUpdateBlock)block errorBlock:(RCLocationManagerLocationUpdateFailBlock)errorBlock {
+    
+    _isOnlyOneRefresh = YES;
+    
+    [self startUpdatingLocationWithBlock:block errorBlock:errorBlock];
+}
+
 - (void)updateUserLocation
 {
     NSLog(@"[%@] updateUserLocation:", NSStringFromClass([self class]));

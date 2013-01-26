@@ -63,6 +63,7 @@ typedef void(^RCLocationManagerRegionUpdateFailBlock)(CLLocationManager *manager
 
 - (void)startUpdatingLocation;
 - (void)startUpdatingLocationWithBlock:(RCLocationManagerLocationUpdateBlock)block errorBlock:(RCLocationManagerLocationUpdateFailBlock)errorBlock; // USING BLOCKS
+- (void)retriveUserLocationWithBlock:(RCLocationManagerLocationUpdateBlock)block errorBlock:(RCLocationManagerLocationUpdateFailBlock)errorBlock; // USING BLOCKS. Only 1 time. 
 - (void)updateUserLocation;
 - (void)stopUpdatingLocation;
 

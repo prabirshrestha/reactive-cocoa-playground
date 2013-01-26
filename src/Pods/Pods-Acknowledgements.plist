@@ -295,6 +295,14 @@ THE SOFTWARE</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2012 Ricardo Caballero (hello@rcabamo.es)</string>
+			<key>Title</key>
+			<string>RCLocationManager</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>**Copyright (c) 2012 - 2013, GitHub, Inc.**
 **All rights reserved.**
 
