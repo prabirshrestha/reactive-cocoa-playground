@@ -48,17 +48,9 @@
                 [self.locationManager startUpdatingLocation];
             }
             ++self.numberOfLocationSubscribers;
-            [self.locationSubject
-             subscribeNext:^(id x) {
-                 [subscriber sendNext:x];
-             }
-             error:^(NSError *error) {
-                 [subscriber sendError:error];
-             }
-             completed:^{
-                 [subscriber sendCompleted];
-             }];
         }
+        
+        [self.locationSubject subscribe:subscriber];
         
         return [RACDisposable disposableWithBlock:^{
             @synchronized(self) {
