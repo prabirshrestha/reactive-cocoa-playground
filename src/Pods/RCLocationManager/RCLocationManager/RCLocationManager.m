@@ -31,7 +31,7 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
 {
     BOOL _isUpdatingUserLocation;
     BOOL _isOnlyOneRefresh;
-
+    NSTimer *_queryingTimer;
 }
 
 @property (nonatomic, readonly) CLLocationManager *userLocationManager;
@@ -202,7 +202,7 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
     
     for (CLRegion *reg in regions) {
         if ([self region:region inRegion:reg]) {
-                return YES;
+            return YES;
         }
     }
     return NO;
@@ -266,9 +266,7 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
 
 - (CLLocation *)location
 {
-    NSLog(@"[%@] location:", NSStringFromClass([self class]));
-    
-    return self.userLocationManager.location;
+    return _location;
 }
 
 - (NSSet *)regions
@@ -294,32 +292,44 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"[%@] locationManager:didUpdateToLocation:fromLocation: %@", NSStringFromClass([self class]), newLocation);
+    NSDate* eventDate			= newLocation.timestamp;
+    NSTimeInterval howRecent	= [eventDate timeIntervalSinceNow];
     
-    if (_isOnlyOneRefresh) {
-        [_userLocationManager stopUpdatingLocation];
-        _isOnlyOneRefresh = NO;
+    if(abs(howRecent) > 10.0) {
+        NSLog(@"locationManager didUpdateToLocation with timestamp %@ which is to old to use", newLocation.timestamp);
+        return;
     }
+    _location = newLocation;
     
-    // Call location block
-    if (self.locationBlock != nil) {
-        self.locationBlock(manager, newLocation, oldLocation);
-    }
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:RCLocationManagerUserLocationDidChangeNotification
-                                                        object:self
-                                                      userInfo:(
-                                                                [NSDictionary dictionaryWithObject:newLocation
-                                                                                            forKey:RCLocationManagerNotificationLocationUserInfoKey])];
-    if ([self.delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
-        [self.delegate locationManager:self didUpdateToLocation:newLocation fromLocation:oldLocation];
-    }
+    if (newLocation.horizontalAccuracy <= manager.desiredAccuracy) {
+        NSLog(@"[%@] locationManager:didUpdateToLocation:fromLocation: %@", NSStringFromClass([self class]), newLocation);
+        [self stopQueryingTimer];
+        
+        if (_isOnlyOneRefresh) {
+            [_userLocationManager stopUpdatingLocation];
+            _isOnlyOneRefresh = NO;
+        }
+        
+        // Call location block
+        if (self.locationBlock != nil) {
+            self.locationBlock(manager, newLocation, oldLocation);
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:RCLocationManagerUserLocationDidChangeNotification
+                                                            object:self
+                                                          userInfo:(
+                                                                    [NSDictionary dictionaryWithObject:newLocation
+                                                                                                forKey:RCLocationManagerNotificationLocationUserInfoKey])];
+        if ([self.delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
+            [self.delegate locationManager:self didUpdateToLocation:newLocation fromLocation:oldLocation];
+        }
+	}
 }
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
     NSLog(@"[%@] locationManager:didEnterRegion:%@ at %@", NSStringFromClass([self class]), region.identifier, [NSDate date]);
-    	
+    
     if (self.regionBlock != nil) {
         self.regionBlock(manager, region, YES);
     }
@@ -385,6 +395,7 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
     
     _isUpdatingUserLocation = YES;
     [self.userLocationManager startUpdatingLocation];
+    [self startQueryingTimer];
 }
 
 - (void)startUpdatingLocationWithBlock:(RCLocationManagerLocationUpdateBlock)block errorBlock:(RCLocationManagerLocationUpdateFailBlock)errorBlock {
@@ -393,6 +404,38 @@ NSString * const RCLocationManagerNotificationLocationUserInfoKey = @"newLocatio
     self.errorLocationBlock = errorBlock;
     
     [self startUpdatingLocation];
+}
+
+-(void)startQueryingTimer
+{
+    [self stopQueryingTimer];
+    _queryingTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(queryingTimerPassed) userInfo: nil repeats: YES];
+}
+
+-(void)stopQueryingTimer
+{
+    if (_queryingTimer)
+	{
+		if ([_queryingTimer isValid])
+		{
+			[_queryingTimer invalidate];
+		}
+		_queryingTimer = nil;
+	}
+}
+
+-(void)queryingTimerPassed
+{
+    [self stopUpdatingLocation];
+    [self stopQueryingTimer];
+    
+    if (self.locationBlock != nil) {
+        self.locationBlock(self.userLocationManager, _location, nil);
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
+        [self.delegate locationManager:self didUpdateToLocation:_location fromLocation:nil];
+    }
 }
 
 - (void)retriveUserLocationWithBlock:(RCLocationManagerLocationUpdateBlock)block errorBlock:(RCLocationManagerLocationUpdateFailBlock)errorBlock {

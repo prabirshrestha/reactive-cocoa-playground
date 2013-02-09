@@ -5,17 +5,39 @@ DEPENDENCIES:
 - EGOCache (= 0.1.0)
 - Facebook-iOS-SDK (= 3.1.1)
 - NoticeView (= 2.4)
-- RCLocationManager (= 0.1)
+- RCLocationManager (from `https://github.com/rcabamo/RCLocationManager.git')
 - ReactiveCocoa (= 0.17.1)
 - SVPullToRefresh (from `https://github.com/samvermette/SVPullToRefresh.git', commit `f54d4871dbe3f905eab44f7aae7096aa15455aa4')
 - TPKeyboardAvoiding (= 0.0.1)
 
-COCOAPODS: 0.16.2
+SPEC CHECKSUMS: 
+  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
+  AFNetworking: 204f4b3d3a3ea7b38737c3fbf2646ba8c9719eea
+  libextobjc/EXTScope: 4a286cdbe966b6685b20a0a1444188a104ed3f40
+  NoticeView: af1d5f1913808731bf4fe9e4e8533a2635e8a627
+  Facebook-iOS-SDK: 5fc068ebfd8c8c9b0fad476bc36dbbf1fffeebc8
+  libextobjc/EXTKeyPathCoding: 4a286cdbe966b6685b20a0a1444188a104ed3f40
+  RCLocationManager: fb0dac46ee8df88e5cff260886120438df37ae08
+  A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
+  ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
+  EGOCache: 073460647a96c40ddd93177c3bcf4c1920b385bc
+  TPKeyboardAvoiding: 7289409b17dc2193a3f324672283c542f17c1bb1
+  ReactiveCocoa/RACExtensions: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  ReactiveCocoa/Core: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  libextobjc/EXTConcreteProtocol: 4a286cdbe966b6685b20a0a1444188a104ed3f40
+  SVPullToRefresh: d95803a9816d3919378ede69342c54927fb953ea
+  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
 
 EXTERNAL SOURCES: 
+  RCLocationManager: 
+    :git: https://github.com/rcabamo/RCLocationManager.git
+    :comit: bca87ea5511dcd5fbf3bdfe439f39dcd785f9a8e
   SVPullToRefresh: 
-    :git: https://github.com/samvermette/SVPullToRefresh.git
     :commit: f54d4871dbe3f905eab44f7aae7096aa15455aa4
+    :git: https://github.com/samvermette/SVPullToRefresh.git
+
+COCOAPODS: 0.16.2
 
 PODS: 
 - A2DynamicDelegate (2.0.2): 
@@ -44,22 +66,3 @@ PODS:
 - libextobjc/EXTKeyPathCoding (0.2.5)
 - libextobjc/EXTScope (0.2.5)
 - libffi (3.0.11)
-
-SPEC CHECKSUMS: 
-  ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
-  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
-  ReactiveCocoa/Core: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
-  RCLocationManager: f02bd426e93e87693fe8a2adf76f917a74d774c9
-  NoticeView: af1d5f1913808731bf4fe9e4e8533a2635e8a627
-  EGOCache: 073460647a96c40ddd93177c3bcf4c1920b385bc
-  libextobjc/EXTKeyPathCoding: 4a286cdbe966b6685b20a0a1444188a104ed3f40
-  libextobjc/EXTConcreteProtocol: 4a286cdbe966b6685b20a0a1444188a104ed3f40
-  JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
-  A2DynamicDelegate: 013b345f1aca891ded67a95c1512fad677c260a9
-  Facebook-iOS-SDK: 5fc068ebfd8c8c9b0fad476bc36dbbf1fffeebc8
-  AFNetworking: 204f4b3d3a3ea7b38737c3fbf2646ba8c9719eea
-  TPKeyboardAvoiding: 7289409b17dc2193a3f324672283c542f17c1bb1
-  BlocksKit: 12fbe889d9f8cc66adf5c9bd4cb0606071f214f2
-  ReactiveCocoa/RACExtensions: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
-  SVPullToRefresh: d95803a9816d3919378ede69342c54927fb953ea
-  libextobjc/EXTScope: 4a286cdbe966b6685b20a0a1444188a104ed3f40
