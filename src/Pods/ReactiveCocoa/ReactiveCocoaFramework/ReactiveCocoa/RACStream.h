@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <EXTConcreteProtocol.h>
 
 @class RACStream;
 

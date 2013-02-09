@@ -11,31 +11,38 @@
 #import "RACDisposable.h"
 #import "RACReplaySubject.h"
 #import "RACSignal+Operations.h"
+#import "EXTScope.h"
+#import "RACKVOTrampoline.h"
 #import <objc/runtime.h>
 
 static const void *RACObjectDisposables = &RACObjectDisposables;
 
 @implementation NSObject (RACPropertySubscribing)
 
-+ (RACSignal *)rac_signalFor:(NSObject *)object keyPath:(NSString *)keyPath onObject:(NSObject *)onObject {
-	RACReplaySubject *subject = [RACReplaySubject replaySubjectWithCapacity:1];
-	[subject setNameWithFormat:@"RACAble(%@, %@)", object, keyPath];
++ (RACSignal *)rac_signalFor:(NSObject *)object keyPath:(NSString *)keyPath observer:(NSObject *)observer {
+	@unsafeify(observer, object);
+	return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
+		@strongify(observer, object);
+		RACKVOTrampoline *KVOTrampoline = [object rac_addObserver:observer forKeyPath:keyPath options:0 block:^(id target, id observer, NSDictionary *change) {
+			[subscriber sendNext:[target valueForKeyPath:keyPath]];
+		}];
 
-	[onObject rac_addDeallocDisposable:[RACDisposable disposableWithBlock:^{
-		[subject sendCompleted];
-	}]];
-	
-	__unsafe_unretained NSObject *weakObject = object;
-	[object rac_addObserver:onObject forKeyPath:keyPath options:0 queue:[NSOperationQueue mainQueue] block:^(id target, NSDictionary *change) {
-		NSObject *strongObject = weakObject;
-		[subject sendNext:[strongObject valueForKeyPath:keyPath]];
-	}];
-	
-	return subject;
+		RACDisposable *KVODisposable = [RACDisposable disposableWithBlock:^{
+			[KVOTrampoline stopObserving];
+		}];
+		RACDisposable *deallocDisposable = [RACDisposable disposableWithBlock:^{
+			[KVODisposable dispose];
+			[subscriber sendCompleted];
+		}];
+		[observer rac_addDeallocDisposable:deallocDisposable];
+		[object rac_addDeallocDisposable:deallocDisposable];
+		
+		return KVODisposable;
+	}] setNameWithFormat:@"RACAble(%@, %@)", object, keyPath];
 }
 
-- (RACSignal *)rac_signalForKeyPath:(NSString *)keyPath onObject:(NSObject *)object {
-	return [self.class rac_signalFor:self keyPath:keyPath onObject:object];
+- (RACSignal *)rac_signalForKeyPath:(NSString *)keyPath observer:(NSObject *)observer {
+	return [self.class rac_signalFor:self keyPath:keyPath observer:observer];
 }
 
 - (RACDisposable *)rac_deriveProperty:(NSString *)keyPath from:(RACSignal *)signal {
