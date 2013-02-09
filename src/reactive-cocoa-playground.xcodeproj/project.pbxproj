@@ -22,6 +22,7 @@
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
 		0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E988B1650A6C0005CEADF /* CoreLocation.framework */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
+		932AC84416C6EB9900F39163 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 932AC84316C6EB9900F39163 /* LocationManager.m */; };
 		9339CE3F16A788DB0088238D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE3E16A788DB0088238D /* MainViewController.m */; };
 		9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */; };
 		9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE4816A78C390088238D /* CreatingObservablesViewController.m */; };
@@ -87,6 +88,8 @@
 		0F6E9603164EF14C005CEADF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0F6E988B1650A6C0005CEADF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B5B2EDB5A1943AF8E57D041 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		932AC84216C6EB9900F39163 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = LocationManager/LocationManager.h; sourceTree = "<group>"; };
+		932AC84316C6EB9900F39163 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = LocationManager/LocationManager.m; sourceTree = "<group>"; };
 		9339CE3D16A788DB0088238D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
 		9339CE3E16A788DB0088238D /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Main/MainViewController.m; sourceTree = "<group>"; };
 		9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreatingObservablesStoryboard.storyboard; path = CreatingObservables/CreatingObservablesStoryboard.storyboard; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 				93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */,
 				93F4D31B16A8CAD00006A507 /* LocationManagerViewController.h */,
 				93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */,
+				932AC84216C6EB9900F39163 /* LocationManager.h */,
+				932AC84316C6EB9900F39163 /* LocationManager.m */,
 			);
 			name = LocationManager;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				93F4D35016A918970006A507 /* TwitterInstantSearchModel.m in Sources */,
 				93F4D38516AA221D0006A507 /* FacebookViewController.m in Sources */,
 				93F4D39216AA23850006A507 /* FBRequestConnection+RACFacebook.m in Sources */,
+				932AC84416C6EB9900F39163 /* LocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
