@@ -146,16 +146,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F4D38F16AA22B10006A507 /* Social.framework in Frameworks */,
-				93F4D38D16AA228C0006A507 /* libsqlite3.dylib in Frameworks */,
 				93F4D38B16AA22780006A507 /* Accounts.framework in Frameworks */,
 				93F4D38916AA22650006A507 /* AdSupport.framework in Frameworks */,
-				0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */,
-				0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */,
-				0F0DEF04160BF29D0083A979 /* UIKit.framework in Frameworks */,
-				0F0DEF06160BF29D0083A979 /* Foundation.framework in Frameworks */,
 				0F0DEF08160BF29D0083A979 /* CoreGraphics.framework in Frameworks */,
+				0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */,
+				0F0DEF06160BF29D0083A979 /* Foundation.framework in Frameworks */,
 				14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */,
+				93F4D38D16AA228C0006A507 /* libsqlite3.dylib in Frameworks */,
+				0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */,
+				93F4D38F16AA22B10006A507 /* Social.framework in Frameworks */,
+				0F0DEF04160BF29D0083A979 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +163,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F0DEF24160BF29E0083A979 /* Foundation.framework in Frameworks */,
 				0F0DEF22160BF29E0083A979 /* SenTestingKit.framework in Frameworks */,
 				0F0DEF23160BF29E0083A979 /* UIKit.framework in Frameworks */,
-				0F0DEF24160BF29E0083A979 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,10 +175,10 @@
 		0F0DEEF4160BF29D0083A979 = {
 			isa = PBXGroup;
 			children = (
-				0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */,
-				0F0DEF27160BF29E0083A979 /* reactive-cocoa-playgroundTests */,
 				0F0DEF02160BF29D0083A979 /* Frameworks */,
 				0F0DEF00160BF29D0083A979 /* Products */,
+				0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */,
+				0F0DEF27160BF29E0083A979 /* reactive-cocoa-playgroundTests */,
 				01899E5251794EAEA70B6F22 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -195,17 +195,17 @@
 		0F0DEF02160BF29D0083A979 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93F4D38E16AA22B10006A507 /* Social.framework */,
-				93F4D38C16AA228C0006A507 /* libsqlite3.dylib */,
 				93F4D38A16AA22780006A507 /* Accounts.framework */,
 				93F4D38816AA22650006A507 /* AdSupport.framework */,
-				0F6E988B1650A6C0005CEADF /* CoreLocation.framework */,
-				0F6E9603164EF14C005CEADF /* QuartzCore.framework */,
-				0F0DEF03160BF29D0083A979 /* UIKit.framework */,
-				0F0DEF05160BF29D0083A979 /* Foundation.framework */,
 				0F0DEF07160BF29D0083A979 /* CoreGraphics.framework */,
-				0F0DEF21160BF29E0083A979 /* SenTestingKit.framework */,
+				0F6E988B1650A6C0005CEADF /* CoreLocation.framework */,
+				0F0DEF05160BF29D0083A979 /* Foundation.framework */,
 				5B5B2EDB5A1943AF8E57D041 /* libPods.a */,
+				93F4D38C16AA228C0006A507 /* libsqlite3.dylib */,
+				0F6E9603164EF14C005CEADF /* QuartzCore.framework */,
+				0F0DEF21160BF29E0083A979 /* SenTestingKit.framework */,
+				93F4D38E16AA22B10006A507 /* Social.framework */,
+				0F0DEF03160BF29D0083A979 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,19 +213,19 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
-				932D98FD16A7881800A7FBFC /* Main */,
-				9339CE4116A78B3F0088238D /* CreatingObservables */,
-				9339CE4D16A796160088238D /* RxOperators */,
-				9339CE5316A797D00088238D /* Events */,
-				9339CE5916A798DA0088238D /* Schedulers */,
 				9339CE6216A79A250088238D /* AFNetworking */,
-				93F4D30116A8C6D60006A507 /* LoginSample */,
-				93F4D30F16A8C84B0006A507 /* TwitterSearch */,
-				93F4D34616A911E10006A507 /* TwitterInstantSearch */,
-				93F4D31816A8CA560006A507 /* LocationManager */,
-				93F4D38116AA21CC0006A507 /* Facebook */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
+				9339CE4116A78B3F0088238D /* CreatingObservables */,
+				9339CE5316A797D00088238D /* Events */,
+				93F4D38116AA21CC0006A507 /* Facebook */,
+				93F4D31816A8CA560006A507 /* LocationManager */,
+				93F4D30116A8C6D60006A507 /* LoginSample */,
+				932D98FD16A7881800A7FBFC /* Main */,
+				9339CE4D16A796160088238D /* RxOperators */,
+				9339CE5916A798DA0088238D /* Schedulers */,
 				0F0DEF0A160BF29D0083A979 /* Supporting Files */,
+				93F4D34616A911E10006A507 /* TwitterInstantSearch */,
+				93F4D30F16A8C84B0006A507 /* TwitterSearch */,
 			);
 			path = "reactive-cocoa-playground";
 			sourceTree = "<group>";
@@ -233,9 +233,9 @@
 		0F0DEF0A160BF29D0083A979 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F0DEF0C160BF29D0083A979 /* InfoPlist.strings */,
 				0F0DEF52160BF36F0083A979 /* main.m */,
 				0F0DEF0B160BF29D0083A979 /* reactive-cocoa-playground-Info.plist */,
-				0F0DEF0C160BF29D0083A979 /* InfoPlist.strings */,
 				0F0DEF11160BF29E0083A979 /* reactive-cocoa-playground-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -244,9 +244,9 @@
 		0F0DEF27160BF29E0083A979 /* reactive-cocoa-playgroundTests */ = {
 			isa = PBXGroup;
 			children = (
+				0F0DEF28160BF29E0083A979 /* Supporting Files */,
 				0F0DEF2D160BF29E0083A979 /* reactive_cocoa_playgroundTests.h */,
 				0F0DEF2E160BF29E0083A979 /* reactive_cocoa_playgroundTests.m */,
-				0F0DEF28160BF29E0083A979 /* Supporting Files */,
 			);
 			path = "reactive-cocoa-playgroundTests";
 			sourceTree = "<group>";
@@ -254,8 +254,8 @@
 		0F0DEF28160BF29E0083A979 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F0DEF29160BF29E0083A979 /* reactive-cocoa-playgroundTests-Info.plist */,
 				0F0DEF2A160BF29E0083A979 /* InfoPlist.strings */,
+				0F0DEF29160BF29E0083A979 /* reactive-cocoa-playgroundTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -315,11 +315,11 @@
 		9339CE5916A798DA0088238D /* Schedulers */ = {
 			isa = PBXGroup;
 			children = (
-				9339CE5A16A798F60088238D /* SchedulersStoryboard.storyboard */,
 				9339CE5C16A7995B0088238D /* BackgroundSchedulerViewController.h */,
 				9339CE5D16A7995B0088238D /* BackgroundSchedulerViewController.m */,
 				9339CE5E16A7995B0088238D /* SchedulerBackgroundViewController.h */,
 				9339CE5F16A7995B0088238D /* SchedulerBackgroundViewController.m */,
+				9339CE5A16A798F60088238D /* SchedulersStoryboard.storyboard */,
 			);
 			name = Schedulers;
 			sourceTree = "<group>";
@@ -361,11 +361,11 @@
 		93F4D31816A8CA560006A507 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				932AC84216C6EB9900F39163 /* LocationManager.h */,
+				932AC84316C6EB9900F39163 /* LocationManager.m */,
 				93F4D31916A8CA730006A507 /* LocationManagerStoryboard.storyboard */,
 				93F4D31B16A8CAD00006A507 /* LocationManagerViewController.h */,
 				93F4D31C16A8CAD00006A507 /* LocationManagerViewController.m */,
-				932AC84216C6EB9900F39163 /* LocationManager.h */,
-				932AC84316C6EB9900F39163 /* LocationManager.m */,
 			);
 			name = LocationManager;
 			sourceTree = "<group>";
@@ -373,8 +373,8 @@
 		93F4D34616A911E10006A507 /* TwitterInstantSearch */ = {
 			isa = PBXGroup;
 			children = (
-				93F4D34816A912020006A507 /* TwitterInstantSearchStoryboard.storyboard */,
 				93F4D34D16A9187C0006A507 /* Models */,
+				93F4D34816A912020006A507 /* TwitterInstantSearchStoryboard.storyboard */,
 				93F4D34A16A912280006A507 /* TwitterInstantSearchViewController.h */,
 				93F4D34B16A912280006A507 /* TwitterInstantSearchViewController.m */,
 			);
@@ -396,9 +396,9 @@
 				93F4D38616AA222B0006A507 /* FacebookStoryboard.storyboard */,
 				93F4D38316AA221D0006A507 /* FacebookViewController.h */,
 				93F4D38416AA221D0006A507 /* FacebookViewController.m */,
-				93F4D39316AA26320006A507 /* RACFacebook.h */,
 				93F4D39016AA23850006A507 /* FBRequestConnection+RACFacebook.h */,
 				93F4D39116AA23850006A507 /* FBRequestConnection+RACFacebook.m */,
+				93F4D39316AA26320006A507 /* RACFacebook.h */,
 			);
 			name = Facebook;
 			sourceTree = "<group>";
@@ -475,18 +475,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0DEF0E160BF29D0083A979 /* InfoPlist.strings in Resources */,
-				0F0DEF17160BF29E0083A979 /* MainStoryboard.storyboard in Resources */,
-				9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */,
-				9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */,
-				9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */,
-				9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */,
 				9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */,
-				93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */,
-				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
-				93F4D31A16A8CA730006A507 /* LocationManagerStoryboard.storyboard in Resources */,
-				93F4D34916A912020006A507 /* TwitterInstantSearchStoryboard.storyboard in Resources */,
+				9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */,
+				9339CE5516A797EB0088238D /* EventsStoryboard.storyboard in Resources */,
 				93F4D38716AA222B0006A507 /* FacebookStoryboard.storyboard in Resources */,
+				0F0DEF0E160BF29D0083A979 /* InfoPlist.strings in Resources */,
+				93F4D31A16A8CA730006A507 /* LocationManagerStoryboard.storyboard in Resources */,
+				93F4D30416A8C6FF0006A507 /* LoginSampleStoryboard.storyboard in Resources */,
+				0F0DEF17160BF29E0083A979 /* MainStoryboard.storyboard in Resources */,
+				9339CE4F16A796480088238D /* RxOperatorsStoryboard.storyboard in Resources */,
+				9339CE5B16A798F60088238D /* SchedulersStoryboard.storyboard in Resources */,
+				93F4D34916A912020006A507 /* TwitterInstantSearchStoryboard.storyboard in Resources */,
+				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,26 +535,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
-				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
-				9339CE3F16A788DB0088238D /* MainViewController.m in Sources */,
-				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
-				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
-				9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */,
-				9339CE5816A798000088238D /* EventsViewController.m in Sources */,
-				9339CE6016A7995B0088238D /* BackgroundSchedulerViewController.m in Sources */,
-				9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */,
 				9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */,
 				9339CE6A16A79ACF0088238D /* Api.m in Sources */,
-				93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */,
-				93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */,
-				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
-				93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */,
-				93F4D34C16A912280006A507 /* TwitterInstantSearchViewController.m in Sources */,
-				93F4D35016A918970006A507 /* TwitterInstantSearchModel.m in Sources */,
+				0F0DEF50160BF3550083A979 /* AppDelegate.m in Sources */,
+				9339CE6016A7995B0088238D /* BackgroundSchedulerViewController.m in Sources */,
+				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
+				9339CE5816A798000088238D /* EventsViewController.m in Sources */,
 				93F4D38516AA221D0006A507 /* FacebookViewController.m in Sources */,
 				93F4D39216AA23850006A507 /* FBRequestConnection+RACFacebook.m in Sources */,
 				932AC84416C6EB9900F39163 /* LocationManager.m in Sources */,
+				93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */,
+				93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */,
+				0F0DEF53160BF36F0083A979 /* main.m in Sources */,
+				9339CE3F16A788DB0088238D /* MainViewController.m in Sources */,
+				9339CE5216A796890088238D /* RxOperatorsViewController.m in Sources */,
+				9339CE6116A7995B0088238D /* SchedulerBackgroundViewController.m in Sources */,
+				93F4D35016A918970006A507 /* TwitterInstantSearchModel.m in Sources */,
+				93F4D34C16A912280006A507 /* TwitterInstantSearchViewController.m in Sources */,
+				93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */,
+				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
+				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

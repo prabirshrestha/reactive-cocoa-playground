@@ -1,0 +1,4 @@
+#!/bin/sh
+
+../scripts/sort-Xcode-project-file reactive-cocoa-playground.xcodeproj/project.pbxproj 
+../scripts/sort-Xcode-project-file Pods/Pods.xcodeproj/project.pbxproj
