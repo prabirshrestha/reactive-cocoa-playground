@@ -3,12 +3,17 @@ ReactiveCocoa (RAC) is an Objective-C framework for [Functional Reactive
 Programming][]. It provides APIs for **composing and transforming streams of
 values**.
 
+If you're already familiar with functional reactive programming or know the basic
+premise of ReactiveCocoa, check out the [Documentation][] folder for a framework
+overview and more in-depth information about how it all works in practice.
+
 ## Getting Started
 
 To add RAC to your application:
 
  1. Add the ReactiveCocoa repository as a submodule of your application's
-    repository.
+    repository. Make sure to update the submodules within with `git submodule update
+    -i --recursive`
  1. Drag and drop `ReactiveCocoaFramework/ReactiveCocoa.xcodeproj` into your
     application's Xcode project or workspace.
  1. On the "Build Phases" tab of your application target, add RAC to the "Link
@@ -17,6 +22,9 @@ To add RAC to your application:
     * **On OS X**, add `ReactiveCocoa.framework`. RAC must also be added to any
       "Copy Frameworks" build phase. If you don't already have one, simply add
       a "Copy Files" build phase and target the "Frameworks" destination.
+ 1. Add `$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include
+    $(inherited)` to the "Header Search Paths" build setting (this is only
+		necessary for archive builds, but it has no negative effect otherwise).
  1. **If you added RAC to a project (not a workspace)**, you will also need to
     add the appropriate RAC target to the "Target Dependencies" of your
     application.

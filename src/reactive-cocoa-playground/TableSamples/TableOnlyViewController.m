@@ -50,7 +50,7 @@
         }
     }];
     
-    self.fetchCommand = [RACCommand commandWithCanExecuteSignal:notFetching block:nil];
+    self.fetchCommand = [RACCommand commandWithCanExecuteSignal:notFetching];
     
     [self.fetchCommand subscribeNext:^(id x) {
         self.fetching = YES;

@@ -159,6 +159,11 @@
 	return newArray;
 }
 
+- (instancetype)tupleByAddingObject:(id)obj {
+	NSArray *newArray = [self.backingArray arrayByAddingObject:obj ?: RACTupleNil.tupleNil];
+	return [self.class tupleWithObjectsFromArray:newArray convertNullsToNils:NO];
+}
+
 - (NSUInteger)count {
 	return self.backingArray.count;
 }
@@ -225,7 +230,7 @@
 	NSParameterAssert(variables != nil);
 	
 	[variables enumerateObjectsUsingBlock:^(NSValue *value, NSUInteger index, BOOL *stop) {
-		__autoreleasing id *ptr = (__autoreleasing id *)value.pointerValue;
+		__strong id *ptr = (__strong id *)value.pointerValue;
 		*ptr = tuple[index];
 	}];
 }

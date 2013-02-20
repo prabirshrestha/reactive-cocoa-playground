@@ -51,7 +51,7 @@
         return @(![x boolValue]);
     }];
     
-    RACCommand *searchTweetsOnline = [RACCommand commandWithCanExecuteSignal:notSearching block:nil];
+    RACCommand *searchTweetsOnline = [RACCommand commandWithCanExecuteSignal:notSearching];
     
     RACSubject *receivedNewTweets = [RACSubject subject];
     [[receivedNewTweets
