@@ -7,6 +7,7 @@ build/*
 # Exclude temp nibs and swap files
 *~.nib
 *.swp
+*.orig
  
 # Exclude user-specific XCode 3 and 4 files
 *.mode1
