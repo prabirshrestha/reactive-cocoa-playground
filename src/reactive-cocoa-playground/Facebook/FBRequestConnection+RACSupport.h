@@ -1,15 +1,16 @@
 //
-//  FBRequestConnection+RACFacebook.h
+//  FBRequestConnection+RACSupport.h
 //  reactive-cocoa-playground
 //
-//  Created by Prabir Shrestha on 1/18/13.
+//  Created by Prabir Shrestha on 3/26/13.
 //  Copyright (c) 2013 Prabir Shrestha. All rights reserved.
 //
 
-#import "Facebook.h"
-#import "ReactiveCocoa.h"
+#import <FacebookSDK/FBRequestConnection.h>
 
-@interface FBRequestConnection (RACFacebook)
+@class RACSignal;
+
+@interface FBRequestConnection (RACSupport)
 
 + (RACSignal*) rac_startWithGraphPath:(NSString*)graphPath
                            parameters:(NSDictionary*)parameters

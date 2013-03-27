@@ -37,6 +37,7 @@
 		9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */; };
 		9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */; };
 		9339CE6A16A79ACF0088238D /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6816A79ACF0088238D /* Api.m */; };
+		93E6660517028849007F111F /* FBRequestConnection+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E6660417028849007F111F /* FBRequestConnection+RACSupport.m */; };
 		93F3130916AA55BE00147BA8 /* iso3166Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 93F3130816AA55BE00147BA8 /* iso3166Countries.json */; };
 		93F3130D16AA563900147BA8 /* TableSamplesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F3130C16AA563900147BA8 /* TableSamplesStoryboard.storyboard */; };
 		93F3131016AA588D00147BA8 /* TableOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F3130F16AA588D00147BA8 /* TableOnlyViewController.m */; };
@@ -57,7 +58,6 @@
 		93F4D38B16AA22780006A507 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F4D38A16AA22780006A507 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		93F4D38D16AA228C0006A507 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F4D38C16AA228C0006A507 /* libsqlite3.dylib */; };
 		93F4D38F16AA22B10006A507 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F4D38E16AA22B10006A507 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		93F4D39216AA23850006A507 /* FBRequestConnection+RACFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F4D39116AA23850006A507 /* FBRequestConnection+RACFacebook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +117,8 @@
 		9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkingViewController.m; path = AFNetworking/AFNetworkingViewController.m; sourceTree = "<group>"; };
 		9339CE6716A79ACF0088238D /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Api.h; path = AFNetworking/Api.h; sourceTree = "<group>"; };
 		9339CE6816A79ACF0088238D /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Api.m; path = AFNetworking/Api.m; sourceTree = "<group>"; };
+		93E6660317028849007F111F /* FBRequestConnection+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FBRequestConnection+RACSupport.h"; path = "Facebook/FBRequestConnection+RACSupport.h"; sourceTree = "<group>"; };
+		93E6660417028849007F111F /* FBRequestConnection+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FBRequestConnection+RACSupport.m"; path = "Facebook/FBRequestConnection+RACSupport.m"; sourceTree = "<group>"; };
 		93F3130816AA55BE00147BA8 /* iso3166Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iso3166Countries.json; sourceTree = "<group>"; };
 		93F3130C16AA563900147BA8 /* TableSamplesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TableSamplesStoryboard.storyboard; path = TableSamples/TableSamplesStoryboard.storyboard; sourceTree = "<group>"; };
 		93F3130E16AA588D00147BA8 /* TableOnlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableOnlyViewController.h; path = TableSamples/TableOnlyViewController.h; sourceTree = "<group>"; };
@@ -146,8 +148,6 @@
 		93F4D38A16AA22780006A507 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		93F4D38C16AA228C0006A507 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		93F4D38E16AA22B10006A507 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		93F4D39016AA23850006A507 /* FBRequestConnection+RACFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FBRequestConnection+RACFacebook.h"; path = "Facebook/FBRequestConnection+RACFacebook.h"; sourceTree = "<group>"; };
-		93F4D39116AA23850006A507 /* FBRequestConnection+RACFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FBRequestConnection+RACFacebook.m"; path = "Facebook/FBRequestConnection+RACFacebook.m"; sourceTree = "<group>"; };
 		93F4D39316AA26320006A507 /* RACFacebook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RACFacebook.h; path = Facebook/RACFacebook.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -436,9 +436,9 @@
 				93F4D38616AA222B0006A507 /* FacebookStoryboard.storyboard */,
 				93F4D38316AA221D0006A507 /* FacebookViewController.h */,
 				93F4D38416AA221D0006A507 /* FacebookViewController.m */,
-				93F4D39016AA23850006A507 /* FBRequestConnection+RACFacebook.h */,
-				93F4D39116AA23850006A507 /* FBRequestConnection+RACFacebook.m */,
 				93F4D39316AA26320006A507 /* RACFacebook.h */,
+				93E6660317028849007F111F /* FBRequestConnection+RACSupport.h */,
+				93E6660417028849007F111F /* FBRequestConnection+RACSupport.m */,
 			);
 			name = Facebook;
 			sourceTree = "<group>";
@@ -584,7 +584,6 @@
 				9339CE4916A78C390088238D /* CreatingObservablesViewController.m in Sources */,
 				9339CE5816A798000088238D /* EventsViewController.m in Sources */,
 				93F4D38516AA221D0006A507 /* FacebookViewController.m in Sources */,
-				93F4D39216AA23850006A507 /* FBRequestConnection+RACFacebook.m in Sources */,
 				932AC84416C6EB9900F39163 /* LocationManager.m in Sources */,
 				93F4D31D16A8CAD00006A507 /* LocationManagerViewController.m in Sources */,
 				93F4D30716A8C75A0006A507 /* LoginSampleViewController.m in Sources */,
@@ -599,6 +598,7 @@
 				93F4D31416A8C84B0006A507 /* TwitterSearchTableViewCell.m in Sources */,
 				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
 				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
+				93E6660517028849007F111F /* FBRequestConnection+RACSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

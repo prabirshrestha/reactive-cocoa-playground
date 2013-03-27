@@ -9,6 +9,7 @@
 #import "FacebookViewController.h"
 #import "RACFacebook.h"
 #import <BlocksKit.h>
+#import <ReactiveCocoa.h>
 
 @interface FacebookViewController ()
 
@@ -36,8 +37,9 @@
      doNext:^(id x) {
          NSLog(@"%@", x);
      }]
-     map:^id(id value) {
-         return [NSString stringWithFormat:@"%@ %@", [value objectForKey:@"first_name"], [value objectForKey:@"last_name"]];
+     map:^id(RACTuple *value) {
+         id result = [value second];
+         return [NSString stringWithFormat:@"%@ %@", [result objectForKey:@"first_name"], [result objectForKey:@"last_name"]];
      }]
      subscribeNext:^(id x) {
          NSLog(@"%@", x);

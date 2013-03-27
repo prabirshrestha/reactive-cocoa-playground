@@ -6,4 +6,4 @@
 //  Copyright (c) 2013 Prabir Shrestha. All rights reserved.
 //
 
-#import "FBRequestConnection+RACFacebook.h"
+#import "FBRequestConnection+RACSupport.h"
