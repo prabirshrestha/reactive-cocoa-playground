@@ -11,7 +11,7 @@
 
 @interface LocationManager : NSObject
 
-+(LocationManager*) sharedManager;
++ (LocationManager*) sharedManager;
 
 @property (strong, nonatomic) NSString *purpose;
 

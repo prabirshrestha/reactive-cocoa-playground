@@ -44,6 +44,7 @@
         @"LocationManager",
         @"Facebook",
         @"TableSamples",
+        @"Reachability"
     ];
     
     [self setupTableView];

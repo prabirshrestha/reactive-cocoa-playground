@@ -37,6 +37,9 @@
 		9339CE6416A79A5F0088238D /* AFNetworkingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE6316A79A5F0088238D /* AFNetworkingStoryboard.storyboard */; };
 		9339CE6916A79ACF0088238D /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */; };
 		9339CE6A16A79ACF0088238D /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE6816A79ACF0088238D /* Api.m */; };
+		93600FBA170352DF00B8BD92 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 93600FB9170352DF00B8BD92 /* Podfile */; };
+		93600FBE1703533200B8BD92 /* ReachabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93600FBD1703533200B8BD92 /* ReachabilityViewController.m */; };
+		93600FC01703536800B8BD92 /* ReachabilityStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93600FBF1703536800B8BD92 /* ReachabilityStoryboard.storyboard */; };
 		93E6660517028849007F111F /* FBRequestConnection+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E6660417028849007F111F /* FBRequestConnection+RACSupport.m */; };
 		93F3130916AA55BE00147BA8 /* iso3166Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 93F3130816AA55BE00147BA8 /* iso3166Countries.json */; };
 		93F3130D16AA563900147BA8 /* TableSamplesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F3130C16AA563900147BA8 /* TableSamplesStoryboard.storyboard */; };
@@ -117,6 +120,10 @@
 		9339CE6616A79ACF0088238D /* AFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkingViewController.m; path = AFNetworking/AFNetworkingViewController.m; sourceTree = "<group>"; };
 		9339CE6716A79ACF0088238D /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Api.h; path = AFNetworking/Api.h; sourceTree = "<group>"; };
 		9339CE6816A79ACF0088238D /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Api.m; path = AFNetworking/Api.m; sourceTree = "<group>"; };
+		93600FB9170352DF00B8BD92 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		93600FBC1703533200B8BD92 /* ReachabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReachabilityViewController.h; path = Reachability/ReachabilityViewController.h; sourceTree = "<group>"; };
+		93600FBD1703533200B8BD92 /* ReachabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReachabilityViewController.m; path = Reachability/ReachabilityViewController.m; sourceTree = "<group>"; };
+		93600FBF1703536800B8BD92 /* ReachabilityStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ReachabilityStoryboard.storyboard; path = Reachability/ReachabilityStoryboard.storyboard; sourceTree = "<group>"; };
 		93E6660317028849007F111F /* FBRequestConnection+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FBRequestConnection+RACSupport.h"; path = "Facebook/FBRequestConnection+RACSupport.h"; sourceTree = "<group>"; };
 		93E6660417028849007F111F /* FBRequestConnection+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FBRequestConnection+RACSupport.m"; path = "Facebook/FBRequestConnection+RACSupport.m"; sourceTree = "<group>"; };
 		93F3130816AA55BE00147BA8 /* iso3166Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iso3166Countries.json; sourceTree = "<group>"; };
@@ -190,6 +197,7 @@
 				0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */,
 				0F0DEF27160BF29E0083A979 /* reactive-cocoa-playgroundTests */,
 				01899E5251794EAEA70B6F22 /* Pods.xcconfig */,
+				93600FB9170352DF00B8BD92 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +231,7 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
+				93600FBB1703530900B8BD92 /* Reachability */,
 				9339CE6216A79A250088238D /* AFNetworking */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
 				9339CE4116A78B3F0088238D /* CreatingObservables */,
@@ -346,6 +355,16 @@
 				9339CE6816A79ACF0088238D /* Api.m */,
 			);
 			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		93600FBB1703530900B8BD92 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				93600FBC1703533200B8BD92 /* ReachabilityViewController.h */,
+				93600FBD1703533200B8BD92 /* ReachabilityViewController.m */,
+				93600FBF1703536800B8BD92 /* ReachabilityStoryboard.storyboard */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		93F3130616AA55BE00147BA8 /* Resources */ = {
@@ -529,6 +548,8 @@
 				93F3130D16AA563900147BA8 /* TableSamplesStoryboard.storyboard in Resources */,
 				93F4D34916A912020006A507 /* TwitterInstantSearchStoryboard.storyboard in Resources */,
 				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
+				93600FBA170352DF00B8BD92 /* Podfile in Resources */,
+				93600FC01703536800B8BD92 /* ReachabilityStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +620,7 @@
 				93F4D31516A8C84B0006A507 /* TwitterSearchViewController.m in Sources */,
 				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
 				93E6660517028849007F111F /* FBRequestConnection+RACSupport.m in Sources */,
+				93600FBE1703533200B8BD92 /* ReachabilityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
