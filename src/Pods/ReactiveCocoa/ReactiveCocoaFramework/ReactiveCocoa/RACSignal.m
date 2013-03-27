@@ -129,16 +129,6 @@ static NSMutableSet *activeSignals() {
 	}];
 }
 
-- (void)tearDown {
-	self.tearingDown = YES;
-	
-	@synchronized (self.subscribers) {
-		[self.subscribers removeAllObjects];
-	}
-	
-	[self invalidateGlobalRef];
-}
-
 #pragma mark Managing Subscribers
 
 - (void)performBlockOnEachSubscriber:(void (^)(id<RACSubscriber> subscriber))block {
@@ -274,25 +264,19 @@ static NSMutableSet *activeSignals() {
 
 - (RACSignal *)concat:(RACSignal *)signal {
 	return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
-		__block RACDisposable *concattedDisposable = nil;
+		RACCompoundDisposable *disposable = [RACCompoundDisposable compoundDisposable];
+
 		RACDisposable *sourceDisposable = [self subscribeNext:^(id x) {
 			[subscriber sendNext:x];
 		} error:^(NSError *error) {
 			[subscriber sendError:error];
 		} completed:^{
-			concattedDisposable = [signal subscribe:[RACSubscriber subscriberWithNext:^(id x) {
-				[subscriber sendNext:x];
-			} error:^(NSError *error) {
-				[subscriber sendError:error];
-			} completed:^{
-				[subscriber sendCompleted];
-			}]];
+			RACDisposable *concattedDisposable = [signal subscribe:subscriber];
+			if (concattedDisposable != nil) [disposable addDisposable:concattedDisposable];
 		}];
-		
-		return [RACDisposable disposableWithBlock:^{
-			[sourceDisposable dispose];
-			[concattedDisposable dispose];
-		}];
+
+		if (sourceDisposable != nil) [disposable addDisposable:sourceDisposable];
+		return disposable;
 	}] setNameWithFormat:@"[%@] -concat: %@", self.name, signal];
 }
 
@@ -489,6 +473,55 @@ static NSMutableSet *activeSignals() {
 	return [[self doCompleted:^{
 		NSLog(@"%@ completed", self);
 	}] setNameWithFormat:@"%@", self.name];
+}
+
+@end
+
+@implementation RACSignal (Testing)
+
+static const NSTimeInterval RACSignalAsynchronousWaitTimeout = 10;
+
+- (id)asynchronousFirstOrDefault:(id)defaultValue success:(BOOL *)success error:(NSError **)error {
+	NSAssert([NSThread isMainThread], @"%s should only be used from the main thread", __func__);
+
+	__block id result = nil;
+	__block BOOL done = NO;
+
+	// Ensures that we don't pass values across thread boundaries by reference.
+	__block NSError *localError;
+	__block BOOL localSuccess = YES;
+
+	[[[[self
+		take:1]
+		timeout:RACSignalAsynchronousWaitTimeout]
+		deliverOn:RACScheduler.mainThreadScheduler]
+		subscribeNext:^(id x) {
+			result = x;
+			done = YES;
+		} error:^(NSError *e) {
+			if (!done) {
+				localSuccess = NO;
+				localError = e;
+				done = YES;
+			}
+		} completed:^{
+			done = YES;
+		}];
+	
+	do {
+		[NSRunLoop.mainRunLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+	} while (!done);
+
+	if (success != NULL) *success = localSuccess;
+	if (error != NULL) *error = localError;
+
+	return result;
+}
+
+- (BOOL)asynchronouslyWaitUntilCompleted:(NSError **)error {
+	BOOL success = NO;
+	[[self ignoreElements] asynchronousFirstOrDefault:nil success:&success error:error];
+	return success;
 }
 
 @end
