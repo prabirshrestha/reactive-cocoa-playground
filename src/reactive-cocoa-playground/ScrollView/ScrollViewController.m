@@ -36,7 +36,7 @@ static const NSInteger kNumberOfPages = 3;
     }];
     
     // Subscribe to the contentOffset property of our scroll view with a block
-    [RACAble(self.scrollView.contentOffset) subscribeNext:^(NSNumber *contentOffset) {
+    [[RACAble(self.scrollView.contentOffset) distinctUntilChanged] subscribeNext:^(NSNumber *contentOffset) {
         @strongify(self);
         
         NSInteger currentPage = [contentOffset CGPointValue].x / CGRectGetWidth(self.scrollView.frame);
