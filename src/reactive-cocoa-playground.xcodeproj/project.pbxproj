@@ -22,6 +22,8 @@
 		0F6E9604164EF14C005CEADF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E9603164EF14C005CEADF /* QuartzCore.framework */; };
 		0F6E988C1650A6C0005CEADF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E988B1650A6C0005CEADF /* CoreLocation.framework */; };
 		14CA4659FA08449685AFEAAC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B2EDB5A1943AF8E57D041 /* libPods.a */; };
+		5EA15401170F6BF10046E50A /* ScrollViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA15400170F6BF10046E50A /* ScrollViewStoryboard.storyboard */; };
+		5EA15404170F6C2B0046E50A /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA15403170F6C2B0046E50A /* ScrollViewController.m */; };
 		932AC84416C6EB9900F39163 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 932AC84316C6EB9900F39163 /* LocationManager.m */; };
 		9339CE3F16A788DB0088238D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339CE3E16A788DB0088238D /* MainViewController.m */; };
 		9339CE4616A78B8E0088238D /* CreatingObservablesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9339CE4516A78B8E0088238D /* CreatingObservablesStoryboard.storyboard */; };
@@ -95,6 +97,9 @@
 		0F6E9603164EF14C005CEADF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0F6E988B1650A6C0005CEADF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B5B2EDB5A1943AF8E57D041 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA15400170F6BF10046E50A /* ScrollViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ScrollViewStoryboard.storyboard; path = ScrollView/ScrollViewStoryboard.storyboard; sourceTree = "<group>"; };
+		5EA15402170F6C2B0046E50A /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrollViewController.h; path = ScrollView/ScrollViewController.h; sourceTree = "<group>"; };
+		5EA15403170F6C2B0046E50A /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrollViewController.m; path = ScrollView/ScrollViewController.m; sourceTree = "<group>"; };
 		932AC84216C6EB9900F39163 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = LocationManager/LocationManager.h; sourceTree = "<group>"; };
 		932AC84316C6EB9900F39163 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = LocationManager/LocationManager.m; sourceTree = "<group>"; };
 		9339CE3D16A788DB0088238D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Main/MainViewController.h; sourceTree = "<group>"; };
@@ -231,6 +236,7 @@
 		0F0DEF09160BF29D0083A979 /* reactive-cocoa-playground */ = {
 			isa = PBXGroup;
 			children = (
+				5EA153FF170F6B8D0046E50A /* ScrollView */,
 				93600FBB1703530900B8BD92 /* Reachability */,
 				9339CE6216A79A250088238D /* AFNetworking */,
 				0F0DEF4C160BF3550083A979 /* Classes */,
@@ -288,6 +294,16 @@
 				0F0DEF4E160BF3550083A979 /* AppDelegate.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		5EA153FF170F6B8D0046E50A /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5EA15402170F6C2B0046E50A /* ScrollViewController.h */,
+				5EA15403170F6C2B0046E50A /* ScrollViewController.m */,
+				5EA15400170F6BF10046E50A /* ScrollViewStoryboard.storyboard */,
+			);
+			name = ScrollView;
 			sourceTree = "<group>";
 		};
 		932D98FD16A7881800A7FBFC /* Main */ = {
@@ -550,6 +566,7 @@
 				93F4D31716A8C8610006A507 /* TwitterSearchStoryboard.storyboard in Resources */,
 				93600FBA170352DF00B8BD92 /* Podfile in Resources */,
 				93600FC01703536800B8BD92 /* ReachabilityStoryboard.storyboard in Resources */,
+				5EA15401170F6BF10046E50A /* ScrollViewStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +638,7 @@
 				9339CE4C16A78DD90088238D /* WikipediaSearchViewController.m in Sources */,
 				93E6660517028849007F111F /* FBRequestConnection+RACSupport.m in Sources */,
 				93600FBE1703533200B8BD92 /* ReachabilityViewController.m in Sources */,
+				5EA15404170F6C2B0046E50A /* ScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
