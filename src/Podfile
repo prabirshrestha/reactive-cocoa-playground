@@ -1,7 +1,7 @@
 platform :ios, '5.0'
 pod 'AFNetworking',         '1.0'
 pod 'BlocksKit',            '1.5.2'
-pod 'EGOCache',             '0.1.0'
+pod 'EGOCache',             '2.2.0'
 pod 'Facebook-iOS-SDK',     '3.2.1'
 pod 'NoticeView',           '2.4'
 pod 'Reachability',         '3.1.0'
